@@ -1,5 +1,7 @@
 import React from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import DarkSection from "../Utilities/DarkSection";
+import GetQuotesSection from "../Utilities/GetQuotesSection";
 import HeroSlider from "../Utilities/HeroSlider";
 // import { Link } from "react-router-dom";
 import animationObserver from "../Utilities/library/animationObserver";
@@ -77,7 +79,10 @@ const Home = () => {
             className="grid-item grid-item-2"
           >
             <div className="img-container">
-              <img src="/assets/pages/home/forklift-vector-min.png" alt="image" />
+              <img
+                src="/assets/pages/home/forklift-vector-min.png"
+                alt="image"
+              />
             </div>
           </div>
         </div>
@@ -140,71 +145,13 @@ const Home = () => {
       </section>
 
       {/* dark  */}
-      <section className="dark">
-        <div
-          data-animname="fade-in-up"
-          data-onetime="true"
-          data-delay=".1"
-          className="basic-grid-container heading-with-line-grid-container"
-        >
-          <div className="heading-container">
-            <div className="secondary-font">
-              <Link className="btn" to="/">
-                How it works ?
-              </Link>
-            </div>
-          </div>
-
-          <div
-            data-animname="fade-in-up"
-            data-onetime="true"
-            data-delay=".2"
-            className="line-container"
-          >
-            <div className="gradient-line"></div>
-          </div>
-        </div>
-
-        <br />
-        <br />
-        <br />
-
-        <div
-          data-animname="fade-in-up"
-          data-onetime="true"
-          data-delay=".3"
-          className="basic-grid-container"
-        >
-          <div className="content-container">
-            <h2 className="heading primary-color primary-font">
-              Store Zippy won’t keep you in the dark!
-            </h2>
-            <p className="rte sub-text">Stay updated with the Live Dashboard</p>
-            <p className="rte">
-              Yes, in order to ensure that you exactly know what’s happening
-              with your customer’s orders, we provide you with a live dashboard
-              which keeps you updated.
-            </p>
-
-            <ul>
-              <li>Greater Accuracy.</li>
-              <li>Warehouse Tracking.</li>
-              <li>Improved Productivity.</li>
-              <li>Live Updates.</li>
-            </ul>
-          </div>
-
-          <div className="img-container">
-            <ResponsiveDisplayImg
-              data={{
-                img: "/assets/pages/home/man-on-laptop-min.png",
-              }}
-            />
-          </div>
-        </div>
-      </section>
-
+      <DarkSection
+        data={{
+          img: "/assets/pages/home/man-on-laptop-min.png",
+        }}
+      />
       <br />
+
       {/* display img */}
       <div className="displayImg-container page-width">
         <ResponsiveDisplayImg
@@ -281,7 +228,12 @@ const Home = () => {
       </section>
 
       {/* stats    */}
-      <Stats />
+      <Stats
+        data={{
+          heading: "Your Business is in safe hands",
+          img: "/assets/pages/home/stats-min.png",
+        }}
+      />
 
       {/* animated tape  */}
       <section className="animated-logos-stripe">
@@ -304,32 +256,12 @@ const Home = () => {
       <br />
 
       {/* get quote  */}
-      <section className="quotes page-width">
-        <div className="basic-grid-container page-width">
-          <div
-            data-animname="fade-in-up"
-            data-onetime="true"
-            data-delay=".1"
-            className="content-container"
-          >
-            <h2 className="heading primary-color primary-font">
-              Looking for Fulfillment Center solutions?
-              <br />
-              <span style={{ color: "#FF8F3F" }}>Try Us!</span>
-            </h2>
-
-            <Link className="btn" to="/quotes">
-              Get Quotes
-            </Link>
-          </div>
-
-          <ResponsiveDisplayImg
-            data={{
-              img: "/assets/pages/home/quotes-min.png",
-            }}
-          />
-        </div>
-      </section>
+      <GetQuotesSection
+        data={{
+          img: "/assets/pages/home/quotes-min.png",
+          heading: `Looking for Fulfillment Center solutions?<br /><span style="color: #FF8F3F;">Try Us!</span>`,
+        }}
+      />
     </div>
   );
 };

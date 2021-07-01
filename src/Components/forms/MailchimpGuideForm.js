@@ -8,7 +8,6 @@ const MailchimpGuideForm = () => {
     guideFormData,
     handleFromChange,
     handleInvalid,
-    handleSubmit,
     message,
     monthlyShipmentsOptions,
   } = useContext(GuideFormContext);

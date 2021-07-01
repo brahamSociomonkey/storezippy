@@ -559,16 +559,6 @@ main {
   color: gold;
 }
 
-#home .dark .basic-grid-container {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#home .dark .basic-grid-container .secondary-font {
-  margin-bottom: 0;
-}
-
 #home .animated-logos-stripe {
   background-color: #fff;
   padding: 3rem 0;
@@ -953,21 +943,6 @@ main {
   max-height: 30rem;
 }
 
-.stats {
-  padding: 2rem !important;
-  background-color: #002862;
-  color: #fff;
-}
-
-.stats .heading {
-  color: inherit;
-}
-
-.stats .display-img {
-  max-width: 1000px;
-  margin-inline: auto;
-}
-
 #guide .hero .basic-grid-container {
   gap: 5rem;
 }
@@ -1052,6 +1027,154 @@ main {
     -ms-grid-rows: auto auto;
     -ms-grid-columns: 1fr;
         grid-template: auto auto / 1fr;
+  }
+}
+
+#why-us .fulfillment-needs,
+#why-us .distributed,
+#why-us .dropdowns-section {
+  padding-inline: clamp(2rem, 10vw, 5%);
+}
+
+#why-us .fulfillment-needs {
+  margin-block: 4rem;
+}
+
+#why-us .fulfillment-needs h1 {
+  max-width: 25ch;
+  width: auto;
+}
+
+#why-us .fulfillment-needs .basic-grid-container {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: auto auto;
+      grid-template: auto/ auto auto;
+  gap: 3rem;
+}
+
+#why-us .fulfillment-needs .basic-grid-container .grid-item {
+  max-width: 40rem;
+}
+
+@media (max-width: 900px) {
+  #why-us .fulfillment-needs .basic-grid-container {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto;
+        grid-template: auto/ auto;
+    gap: 1rem;
+  }
+  #why-us .fulfillment-needs .basic-grid-container .grid-item {
+    max-width: 100%;
+  }
+}
+
+#why-us .dark .heading-with-line-grid-container {
+  display: none;
+}
+
+#why-us .distributed {
+  background-color: #002862;
+  color: #fff;
+}
+
+#why-us .distributed .basic-grid-container .content {
+  max-width: 27ch;
+}
+
+#why-us .distributed .basic-grid-container .content h1 {
+  width: auto;
+}
+
+#why-us .distributed .basic-grid-container .content h1::after {
+  background: -webkit-gradient(linear, right top, left top, color-stop(50%, #21bed5), color-stop(74.12%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(#4069a3), to(#3c76ab));
+  background: linear-gradient(270deg, #21bed5 50%, rgba(255, 255, 255, 0) 74.12%), linear-gradient(180deg, #4069a3 0%, #3c76ab 100%);
+}
+
+@media (max-width: 900px) {
+  #why-us .distributed .basic-grid-container {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: auto;
+        grid-template: auto/ auto;
+    gap: 1rem;
+  }
+  #why-us .distributed .basic-grid-container .content {
+    max-width: 100%;
+  }
+}
+
+#why-us .dropdowns-section h1::after {
+  background-color: currentColor;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item {
+  margin-block: 2rem;
+  color: #fff;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details {
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  padding: 1rem;
+  background: #ff8f3f;
+  border-radius: 24px;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details summary {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details summary .icon {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 2rem;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details summary .arrow {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  right: 0%;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details summary::marker {
+  content: "";
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details[open] summary {
+  border-bottom: 2px solid;
+  padding-bottom: .5rem;
+  margin-bottom: 1rem;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details[open] summary .arrow {
+  -webkit-transform: translateY(-50%) rotate(-180deg);
+          transform: translateY(-50%) rotate(-180deg);
+}
+
+@media (max-width: 900px) {
+  #why-us .dropdowns-section .dropdowns .dropdown-item {
+    margin-block: 1rem;
+  }
+  #why-us .dropdowns-section .dropdowns .dropdown-item summary .icon {
+    margin-right: 1rem;
   }
 }
 

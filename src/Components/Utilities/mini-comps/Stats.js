@@ -2,15 +2,17 @@ import React from "react";
 import HeadingWithLine from "./HeadingWithLine";
 import ResponsiveDisplayImg from "./ResponsiveDisplayImg";
 
-const Stats = () => {
+const Stats = ({ data }) => {
+  const { heading, img } = data;
+
   return (
     <section className="stats">
-      <HeadingWithLine data={{ heading: "Your Business is in safe hands" }} />
+      <HeadingWithLine data={{ heading }} />
       <br />
       <br />
       <ResponsiveDisplayImg
         data={{
-          img: "/assets/pages/home/stats-min.png",
+          img,
         }}
       />
     </section>

@@ -125,7 +125,12 @@ const Quotes = () => {
       </section>
 
       {/* Stats */}
-      <Stats />
+      <Stats
+        data={{
+          heading: "Your Business is in safe hands",
+          img: "/assets/pages/home/stats-min.png",
+        }}
+      />
 
       {/* testimonial */}
       <section className="testimonial">

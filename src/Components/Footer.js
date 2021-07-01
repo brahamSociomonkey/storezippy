@@ -8,6 +8,7 @@ const Footer = () => {
     heading: "Company",
     linksData: [
       { text: "About", to: "/about" },
+      { text: "WHy Us?", to: "/why-us" },
       { text: "Get in Touch", to: "/contact" },
       { text: "Careers", to: "/careers" },
       { text: "Fulfillment Centers", to: "/fddsf" },

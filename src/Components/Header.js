@@ -152,6 +152,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>
+                <Link onClick={handleLinkClick} className="main-link" to="/why-us">
+                  Why Us?
+                </Link>
+              </li>
+              <li>
                 <Link
                   onClick={handleLinkClick}
                   className="main-link"

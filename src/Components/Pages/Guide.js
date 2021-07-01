@@ -91,7 +91,7 @@ const Guide = () => {
         data={{
           sectionClassName: "hero page-width",
           heading: "The Ultimate Guide to Order Fulfillment 2021",
-          text: "Are you struggling with Order Fulfillment? Then you have come to the right place! We understand it is a crucial process which requires a lot of planning and manpower and as a result it’s easy to make mistakes that can damage your brand’s reputation. <br /> <br /> We at StoreZippy are a team of FBA experts to set you up for success with adequate experience in providing 3PL fulfillment solutions. <br /><ul>This Order Fulfillment guide will help you learn:<br /><li>What is order fulfillment and the steps involved.</li> <li>Different order fulfillment options.</li> <li>Why outsource?</li><li>Important factors while choosing the right 3PL.</li></ul>",
+          text: "Determining the right fulfillment strategy for your business can be nerve wracking. That’s why we have created a free all-in-one guide on <strong>“Order Fulfillment”</strong> to help you with a seamless fulfillment process.<br /><ul>This Order Fulfillment guide will help you learn:<br /><li>What is order fulfillment and the steps involved.</li> <li>Different order fulfillment options.</li> <li>Why outsource?</li><li>Important factors while choosing the right 3PL.</li></ul>",
           img: "/assets/pages/guide/hero.png",
           mobImg: "/assets/pages/guide/hero-mob.png",
         }}
