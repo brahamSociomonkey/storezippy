@@ -1109,6 +1109,11 @@ main {
   background-color: currentColor;
 }
 
+#why-us .dropdowns-section .dropdowns {
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
 #why-us .dropdowns-section .dropdowns .dropdown-item {
   margin-block: 2rem;
   color: #fff;
@@ -1119,7 +1124,7 @@ main {
   transition: 0.3s ease;
   padding: 1rem;
   background: #ff8f3f;
-  border-radius: 24px;
+  border-radius: 15px;
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
