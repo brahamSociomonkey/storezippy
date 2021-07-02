@@ -257,6 +257,7 @@ header {
   }
 
   &:active,
+  &:focus-within,
   &:focus {
     ul {
       opacity: 1 !important;
@@ -1022,12 +1023,16 @@ main {
           cursor: pointer;
           border-radius: 15px;
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          border: none;
+          outline: none;
 
           summary {
             position: relative;
             display: flex;
             align-items: center;
             transition: 0.3s ease;
+            border: none;
+            outline: none;
 
             .icon {
               width: 2rem;

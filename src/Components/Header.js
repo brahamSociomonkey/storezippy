@@ -178,6 +178,7 @@ const Header = () => {
                 <button
                   onMouseEnter={handleDropDownLinkMouseEnter}
                   onClick={handleDropDownLinkClick}
+                  ontouchstart=""
                   className="main-link has-drop-down"
                 >
                   <div className="title" data-drop-down="resources">
