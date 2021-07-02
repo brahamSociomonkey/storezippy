@@ -159,7 +159,7 @@ const WhyUs = () => {
       <GetQuotesSection
         data={{
           img: "/assets/pages/why-us/try-us.png",
-          heading: `Looking for Fulfillment Center solutions?<br /><span style="color: #FF8F3F;">Try Us!</span>`,
+          heading: `Looking for Fulfillment Centre solutions?<br /><span style="color: #FF8F3F;">Try Us!</span>`,
         }}
       />
     </div>

@@ -9,6 +9,7 @@ const MailchimpGuideForm = () => {
     handleFromChange,
     handleInvalid,
     message,
+    handleSubmit,
     monthlyShipmentsOptions,
   } = useContext(GuideFormContext);
 
@@ -23,6 +24,7 @@ const MailchimpGuideForm = () => {
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
           target="_blank"
+          onSubmit={handleSubmit}
         >
           <input
             onChange={handleFromChange}

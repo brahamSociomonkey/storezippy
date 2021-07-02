@@ -5,6 +5,7 @@ import sendFormData from "../Utilities/library/sendFormData";
 import HeadingWithLine from "../Utilities/mini-comps/HeadingWithLine";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import SectionImgContentGrid from "../Utilities/mini-comps/SectionImgContentGrid";
+import MailchimpSubscribe from "react-mailchimp-subscribe";
 export const GuideFormContext = React.createContext();
 
 const Guide = () => {
@@ -30,10 +31,33 @@ const Guide = () => {
 
   const [message, setMessage] = useState("");
 
+  const AddSubscriber = (response) => {
+    const url =
+      "https://storezippy.us6.list-manage.com/subscribe/post?u=0ac89d59bb2dc464d014be5f5&id=e4c9b16a6f";
+
+    const data = {};
+
+    for (const key in response) {
+      if (Object.hasOwnProperty.call(response, key)) {
+        const element = response[key];
+        const { name, value } = element;
+
+        if (value) data[name] = value;
+      }
+    }
+
+    return (
+      <MailchimpSubscribe
+        url={url}
+      />
+    );
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setMessage(() => "Connecting to the server..");
     sendFormData(guideFormData, setMessage);
+    // AddSubscriber(guideFormData);
   };
 
   const handleInvalid = (e) => {
