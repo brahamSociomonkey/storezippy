@@ -66,31 +66,34 @@ const HowToStartSellingOnline = () => {
         </h1>
         <br />
 
-        <div className="point has-float-img">
-          <img src="/assets/pages/blogs/how-to-start-selling-online/graph.png" />
+        <div className="point ">
           <h2 className="heading">1. Pick a profitable niche</h2>
-          <p>
-            This is perhaps the most important step. A business niche refers to
-            the area of expertise in which you specialize. It includes the
-            market segment and your target audience. Remember if you are
-            targeting people who do not need your products, can’t afford them or
-            are not interested in what you are selling, you are making things
-            difficult for yourself. That's why it is important that you choose
-            your niche carefully only after doing proper market research.
-          </p>
-          <br />
-          <h2 className="heading">How to find a good niche?</h2>
-          Offer products which are -
-          <ul>
-            <li>unique</li>
-            <li>affordable and</li>
-            <li>In-demand</li>
-          </ul>
-          <p>
-            Having the right niche helps you in easy expansion of your customer
-            base and amplifies your brand reach. So, there is no way you can
-            ignore this crucial step.
-          </p>
+          <div className="has-float-img">
+            <img src="/assets/pages/blogs/how-to-start-selling-online/graph.png" />
+            <p>
+              This is perhaps the most important step. A business niche refers
+              to the area of expertise in which you specialize. It includes the
+              market segment and your target audience. Remember if you are
+              targeting people who do not need your products, can’t afford them
+              or are not interested in what you are selling, you are making
+              things difficult for yourself. That's why it is important that you
+              choose your niche carefully only after doing proper market
+              research.
+            </p>
+            <br />
+            <h2 className="heading">How to find a good niche?</h2>
+            Offer products which are -
+            <ul>
+              <li>unique</li>
+              <li>affordable and</li>
+              <li>In-demand</li>
+            </ul>
+            <p>
+              Having the right niche helps you in easy expansion of your
+              customer base and amplifies your brand reach. So, there is no way
+              you can ignore this crucial step.
+            </p>
+          </div>
         </div>
 
         <div className="point">
@@ -112,42 +115,43 @@ const HowToStartSellingOnline = () => {
           </p>
         </div>
 
-        <div className="point has-float-img">
-          <img src="/assets/pages/blogs/how-to-start-selling-online/stamp.png" />
+        <div className="point ">
           <h2 className="heading">3. Setting up your business</h2>
-
-          <p>
-            Now that you are ready to launch your online business, you first
-            need to make it official. Yes, if you want to start selling online,
-            you need to play by some rules. It’s a wise idea to get in touch
-            with a C.A. or a lawyer for the best professional advice.
-            <br />
-            <br />
-            However I would like to throw some light on principal key points you
-            need to consider while setting up your business -
-          </p>
-          <ul>
-            <li>
-              Choose a <strong>unique business name</strong> (preferably the
-              name should be self explanatory about the nature of business)
-            </li>
-            <br />
-            <li>
-              <strong>GST registration -</strong> Unless your niche is books, it
-              is a mandatory requirement for all ecommerce businesses. Your
-              trusted C.A. can help you do it, otherwise you can also hop on to
-              websites like vakilsearch, legal pillars, etc for getting the GST
-              certificate.
-            </li>
-            <br />
-            <li>
-              <strong>Trademark/business registration -</strong> Although this
-              is not mandatory, yet it is advisable to get the trademark
-              registration done for your business. A simple google search will
-              tell you how and why you must do it.
-            </li>
-            <br />
-          </ul>
+          <div className="has-float-img">
+            <img src="/assets/pages/blogs/how-to-start-selling-online/stamp.png" />
+            <p>
+              Now that you are ready to launch your online business, you first
+              need to make it official. Yes, if you want to start selling
+              online, you need to play by some rules. It’s a wise idea to get in
+              touch with a C.A. or a lawyer for the best professional advice.
+              <br />
+              <br />
+              However I would like to throw some light on principal key points
+              you need to consider while setting up your business -
+            </p>
+            <ul>
+              <li>
+                Choose a <strong>unique business name</strong> (preferably the
+                name should be self explanatory about the nature of business)
+              </li>
+              <br />
+              <li>
+                <strong>GST registration -</strong> Unless your niche is books,
+                it is a mandatory requirement for all ecommerce businesses. Your
+                trusted C.A. can help you do it, otherwise you can also hop on
+                to websites like vakilsearch, legal pillars, etc for getting the
+                GST certificate.
+              </li>
+              <br />
+              <li>
+                <strong>Trademark/business registration -</strong> Although this
+                is not mandatory, yet it is advisable to get the trademark
+                registration done for your business. A simple google search will
+                tell you how and why you must do it.
+              </li>
+              <br />
+            </ul>
+          </div>
         </div>
 
         <img
@@ -265,7 +269,6 @@ const HowToStartSellingOnline = () => {
             the competition. Set up your online store and enjoy the freedom of
             being your own boss...Good luck!
           </p>
-          <br />
         </div>
       </article>
     </div>

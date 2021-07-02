@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const dataForBlogs = [
     {
+      img: "/assets/pages/blogs/covid-implications-on-fulfillment/featured-image.png",
+      date: "2nd July 2021",
+      title: "Covid-19 implications on fulfillment operations",
+      des: "Gain insights into the challenges fulfillment operations are facing in the wake of Covid-19 pandemic.",
+      author: "Garima Mehta",
+      url: "/blogs/covid-implications-on-fulfillment",
+    },
+    {
       img: "/assets/pages/blogs/how-to-start-selling-online/featured-image.png",
       date: "23rd June 2021",
       title: "How to start selling online?",

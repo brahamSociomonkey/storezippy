@@ -1295,9 +1295,10 @@ main {
   }
 }
 
-.blog-page .heading {
+.blog-page .title.heading.primary-font {
   color: #002862;
   font-family: "Helvetica Rounded";
+  max-width: 30ch;
 }
 
 .blog-page .author {
@@ -1328,12 +1329,21 @@ main {
 }
 
 .blog-page .point {
-  padding-top: 3rem;
+  margin-block: 3rem;
   overflow: hidden;
 }
 
 .blog-page .point:first-of-type {
-  padding-top: 0;
+  margin-top: 0;
+}
+
+.blog-page article {
+  padding-bottom: 2rem;
+}
+
+.blog-page article > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 footer {
