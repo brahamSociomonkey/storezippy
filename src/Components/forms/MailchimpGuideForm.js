@@ -24,7 +24,7 @@ const MailchimpGuideForm = () => {
           id="mc-embedded-subscribe-form"
           name="mc-embedded-subscribe-form"
           target="_blank"
-          onSubmit={handleSubmit}
+          // onSubmit={handleSubmit}
         >
           <input
             onChange={handleFromChange}
