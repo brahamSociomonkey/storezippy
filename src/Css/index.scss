@@ -1150,7 +1150,7 @@ main {
     .blog-item {
       display: grid;
       padding-inline: 5%;
-      margin-bottom: clamp(5rem, 10vw, 10rem);
+      margin-bottom: clamp(4rem, 10vw, 6rem);
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
       grid-auto-rows: auto;
       gap: 2rem;

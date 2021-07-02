@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import HamIcon from "./Utilities/mini-comps/HamIcon";
 import { useIntercom } from "react-use-intercom";
 import ReactHtmlParser from "react-html-parser";

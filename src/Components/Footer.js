@@ -1,5 +1,5 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 import FooterLinksGenerator from "./Utilities/mini-comps/FooterLinksGenerator";
 import IconLink from "./Utilities/mini-comps/IconLink";
 
