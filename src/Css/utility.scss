@@ -216,13 +216,15 @@ a,
 .txt-center,
 .text-center {
   text-align: center !important;
-  margin-inline: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .page-width {
   max-width: 1200px;
   margin: 0 auto;
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .responsive-txt {
@@ -609,7 +611,8 @@ a,
 .blog-page-width {
   max-width: 1400px;
   margin: 0 auto;
-  padding-inline: calc(min(5%, 4rem));
+  padding-left: calc(min(5%, 4rem));
+  padding-right: calc(min(5%, 4rem));
 }
 
 .custom-hr {
@@ -648,9 +651,10 @@ a,
 
 // dark section
 .dark {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 
-  .heading-with-line-grid-container{
+  .heading-with-line-grid-container {
     margin-bottom: clamp(3rem, 10vw, 5rem);
   }
 
@@ -699,7 +703,8 @@ a,
 
   .display-img {
     max-width: 1000px;
-    margin-inline: auto;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 

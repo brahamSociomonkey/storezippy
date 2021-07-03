@@ -289,13 +289,15 @@ a:focus::after, a:hover::after, a:active::after,
 .txt-center,
 .text-center {
   text-align: center !important;
-  margin-inline: auto !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
 .page-width {
   max-width: 1200px;
   margin: 0 auto;
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .responsive-txt {
@@ -720,7 +722,8 @@ a:focus::after, a:hover::after, a:active::after,
 .blog-page-width {
   max-width: 1400px;
   margin: 0 auto;
-  padding-inline: calc(min(5%, 4rem));
+  padding-left: calc(min(5%, 4rem));
+  padding-right: calc(min(5%, 4rem));
 }
 
 .custom-hr {
@@ -761,7 +764,8 @@ a:focus::after, a:hover::after, a:active::after,
 }
 
 .dark {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .dark .heading-with-line-grid-container {
@@ -811,7 +815,8 @@ a:focus::after, a:hover::after, a:active::after,
 
 .stats .display-img {
   max-width: 1000px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .hr-gradient-line {

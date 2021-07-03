@@ -351,7 +351,8 @@ header.hide {
 
 .dropdown-nav .dropdown-grid-container {
   margin: 2rem calc(min(5rem, 10%));
-  padding-block: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
@@ -510,14 +511,16 @@ main {
 }
 
 #home .procedure {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   padding-bottom: 0;
 }
 
 #home .dark,
 #home .quotes,
 #home .warehouse {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #home .dark .basic-grid-container,
@@ -605,7 +608,8 @@ main {
 }
 
 #quotes .hero .quotes-grid-container .form-container form {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #quotes .hero .quotes-grid-container .form-container form .form-item [data-required="true"] > span {
@@ -656,7 +660,8 @@ main {
 
 #quotes .testimonial,
 #quotes .partner-area {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #quotes .testimonial .content-container,
@@ -687,7 +692,8 @@ main {
   background-size: contain;
   width: clamp(3rem, 10vw, 5rem);
   height: clamp(3rem, 10vw, 5rem);
-  margin-inline: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 #quotes .testimonial .content-container p::before {
@@ -724,7 +730,8 @@ main {
 }
 
 #contact .contact-grid-container .form-container form {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #contact .contact-grid-container .form-container form .form-item [data-required="true"] > span {
@@ -777,7 +784,8 @@ main {
 }
 
 #contact .contact-sales {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #contact .contact-sales button {
@@ -823,7 +831,8 @@ main {
 }
 
 #contact .download {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #contact .download .content-container {
@@ -837,7 +846,8 @@ main {
 #product .dispatch,
 #product .returns,
 #product .warehouse {
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 #product .hero .basic-grid-container,
@@ -1033,11 +1043,13 @@ main {
 #why-us .fulfillment-needs,
 #why-us .distributed,
 #why-us .dropdowns-section {
-  padding-inline: clamp(2rem, 10vw, 5%);
+  padding-left: clamp(2rem, 10vw, 5%);
+  padding-right: clamp(2rem, 10vw, 5%);
 }
 
 #why-us .fulfillment-needs {
-  margin-block: 4rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
 }
 
 #why-us .fulfillment-needs h1 {
@@ -1111,11 +1123,13 @@ main {
 
 #why-us .dropdowns-section .dropdowns {
   max-width: 1200px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item {
-  margin-block: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
   color: #fff;
 }
 
@@ -1170,7 +1184,7 @@ main {
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details[open] summary {
   border-bottom: 2px solid;
-  padding-bottom: .5rem;
+  padding-bottom: 0.5rem;
   margin-bottom: 1rem;
 }
 
@@ -1181,7 +1195,8 @@ main {
 
 @media (max-width: 900px) {
   #why-us .dropdowns-section .dropdowns .dropdown-item {
-    margin-block: 1rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
   }
   #why-us .dropdowns-section .dropdowns .dropdown-item summary .icon {
     margin-right: 1rem;
@@ -1249,7 +1264,8 @@ main {
 #blogs-page .blogs-container .blog-item {
   display: -ms-grid;
   display: grid;
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   margin-bottom: clamp(4rem, 10vw, 6rem);
   -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -1295,7 +1311,8 @@ main {
     gap: 0rem;
   }
   #blogs-page .blogs-container .blog-item .content {
-    padding-inline: 5%;
+    padding-left: 5%;
+    padding-right: 5%;
   }
 }
 
@@ -1333,7 +1350,8 @@ main {
 }
 
 .blog-page .point {
-  margin-block: 3rem;
+  margin-left: 3rem;
+  margin-right: 3rem;
   overflow: hidden;
 }
 
@@ -1358,11 +1376,13 @@ footer {
 }
 
 footer .links-container {
-  padding-block: clamp(1rem, 5vw, 2rem);
+  padding-left: clamp(1rem, 5vw, 2rem);
+  padding-right: clamp(1rem, 5vw, 2rem);
   -ms-grid-rows: 1fr;
   -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
       grid-template: 1fr/repeat(auto-fit, minmax(15rem, 1fr));
-  padding-inline: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
   gap: 2rem;
   max-width: 2000px;
   margin: 0 auto;
@@ -1449,7 +1469,8 @@ footer .social-icons-container .social-link-item img {
 
 #page-about-us > *:not(.hero) {
   width: calc(min(1400px, 85vw));
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #page-about-us h1 {
@@ -1458,11 +1479,13 @@ footer .social-icons-container .social-link-item img {
 }
 
 #page-about-us > div {
-  margin-block: clamp(3rem, 10vw, 5rem);
+  margin-left: clamp(3rem, 10vw, 5rem);
+  margin-right: clamp(3rem, 10vw, 5rem);
 }
 
 #page-about-us > div:first-of-type, #page-about-us > div:last-of-type {
-  margin-block: revert;
+  margin-left: revert;
+  margin-right: revert;
 }
 
 #page-about-us > div:last-of-type {
@@ -1512,12 +1535,14 @@ footer .social-icons-container .social-link-item img {
 #page-about-us .founders .basic-grid-container {
   gap: 3rem;
   max-width: 1000px;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #page-about-us .founders .basic-grid-container .person {
   max-width: 20rem;
-  margin-inline: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media (max-width: 900px) {
