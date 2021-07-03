@@ -109,7 +109,7 @@ const CovidImplicationsOnFulfillment = () => {
         </div>
 
         <div className="point">
-          <h2 className="heading">4. Increase reliance on 3PL providers</h2>
+          <h2 className="heading">4. Increased reliance on 3PL providers</h2>
           <p>
             Covid-19 has triggered major setbacks for global supply chains
             making it crucial to place the fulfillment operations in the hands
@@ -118,7 +118,7 @@ const CovidImplicationsOnFulfillment = () => {
             reliable 3PL so that they can get back the time to focus on
             efficiently running and expanding it. Also, since 3PL’s like
             StoreZippy have a strong network of their fulfillment centres, it
-            allows them to keep the inventory close to their end customers
+            allows them to keep the inventory close to their end customers -
             increasing efficiency and improving customer experience.
           </p>
         </div>
@@ -127,7 +127,7 @@ const CovidImplicationsOnFulfillment = () => {
           <h2 className="heading">5. No more long term contracts</h2>
           <p>
             Second wave of Covid-19 has hit the nation harder than the first and
-            one lesson we all learnt while being on the roller coaster ride set
+            one lesson we all have learnt while being on the roller coaster ride set
             by this pandemic is that the future is so uncertain and
             unpredictable. This is in turn making the companies hesitant to sign
             a long-term contract commitment. Same is the case with 3PL’s
@@ -163,7 +163,7 @@ const CovidImplicationsOnFulfillment = () => {
         <div className="point">
           <h2 className="heading">7. More investment in technology</h2>
           <p>
-            To have improved efficiency, better accuracy and a secure business’s
+            To have improved efficiency, better accuracy and a secure business’
             future success in these tough times, there is a need to be equipped
             with the latest technology which simply means more investment in a
             WMS to stay ahead.
