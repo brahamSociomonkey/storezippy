@@ -288,8 +288,8 @@ header {
 
   .dropdown-grid-container {
     margin: 2rem calc(min(5rem, 10%));
-    padding-left: 2rem;
-    padding-right: 2rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
     display: grid;
     align-items: center;
     grid-template: 1fr/ 1fr 1fr;
@@ -944,8 +944,8 @@ main {
   }
 
   .fulfillment-needs {
-    margin-left: 4rem;
-    margin-right: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 
     h1 {
       max-width: 25ch;
@@ -1026,8 +1026,8 @@ main {
       margin-right: auto;
 
       .dropdown-item {
-        margin-left: 2rem;
-        margin-right: 2rem;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
         color: #fff;
 
         details {
@@ -1070,9 +1070,10 @@ main {
           }
 
           &[open] {
+
             summary {
-              border-bottom: 2px solid;
-              padding-bottom: 0.5rem;
+              border-bottom: 2px solid ;
+              padding-bottom: .5rem;
               margin-bottom: 1rem;
 
               .arrow {
@@ -1082,21 +1083,25 @@ main {
           }
         }
 
+        
         // mobile rules
-        @media (max-width: $mob-nav-breakpoint) {
-          margin-left: 1rem;
-          margin-right: 1rem;
+      @media (max-width: $mob-nav-breakpoint) {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
 
-          summary {
-            .icon {
-              margin-right: 1rem;
-            }
+        summary {
 
-            .arrow {
-              // right: 1rem;
-            }
+          .icon {
+            margin-right: 1rem;
+
+          }
+
+          .arrow {
+            // right: 1rem;
+
           }
         }
+      }
       }
     }
   }
@@ -1263,8 +1268,8 @@ main {
   }
 
   .point {
-    margin-left: 3rem;
-    margin-right: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
     overflow: hidden;
 
     &:first-of-type {
@@ -1289,8 +1294,8 @@ footer {
   font-family: "Montserrat";
 
   .links-container {
-    padding-left: clamp(1rem, 5vw, 2rem);
-    padding-right: clamp(1rem, 5vw, 2rem);
+    padding-top: clamp(1rem, 5vw, 2rem);
+    padding-bottom: clamp(1rem, 5vw, 2rem);
     grid-template: 1fr / repeat(auto-fit, minmax(15rem, 1fr));
     padding-left: 5%;
     padding-right: 5%;
@@ -1385,13 +1390,13 @@ footer {
   }
 
   & > div {
-    margin-left: clamp(3rem, 10vw, 5rem);
-    margin-right: clamp(3rem, 10vw, 5rem);
+    margin-top: clamp(3rem, 10vw, 5rem);
+    margin-bottom: clamp(3rem, 10vw, 5rem);
 
     &:first-of-type,
     &:last-of-type {
-      margin-left: revert;
-      margin-right: revert;
+      margin-top: revert;
+      margin-bottom: revert;
     }
 
     &:last-of-type {
