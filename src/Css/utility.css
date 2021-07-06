@@ -294,7 +294,7 @@ a:focus::after, a:hover::after, a:active::after,
 }
 
 .page-width {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 5%;
   padding-right: 5%;
@@ -670,6 +670,8 @@ a:focus::after, a:hover::after, a:active::after,
 }
 
 .heading-with-line-grid-container {
+  display: -ms-grid;
+  display: grid;
   -ms-grid-rows: auto;
   -ms-grid-columns: auto 1fr;
       grid-template: auto/ auto 1fr;

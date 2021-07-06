@@ -221,7 +221,7 @@ a,
 }
 
 .page-width {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding-left: 5%;
   padding-right: 5%;
@@ -558,6 +558,7 @@ a,
 }
 
 .heading-with-line-grid-container {
+  display: grid;
   grid-template: auto/ auto 1fr;
   gap: 1rem;
   // justify-content: center;
@@ -656,6 +657,7 @@ a,
 
   .heading-with-line-grid-container {
     margin-bottom: clamp(3rem, 10vw, 5rem);
+    // align-items: center;
   }
 
   .content-container {

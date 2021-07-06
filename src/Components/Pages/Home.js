@@ -30,7 +30,7 @@ const Home = () => {
             textData: {
               color: "#fff",
               heading:
-                "<span style='color: #2CDEF8; margin-right: 1rem' data-animname='fade-in-up'            data-onetime='true' data-delay='.1'>Reliable.</span><span style='color: #FFCA41; margin-right: 1rem' data-animname='fade-in-up'            data-onetime='true' data-delay='.2'>Flexible.</span><span style='color: #FF8F3F; margin-right: 1rem' data-animname='fade-in-up'            data-onetime='true' data-delay='.3'>Scalable.</span>",
+                "<span style='color: #2CDEF8; margin-right: 1rem' data-animname='fade-in-up'            data-onetime='true' data-delay='.1'>Reliable.</span><span style='color: #FFCA41; margin-right: 1rem' data-animname='fade-in-up' data-onetime='true' data-delay='.2'>Flexible.</span><span style='color: #FF8F3F; margin-right: 1rem' data-animname='fade-in-up' data-onetime='true' data-delay='.3'>Scalable.</span>",
               content: "India’s most cost-effective fulfillment solution",
               buttonText: "Get Quotes",
               buttonURL: "/quotes",

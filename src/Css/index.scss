@@ -483,6 +483,12 @@ main {
     }
   }
 
+  .dark {
+    .heading-with-line-grid-container {
+      align-items: center;
+    }
+  }
+
   .animated-logos-stripe {
     background-color: #fff;
     padding: 3rem 0;
@@ -1070,10 +1076,9 @@ main {
           }
 
           &[open] {
-
             summary {
-              border-bottom: 2px solid ;
-              padding-bottom: .5rem;
+              border-bottom: 2px solid;
+              padding-bottom: 0.5rem;
               margin-bottom: 1rem;
 
               .arrow {
@@ -1083,25 +1088,21 @@ main {
           }
         }
 
-        
         // mobile rules
-      @media (max-width: $mob-nav-breakpoint) {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
+        @media (max-width: $mob-nav-breakpoint) {
+          margin-top: 1rem;
+          margin-bottom: 1rem;
 
-        summary {
+          summary {
+            .icon {
+              margin-right: 1rem;
+            }
 
-          .icon {
-            margin-right: 1rem;
-
-          }
-
-          .arrow {
-            // right: 1rem;
-
+            .arrow {
+              // right: 1rem;
+            }
           }
         }
-      }
       }
     }
   }
@@ -1287,91 +1288,6 @@ main {
   }
 }
 
-footer {
-  background-color: $header-bg-color;
-  padding: 1rem 0;
-  color: #fff;
-  font-family: "Montserrat";
-
-  .links-container {
-    padding-top: clamp(1rem, 5vw, 2rem);
-    padding-bottom: clamp(1rem, 5vw, 2rem);
-    grid-template: 1fr / repeat(auto-fit, minmax(15rem, 1fr));
-    padding-left: 5%;
-    padding-right: 5%;
-    gap: 2rem;
-    max-width: 2000px;
-    margin: 0 auto;
-    text-align: left;
-
-    .address-area {
-      address {
-        max-width: 45ch;
-      }
-
-      .icon-link {
-        display: flex;
-        gap: 1rem;
-        justify-content: start;
-        align-items: center;
-        padding-bottom: 0.5rem;
-
-        .icon {
-          img {
-            width: 1.5rem;
-            height: 1.5rem;
-            object-fit: contain;
-          }
-        }
-
-        .link {
-          word-wrap: anywhere;
-        }
-      }
-    }
-  }
-
-  .mail-container {
-    padding: 0.5rem 0;
-  }
-
-  .gradient-line {
-    border-radius: 0;
-    height: 3px;
-  }
-
-  .footer-links-column {
-    ul {
-      padding: 0;
-
-      h3 {
-        padding-bottom: 2rem;
-        margin: 0;
-      }
-
-      li {
-        font-family: "Montserrat";
-        font-weight: lighter;
-        padding-bottom: 1rem;
-      }
-    }
-  }
-
-  .social-icons-container {
-    display: flex;
-    gap: 1rem;
-    justify-content: start;
-    align-items: center;
-
-    .social-link-item {
-      img {
-        height: 2.2rem;
-        width: 2.2rem;
-      }
-    }
-  }
-}
-
 #page-about-us {
   background-color: #001635;
   color: #fff;
@@ -1456,6 +1372,191 @@ footer {
         .person {
           max-width: 15rem;
         }
+      }
+    }
+  }
+}
+
+// page-integration
+#page-integration {
+  .hero {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template: 1fr/ 1fr 1fr;
+    gap: 2rem;
+    padding: 0 5%;
+    background-color: #002862;
+
+    .content {
+      color: #fff;
+      max-width: 60ch;
+    }
+
+    // mobile rules
+    @media (max-width: $mob-nav-breakpoint) {
+      grid-template: auto auto/ auto;
+    }
+  }
+
+  .icons-section {
+    margin-top: clamp(2rem, 10vw, 5rem);
+    margin-bottom: clamp(2rem, 10vw, 5rem);
+    padding: 0 5%;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
+
+    .icons-grid-container {
+      margin-top: clamp(3rem, 10vw, 5rem);
+      margin-bottom: clamp(3rem, 10vw, 5rem);
+      display: grid;
+      gap: clamp(3rem, 10vw, 4rem) clamp(2rem, 10vw, 3rem);
+      // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      grid-template: auto/ repeat(5, 1fr);
+      // grid-auto-rows: 150px;
+
+      .icon-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        justify-content: stretch;
+        align-items: center;
+        text-align: center;
+
+        img {
+          border-radius: 10px;
+          // height: 200px;
+          // width: 200px;
+          object-fit: contain;
+        }
+
+        strong {
+          p {
+            margin: 0;
+          }
+        }
+      }
+
+      // mobile rules
+      @media (max-width: 850px) {
+        grid-template: auto/ repeat(4, 1fr);
+      }
+
+      @media (max-width: 550px) {
+        grid-template: auto/ repeat(3, 1fr);
+
+        .icon-item {
+          img {
+            // height: 150px;
+            // width: 150px;
+            object-fit: contain;
+          }
+        }
+      }
+
+      @media (max-width: 450px) {
+        grid-template: auto/ repeat(2, 1fr);
+      }
+    }
+  }
+
+  .quotes {
+    padding-top: clamp(2rem, 10vw, 5rem);
+    padding-bottom: clamp(2rem, 10vw, 5rem);
+  }
+
+  .heading-with-line-grid-container {
+    margin: 0;
+
+    .gradient-line {
+      height: 0.5rem;
+      align-self: center;
+    }
+  }
+}
+
+// footer ------------------------
+footer {
+  background-color: $header-bg-color;
+  padding: 1rem 0;
+  color: #fff;
+  font-family: "Montserrat";
+
+  .links-container {
+    padding-top: clamp(1rem, 5vw, 2rem);
+    padding-bottom: clamp(1rem, 5vw, 2rem);
+    grid-template: 1fr / repeat(auto-fit, minmax(15rem, 1fr));
+    padding-left: 5%;
+    padding-right: 5%;
+    gap: 2rem;
+    max-width: 2000px;
+    margin: 0 auto;
+    text-align: left;
+
+    .address-area {
+      address {
+        max-width: 45ch;
+      }
+
+      .icon-link {
+        display: flex;
+        gap: 1rem;
+        justify-content: start;
+        align-items: center;
+        padding-bottom: 0.5rem;
+
+        .icon {
+          img {
+            width: 1.5rem;
+            height: 1.5rem;
+            object-fit: contain;
+          }
+        }
+
+        .link {
+          word-wrap: anywhere;
+        }
+      }
+    }
+  }
+
+  .mail-container {
+    padding: 0.5rem 0;
+  }
+
+  .gradient-line {
+    border-radius: 0;
+    height: 3px;
+  }
+
+  .footer-links-column {
+    ul {
+      padding: 0;
+
+      h3 {
+        padding-bottom: 2rem;
+        margin: 0;
+      }
+
+      li {
+        font-family: "Montserrat";
+        font-weight: lighter;
+        padding-bottom: 1rem;
+      }
+    }
+  }
+
+  .social-icons-container {
+    display: flex;
+    gap: 1rem;
+    justify-content: start;
+    align-items: center;
+
+    .social-link-item {
+      img {
+        height: 2.2rem;
+        width: 2.2rem;
       }
     }
   }

@@ -13,6 +13,7 @@ import HowToStartSellingOnline from "./Pages/blogs/HowToStartSellingOnline";
 import About from "./Pages/About";
 import WhyUs from "./Pages/WhyUs";
 import CovidImplicationsOnFulfillment from "./Pages/blogs/CovidImplicationsOnFulfillment";
+import Integration from "./Pages/Integration";
 
 const Main = () => {
   return (
@@ -32,6 +33,7 @@ const Main = () => {
           path="/blogs/covid-implications-on-fulfillment"
           component={CovidImplicationsOnFulfillment}
         />
+        <Route exact path="/integration" component={Integration} />
         <Route exact path="/guide" component={Guide} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/product" component={Product} />
