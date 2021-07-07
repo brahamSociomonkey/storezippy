@@ -1476,6 +1476,7 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  justify-items: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1483,13 +1484,28 @@ main {
   -ms-grid-columns: 1fr 1fr;
       grid-template: 1fr/ 1fr 1fr;
   gap: 2rem;
-  padding: 0 5%;
+  padding: clamp(2rem, 10vh, 5rem) 5%;
   background-color: #002862;
 }
 
 #page-integration .hero .content {
   color: #fff;
   max-width: 60ch;
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+#page-integration .hero .content h1 {
+  font-size: clamp(55px, 10vw, 65px);
+}
+
+#page-integration .hero .content p {
+  font-size: clamp(1rem, 10vw, 18px);
+  max-width: 43ch;
+}
+
+#page-integration .hero .img-container {
+  max-width: 500px;
 }
 
 @media (max-width: 900px) {
@@ -1509,11 +1525,19 @@ main {
   margin-right: auto;
 }
 
+#page-integration .icons-section .tertiary-font {
+  font-weight: normal;
+}
+
 #page-integration .icons-section .icons-grid-container {
   margin-top: clamp(3rem, 10vw, 5rem);
   margin-bottom: clamp(3rem, 10vw, 5rem);
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
   gap: clamp(3rem, 10vw, 4rem) clamp(2rem, 10vw, 3rem);
   -ms-grid-rows: auto;
   -ms-grid-columns: (1fr)[5];
@@ -1536,6 +1560,7 @@ main {
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
+  max-width: 134px;
 }
 
 #page-integration .icons-section .icons-grid-container .icon-item img {
@@ -1550,6 +1575,9 @@ main {
 
 @media (max-width: 850px) {
   #page-integration .icons-section .icons-grid-container {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
     -ms-grid-rows: auto;
     -ms-grid-columns: (1fr)[4];
         grid-template: auto/repeat(4, 1fr);
@@ -1579,6 +1607,17 @@ main {
 #page-integration .quotes {
   padding-top: clamp(2rem, 10vw, 5rem);
   padding-bottom: clamp(2rem, 10vw, 5rem);
+}
+
+#page-integration .quotes .basic-grid-container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0;
+}
+
+#page-integration .quotes .heading {
+  font-size: clamp(40px, 10vw, 65px);
 }
 
 #page-integration .heading-with-line-grid-container {

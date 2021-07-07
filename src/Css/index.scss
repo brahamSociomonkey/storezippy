@@ -1382,15 +1382,30 @@ main {
   .hero {
     display: grid;
     justify-content: center;
+    justify-items: center;
     align-items: center;
     grid-template: 1fr/ 1fr 1fr;
     gap: 2rem;
-    padding: 0 5%;
+    padding: clamp(2rem, 10vh, 5rem) 5%;
     background-color: #002862;
 
     .content {
       color: #fff;
       max-width: 60ch;
+      justify-self: start;
+
+      h1 {
+        font-size: clamp(55px, 10vw, 65px);
+      }
+
+      p {
+        font-size: clamp(1rem, 10vw, 18px);
+        max-width: 43ch;
+      }
+    }
+
+    .img-container {
+      max-width: 500px;
     }
 
     // mobile rules
@@ -1407,14 +1422,18 @@ main {
     margin-left: auto;
     margin-right: auto;
 
+    .tertiary-font {
+      font-weight: normal;
+    }
+
     .icons-grid-container {
       margin-top: clamp(3rem, 10vw, 5rem);
       margin-bottom: clamp(3rem, 10vw, 5rem);
       display: grid;
+      justify-content: space-between;
+      justify-items: center;
       gap: clamp(3rem, 10vw, 4rem) clamp(2rem, 10vw, 3rem);
-      // grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       grid-template: auto/ repeat(5, 1fr);
-      // grid-auto-rows: 150px;
 
       .icon-item {
         display: flex;
@@ -1423,6 +1442,7 @@ main {
         justify-content: stretch;
         align-items: center;
         text-align: center;
+        max-width: 134px;
 
         img {
           border-radius: 10px;
@@ -1440,6 +1460,7 @@ main {
 
       // mobile rules
       @media (max-width: 850px) {
+        justify-content: stretch;
         grid-template: auto/ repeat(4, 1fr);
       }
 
@@ -1464,6 +1485,15 @@ main {
   .quotes {
     padding-top: clamp(2rem, 10vw, 5rem);
     padding-bottom: clamp(2rem, 10vw, 5rem);
+
+    .basic-grid-container {
+      justify-content: space-between;
+      padding: 0;
+    }
+
+    .heading {
+      font-size: clamp(40px, 10vw, 65px);
+    }
   }
 
   .heading-with-line-grid-container {

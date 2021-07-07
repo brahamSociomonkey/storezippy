@@ -96,7 +96,7 @@ const Integration = () => {
           <p>
             We support a diversity of popular integration platforms and prime
             technology solutions to accelerate your online growth and give you
-            that extra competitive edge
+            that extra competitive edge.
           </p>
         </div>
 
@@ -106,13 +106,13 @@ const Integration = () => {
       {/* marketplace */}
       <div className="marketplace icons-section">
         <div className="heading-with-line-grid-container">
-          <div className="heading secondary-font">Marketplace</div>
+          <div className="heading primary-font">Marketplace</div>
 
           <div className="gradient-line"></div>
         </div>
 
         <br />
-        <p>
+        <p className="tertiary-font">
           At StoreZippy we expand your digital footprint by providing seamless
           integrations with the most popular and useful eCommerce marketplaces.
         </p>
@@ -123,13 +123,13 @@ const Integration = () => {
       {/* logistics-partners */}
       <div className="logistics-partners icons-section">
         <div className="heading-with-line-grid-container">
-          <div className="heading secondary-font">Logistics Partners</div>
+          <div className="heading primary-font">Logistics Partners</div>
 
           <div className="gradient-line"></div>
         </div>
 
         <br />
-        <p>
+        <p className="tertiary-font">
           Our vision is to provide a last mile fulfillment network by partnering
           with all top-notch shipping platforms.
         </p>
@@ -140,19 +140,28 @@ const Integration = () => {
       {/* ecom-web-stores */}
       <div className="ecom-web-stores icons-section">
         <div className="heading-with-line-grid-container">
-          <div className="heading secondary-font">ECommerce Web Stores</div>
+          <div className="heading primary-font">ECommerce Web Stores</div>
 
           <div className="gradient-line"></div>
         </div>
 
         <br />
-        <p>
+        <p className="tertiary-font">
           Essential webstore integrations to keep your eCommerce business up and
           running and help you scale up with ease.
         </p>
 
         <IconsGridContainer data={dataForEComWebStores} />
       </div>
+
+      <br />
+      <br />
+      <div className="page-width">
+        <div style={{ height: "12px" }} className="gradient-line"></div>
+      </div>
+
+      <br />
+      <br />
 
       {/* get quote  */}
       <GetQuotesSection
