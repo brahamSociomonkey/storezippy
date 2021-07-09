@@ -1168,16 +1168,21 @@ main {
   padding: 3rem 0;
 
   .blogs-container {
+    display: grid;
+    grid-template: auto/repeat(auto-fill, minmax(400px, 1fr));
+    gap: 3rem 2rem;
+
     .blog-item {
-      display: grid;
-      padding-left: 5%;
-      padding-right: 5%;
-      margin-bottom: clamp(4rem, 10vw, 6rem);
-      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-      grid-auto-rows: auto;
-      gap: 2rem;
-      justify-content: center;
-      align-items: stretch;
+      &:first-of-type {
+        grid-column: 1/-1;
+        grid-row: 1/2;
+        display: grid;
+        gap: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        grid-auto-rows: auto;
+        justify-content: center;
+        align-items: stretch;
+      }
 
       .featured-image,
       .content {
@@ -1234,12 +1239,11 @@ main {
 
 // blog-page
 .blog-page {
-
-  .primary-font{
+  .primary-font {
     font-size: clamp(1.8rem, 5vw, 72px);
   }
 
-  .primary-color{
+  .primary-color {
     color: #002862;
   }
 

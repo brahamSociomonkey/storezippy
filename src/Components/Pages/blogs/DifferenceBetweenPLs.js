@@ -23,7 +23,8 @@ const DifferenceBetweenPLs = () => {
           Difference between 1PL, 2PL, 3PL and 4PL
         </h1>
         <p>
-          Written by <span className="author">Garima Mehta</span> | 2 mins 17 sec Read
+          Written by <span className="author">Garima Mehta</span> | 2 mins 17
+          sec Read
         </p>
         <div className="custom-hr"></div>
         <br />
@@ -145,8 +146,8 @@ const DifferenceBetweenPLs = () => {
 
         <div className="">
           <h1
-            className="primary-font heading primary-color"
-            style={{ color: "#002862" }}
+            className="heading primary-color"
+            style={{ color: "#002862", fontSize: "clamp(55px, 10vw, 60px)" }}
           >
             Which one should I choose?
           </h1>
