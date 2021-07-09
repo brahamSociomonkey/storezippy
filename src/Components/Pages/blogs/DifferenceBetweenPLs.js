@@ -151,7 +151,6 @@ const DifferenceBetweenPLs = () => {
           >
             Which one should I choose?
           </h1>
-          <br />
           <p>
             I wish I could tell you that a particular logistics service provider
             is the best one for you but trust me it all depends on what segment
@@ -165,9 +164,11 @@ const DifferenceBetweenPLs = () => {
             <br /> <br />
             If you are looking for a reliable and scalable 3PL, get in touch
             with us and let us know how we can help you grow your business. Hop
-            onto our website https://storezippy.com/#/ to know more about us and
-            the services we offer.
+            onto our website{" "}
+            <a href="https://storezippy.com/" target="_blank" style={{color: "currentcolor", border: "none"}}>https://storezippy.com/</a> to know more
+            about us and the services we offer.
           </p>
+          <br />
         </div>
       </article>
     </div>
