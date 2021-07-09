@@ -14,6 +14,7 @@ import About from "./Pages/About";
 import WhyUs from "./Pages/WhyUs";
 import CovidImplicationsOnFulfillment from "./Pages/blogs/CovidImplicationsOnFulfillment";
 import Integration from "./Pages/Integration";
+import DifferenceBetweenPLs from "./Pages/blogs/DifferenceBetweenPLs";
 
 const Main = () => {
   return (
@@ -23,6 +24,11 @@ const Main = () => {
       <Switch>
         <Route exact path="/polices/privacy" component={PrivacyPolicy} />
         <Route exact path="/blogs" component={Blogs} />
+        <Route
+          exact
+          path="/blogs/difference-between-1PL-2PL-3PL-4PL"
+          component={DifferenceBetweenPLs}
+        />
         <Route
           exact
           path="/blogs/how-to-start-selling-online"

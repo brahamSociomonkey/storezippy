@@ -1234,6 +1234,15 @@ main {
 
 // blog-page
 .blog-page {
+
+  .primary-font{
+    font-size: clamp(1.8rem, 5vw, 72px);
+  }
+
+  .primary-color{
+    color: #002862;
+  }
+
   .title.heading.primary-font {
     color: #002862;
     font-family: "Helvetica Rounded";

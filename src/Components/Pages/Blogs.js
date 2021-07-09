@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const dataForBlogs = [
     {
+      img: "/assets/pages/blogs/difference-between-1PL-2PL-3PL-4PL/featured.png",
+      date: "9th July 2021",
+      title: "Difference between 1PL, 2PL, 3PL and 4PL",
+      des: "Learn about the specifics of different types of logistics providers before choosing the right one for your needs in our latest blogpost.",
+      author: "Garima Mehta",
+      url: "/blogs/difference-between-1PL-2PL-3PL-4PL",
+    },
+    {
       img: "/assets/pages/blogs/covid-implications-on-fulfillment/featured-image.png",
       date: "2nd July 2021",
       title: "Covid-19 implications on fulfillment operations",
