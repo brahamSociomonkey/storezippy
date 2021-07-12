@@ -1317,7 +1317,7 @@ main {
         .buttons-container {
           button {
             justify-self: center;
-            padding: 1em 3em;
+            padding: 1em clamp(2em, 5vw, 3em);
             width: max-content;
 
             img {
@@ -1353,13 +1353,15 @@ main {
           transition: 0.2s ease;
 
           a {
-            font: inherit;
+            font-size: clamp(22px, 7vw, 36px);
             border: none;
             outline: none;
             cursor: pointer;
             padding: 0.5em 3em;
             width: 100%;
-            display: inline-block;
+            display: block;
+          border-radius: 10px;
+          overflow: hidden;
 
             &::after {
               display: none;
@@ -1369,6 +1371,11 @@ main {
             &:focus {
               background-color: #fff;
               color: #ff8f3f;
+            }
+
+            // mobile rules
+            @media (max-width: $mob-nav-breakpoint) {
+              padding: 0.5em;
             }
           }
 
