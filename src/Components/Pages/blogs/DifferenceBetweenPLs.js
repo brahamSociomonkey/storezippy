@@ -75,7 +75,7 @@ const DifferenceBetweenPLs = () => {
           <br />
 
           <p>
-            2PL’s involve a second party for the transportation of goods from
+            2PLs involve a second party for the transportation of goods from
             point A to point B via road, rail, sea or air. They own or lease
             specialized means of transportation to cater to their business
             needs. A courier company offering services to transfer
@@ -98,9 +98,9 @@ const DifferenceBetweenPLs = () => {
           <br />
 
           <p>
-            3PL’s gained popularity in the 1990’s. Back then, their main
+            3PLs gained popularity in the 1990’s. Back then, their main
             functions were restricted to warehousing and transportation. But by
-            the late 2000’s 3PL’s started to dominate most people’s preferences
+            the late 2000’s 3PLs started to dominate most people’s preferences
             as they expanded their services by including order fulfillment,
             labelling, packaging, assembly, kitting, returns management etc. to
             their operations. They provide end to end comprehensive fulfillment
@@ -137,7 +137,7 @@ const DifferenceBetweenPLs = () => {
           <p>
             Fourth party logistics is a model in which the complete supply chain
             management and logistics are outsourced to one service provider.
-            4PL’s often engage with a 3PL to manage the logistics part..
+            4PLs often engage with a 3PL to manage the logistics part..
             Although their services are best tailored to match your business
             needs, yet outsourcing to a 4PL means giving up almost the entire
             control of your supply chain.
@@ -157,7 +157,7 @@ const DifferenceBetweenPLs = () => {
             of your supply chain you want to outsource and what your specific
             business needs are. However, there is no denial about the fact that
             3PL is the most preferred and the most popular amongst all and that
-            too for all the good reasons. 3PL’s help you save a lot of your
+            too for all the good reasons. 3PLs help you save a lot of your
             valuable time which you can use to focus on expanding your core
             business. They can be your one stop solution for warehousing,
             packaging, transportation and order fulfillment needs.

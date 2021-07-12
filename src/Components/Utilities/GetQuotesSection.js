@@ -7,8 +7,8 @@ const GetQuotesSection = ({ data }) => {
   const { heading, img } = data;
 
   return (
-    <section className="quotes page-width">
-      <div className="basic-grid-container page-width">
+    <section className="quotes">
+      <div className="basic-grid-container">
         <div
           data-animname="fade-in-up"
           data-onetime="true"

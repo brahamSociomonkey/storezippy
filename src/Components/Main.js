@@ -15,6 +15,7 @@ import WhyUs from "./Pages/WhyUs";
 import CovidImplicationsOnFulfillment from "./Pages/blogs/CovidImplicationsOnFulfillment";
 import Integration from "./Pages/Integration";
 import DifferenceBetweenPLs from "./Pages/blogs/DifferenceBetweenPLs";
+import Pricing from "./Pages/Pricing";
 
 const Main = () => {
   return (
@@ -41,6 +42,7 @@ const Main = () => {
         />
         <Route exact path="/integration" component={Integration} />
         <Route exact path="/guide" component={Guide} />
+        <Route exact path="/pricing" component={Pricing} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/product" component={Product} />
         <Route exact path="/quotes" component={Quotes} />
