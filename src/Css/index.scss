@@ -850,6 +850,19 @@ main {
     //   top: 99%;
     // }
   }
+
+  .inventory,
+  .inventory-dashboard,
+  .dispatch,
+  .returns,
+  .warehouse {
+    padding-top: clamp(2rem, 10vw, 4rem);
+    padding-bottom: clamp(2rem, 10vw, 4rem);
+  }
+
+  .warehouse {
+    padding-bottom: clamp(3rem, 10vw, 5rem);
+  }
 }
 
 // guide page
@@ -1360,8 +1373,8 @@ main {
             padding: 0.5em 3em;
             width: 100%;
             display: block;
-          border-radius: 10px;
-          overflow: hidden;
+            border-radius: 10px;
+            overflow: hidden;
 
             &::after {
               display: none;

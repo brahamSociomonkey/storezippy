@@ -959,6 +959,19 @@ main {
   max-height: 30rem;
 }
 
+#product .inventory,
+#product .inventory-dashboard,
+#product .dispatch,
+#product .returns,
+#product .warehouse {
+  padding-top: clamp(2rem, 10vw, 4rem);
+  padding-bottom: clamp(2rem, 10vw, 4rem);
+}
+
+#product .warehouse {
+  padding-bottom: clamp(3rem, 10vw, 5rem);
+}
+
 #guide .hero .basic-grid-container {
   gap: 5rem;
 }
