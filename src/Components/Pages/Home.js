@@ -130,6 +130,9 @@ const Home = () => {
         </div>
       </section>
 
+      <br />
+      <br />
+      <br />
       {/* procedure */}
       <section className="procedure page-width">
         <HeadingWithLine
@@ -143,6 +146,10 @@ const Home = () => {
           }}
         />
       </section>
+
+      <br />
+      <br />
+      <br />
 
       {/* dark  */}
       <DarkSection
