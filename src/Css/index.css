@@ -962,6 +962,7 @@ main {
 #product .inventory,
 #product .inventory-dashboard,
 #product .dispatch,
+#product .report,
 #product .returns,
 #product .warehouse {
   padding-top: clamp(2rem, 10vw, 4rem);
