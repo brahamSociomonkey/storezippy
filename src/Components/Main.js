@@ -16,6 +16,8 @@ import CovidImplicationsOnFulfillment from "./Pages/blogs/CovidImplicationsOnFul
 import Integration from "./Pages/Integration";
 import DifferenceBetweenPLs from "./Pages/blogs/DifferenceBetweenPLs";
 import Pricing from "./Pages/Pricing";
+import Guides from "./Pages/Guides";
+import Guide2 from "./Pages/Guide2";
 
 const Main = () => {
   return (
@@ -41,7 +43,9 @@ const Main = () => {
           component={CovidImplicationsOnFulfillment}
         />
         <Route exact path="/integration" component={Integration} />
-        <Route exact path="/guide" component={Guide} />
+        <Route exact path="/guides/guide-2" component={Guide2} />
+        <Route exact path="/guides/guide-1" component={Guide} />
+        <Route exact path="/guides" component={Guides} />
         <Route exact path="/pricing" component={Pricing} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/product" component={Product} />

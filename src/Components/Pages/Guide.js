@@ -110,14 +110,14 @@ const Guide = () => {
   }, []);
 
   return (
-    <div id="guide">
+    <div id="guide-1">
       <SectionImgContentGrid
         data={{
           sectionClassName: "hero page-width",
           heading: "The Ultimate Guide to Order Fulfillment 2021",
           text: "Determining the right fulfillment strategy for your business can be nerve wracking. That’s why we have created a free all-in-one guide on <strong>“Order Fulfillment”</strong> to help you with a seamless fulfillment process.<br /><ul>This Order Fulfillment guide will help you learn:<br /><li>What is order fulfillment and the steps involved.</li> <li>Different order fulfillment options.</li> <li>Why outsource?</li><li>Important factors while choosing the right 3PL.</li></ul>",
-          img: "/assets/pages/guide/hero.png",
-          mobImg: "/assets/pages/guide/hero-mob.png",
+          img: "/assets/pages/guides/guide-1/hero.png",
+          mobImg: "/assets/pages/guides/guide-1/hero-mob.png",
         }}
       />
 
@@ -154,7 +154,7 @@ const Guide = () => {
           <div className="images-area">
             <ResponsiveDisplayImg
               data={{
-                img: "/assets/pages/guide/dude.png",
+                img: "/assets/pages/guides/guide-1/dude.png",
               }}
             />
           </div>

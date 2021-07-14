@@ -393,8 +393,8 @@ header.hide {
 .dropdown-nav .dropdown-grid-container .links-container {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(15rem, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
   grid-auto-rows: auto;
   gap: 2rem;
 }
@@ -973,24 +973,29 @@ main {
   padding-bottom: clamp(3rem, 10vw, 5rem);
 }
 
-#guide .hero .basic-grid-container {
+#guide-1 .hero {
+  padding-top: clamp(3rem, 10vw, 5rem);
+  padding-bottom: clamp(3rem, 10vw, 5rem);
+}
+
+#guide-1 .hero .basic-grid-container {
   gap: 5rem;
 }
 
-#guide .hero .rte ul {
+#guide-1 .hero .rte ul {
   font-weight: bold;
   padding: 0;
   padding-top: 2rem;
 }
 
-#guide .hero .rte ul li {
+#guide-1 .hero .rte ul li {
   margin-left: 1rem;
   list-style: revert;
   font-weight: normal;
   padding-top: 0.5rem;
 }
 
-#guide .guide-grid-container {
+#guide-1 .guide-grid-container {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
@@ -999,32 +1004,32 @@ main {
       grid-template: 1fr / auto auto;
 }
 
-#guide .guide-grid-container .heading-with-line-grid-container .heading-container .heading {
+#guide-1 .guide-grid-container .heading-with-line-grid-container .heading-container .heading {
   font-size: clamp(1.4rem, 5vw, 1.4rem);
   max-width: 100%;
 }
 
-#guide .guide-grid-container .heading-with-line-grid-container .line-container {
+#guide-1 .guide-grid-container .heading-with-line-grid-container .line-container {
   max-width: 10rem;
 }
 
-#guide .guide-grid-container .form-container form .form-item [data-required="true"] > span {
+#guide-1 .guide-grid-container .form-container form .form-item [data-required="true"] > span {
   display: inline-block;
 }
 
-#guide .guide-grid-container .form-container form .form-item [data-required="true"] > span::after {
+#guide-1 .guide-grid-container .form-container form .form-item [data-required="true"] > span::after {
   content: "*";
   color: red;
   padding-left: 0.1rem;
 }
 
-#guide .guide-grid-container .form-container form .form-item input,
-#guide .guide-grid-container .form-container form .form-item textarea,
-#guide .guide-grid-container .form-container form .form-item select {
+#guide-1 .guide-grid-container .form-container form .form-item input,
+#guide-1 .guide-grid-container .form-container form .form-item textarea,
+#guide-1 .guide-grid-container .form-container form .form-item select {
   margin-top: 0.5rem;
 }
 
-#guide .guide-grid-container .form-container form .split-half {
+#guide-1 .guide-grid-container .form-container form .split-half {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1037,26 +1042,68 @@ main {
           justify-content: space-between;
 }
 
-#guide .guide-grid-container .images-area {
+#guide-1 .guide-grid-container .images-area {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
 }
 
-#guide .guide-grid-container .images-area .display-img {
+#guide-1 .guide-grid-container .images-area .display-img {
   border-radius: 10px;
   overflow: hidden;
 }
 
-#guide .guide-grid-container .images-area .display-img .img-container {
+#guide-1 .guide-grid-container .images-area .display-img .img-container {
   height: 100%;
 }
 
 @media (max-width: 750px) {
-  #guide .guide-grid-container {
+  #guide-1 .guide-grid-container {
     -ms-grid-rows: auto auto;
     -ms-grid-columns: 1fr;
         grid-template: auto auto / 1fr;
+  }
+}
+
+#guide-2 {
+  line-height: 1.3;
+}
+
+#guide-2 .hero {
+  padding: clamp(3em, 10vw, 5em) 10%;
+  max-width: revert;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 2rem;
+}
+
+#guide-2 .hero .content h2 {
+  font-weight: 500;
+}
+
+#guide-2 .hero .content li {
+  list-style: disc;
+  font-size: 1.125rem;
+  margin-bottom: 0.5em;
+}
+
+#guide-2 .hero .content .btn {
+  padding: 0.5em 3.5em;
+}
+
+@media (max-width: 900px) {
+  #guide-2 .hero {
+    -ms-grid-rows: auto 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: auto 1fr/ 1fr;
+  }
+  #guide-2 .hero .content {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
   }
 }
 
@@ -1629,11 +1676,15 @@ main {
   list-style: disc;
 }
 
-#blogs-page {
+#blogs-page,
+#page-guides {
   padding: 3rem 0;
 }
 
-#blogs-page .blogs-container {
+#blogs-page .blogs-container,
+#blogs-page .guides-container,
+#page-guides .blogs-container,
+#page-guides .guides-container {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
@@ -1642,7 +1693,14 @@ main {
   gap: 3rem 2rem;
 }
 
-#blogs-page .blogs-container .blog-item:first-of-type {
+#blogs-page .blogs-container .blog-item:first-of-type,
+#blogs-page .blogs-container .guide-item:first-of-type,
+#blogs-page .guides-container .blog-item:first-of-type,
+#blogs-page .guides-container .guide-item:first-of-type,
+#page-guides .blogs-container .blog-item:first-of-type,
+#page-guides .blogs-container .guide-item:first-of-type,
+#page-guides .guides-container .blog-item:first-of-type,
+#page-guides .guides-container .guide-item:first-of-type {
   grid-column: 1/-1;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
@@ -1662,37 +1720,100 @@ main {
 }
 
 #blogs-page .blogs-container .blog-item .featured-image a::after,
-#blogs-page .blogs-container .blog-item .content a::after {
+#blogs-page .blogs-container .blog-item .content a::after,
+#blogs-page .blogs-container .guide-item .featured-image a::after,
+#blogs-page .blogs-container .guide-item .content a::after,
+#blogs-page .guides-container .blog-item .featured-image a::after,
+#blogs-page .guides-container .blog-item .content a::after,
+#blogs-page .guides-container .guide-item .featured-image a::after,
+#blogs-page .guides-container .guide-item .content a::after,
+#page-guides .blogs-container .blog-item .featured-image a::after,
+#page-guides .blogs-container .blog-item .content a::after,
+#page-guides .blogs-container .guide-item .featured-image a::after,
+#page-guides .blogs-container .guide-item .content a::after,
+#page-guides .guides-container .blog-item .featured-image a::after,
+#page-guides .guides-container .blog-item .content a::after,
+#page-guides .guides-container .guide-item .featured-image a::after,
+#page-guides .guides-container .guide-item .content a::after {
   display: none;
 }
 
-#blogs-page .blogs-container .blog-item .content {
+#blogs-page .blogs-container .blog-item .content,
+#blogs-page .blogs-container .guide-item .content,
+#blogs-page .guides-container .blog-item .content,
+#blogs-page .guides-container .guide-item .content,
+#page-guides .blogs-container .blog-item .content,
+#page-guides .blogs-container .guide-item .content,
+#page-guides .guides-container .blog-item .content,
+#page-guides .guides-container .guide-item .content {
   font-weight: normal;
 }
 
-#blogs-page .blogs-container .blog-item .content p {
+#blogs-page .blogs-container .blog-item .content p,
+#blogs-page .blogs-container .guide-item .content p,
+#blogs-page .guides-container .blog-item .content p,
+#blogs-page .guides-container .guide-item .content p,
+#page-guides .blogs-container .blog-item .content p,
+#page-guides .blogs-container .guide-item .content p,
+#page-guides .guides-container .blog-item .content p,
+#page-guides .guides-container .guide-item .content p {
   margin-top: 0.5rem;
   margin-bottom: 1rem;
 }
 
-#blogs-page .blogs-container .blog-item .content .title {
+#blogs-page .blogs-container .blog-item .content .title,
+#blogs-page .blogs-container .guide-item .content .title,
+#blogs-page .guides-container .blog-item .content .title,
+#blogs-page .guides-container .guide-item .content .title,
+#page-guides .blogs-container .blog-item .content .title,
+#page-guides .blogs-container .guide-item .content .title,
+#page-guides .guides-container .blog-item .content .title,
+#page-guides .guides-container .guide-item .content .title {
   font-family: "Helvetica Rounded";
   color: #002862;
 }
 
-#blogs-page .blogs-container .blog-item .content .author span {
+#blogs-page .blogs-container .blog-item .content .author span,
+#blogs-page .blogs-container .guide-item .content .author span,
+#blogs-page .guides-container .blog-item .content .author span,
+#blogs-page .guides-container .guide-item .content .author span,
+#page-guides .blogs-container .blog-item .content .author span,
+#page-guides .blogs-container .guide-item .content .author span,
+#page-guides .guides-container .blog-item .content .author span,
+#page-guides .guides-container .guide-item .content .author span {
   font-weight: 600;
 }
 
-#blogs-page .blogs-container .blog-item:last-of-type {
+#blogs-page .blogs-container .blog-item:last-of-type,
+#blogs-page .blogs-container .guide-item:last-of-type,
+#blogs-page .guides-container .blog-item:last-of-type,
+#blogs-page .guides-container .guide-item:last-of-type,
+#page-guides .blogs-container .blog-item:last-of-type,
+#page-guides .blogs-container .guide-item:last-of-type,
+#page-guides .guides-container .blog-item:last-of-type,
+#page-guides .guides-container .guide-item:last-of-type {
   margin-bottom: 0;
 }
 
 @media (max-width: 900px) {
-  #blogs-page .blogs-container .blog-item {
+  #blogs-page .blogs-container .blog-item,
+  #blogs-page .blogs-container .guide-item,
+  #blogs-page .guides-container .blog-item,
+  #blogs-page .guides-container .guide-item,
+  #page-guides .blogs-container .blog-item,
+  #page-guides .blogs-container .guide-item,
+  #page-guides .guides-container .blog-item,
+  #page-guides .guides-container .guide-item {
     gap: 0rem;
   }
-  #blogs-page .blogs-container .blog-item .content {
+  #blogs-page .blogs-container .blog-item .content,
+  #blogs-page .blogs-container .guide-item .content,
+  #blogs-page .guides-container .blog-item .content,
+  #blogs-page .guides-container .guide-item .content,
+  #page-guides .blogs-container .blog-item .content,
+  #page-guides .blogs-container .guide-item .content,
+  #page-guides .guides-container .blog-item .content,
+  #page-guides .guides-container .guide-item .content {
     padding-left: 5%;
     padding-right: 5%;
   }

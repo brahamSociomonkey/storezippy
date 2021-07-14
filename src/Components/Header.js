@@ -17,7 +17,7 @@ const Header = () => {
         {
           icon: "/assets/icon-guide.png",
           text: "Guides",
-          url: "/guide",
+          url: "/guides",
         },
         {
           icon: "/assets/icon-blogging.png",
