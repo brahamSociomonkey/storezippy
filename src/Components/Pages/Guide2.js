@@ -19,6 +19,7 @@ const Guide2 = () => {
             Choosing the right product for online selling is an exhilarating yet
             challenging task. That's why we have created a free, downloadable
             guidebook on “Top 10 in-demand trending products” to help new
+            <br />
             aspiring eCommerce sellers launch their online store.
           </p>
 
@@ -33,6 +34,9 @@ const Guide2 = () => {
             <li>Different order fulfillment options.</li>
             <li>Why outsource?</li>
             <li>Important factors while choosing the right 3PL.</li>
+            <li>Trending products for online selling</li>
+            <li>Characteristics of best selling products</li>
+            <li>The three step niche success validation process</li>
           </ul>
 
           <br />
