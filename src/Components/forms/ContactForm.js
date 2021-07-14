@@ -252,10 +252,10 @@ function QotesForm() {
               checked={contactFormData["warehousingCount"]["value"] === "1"}
               required={contactFormData["warehousingCount"]["required"]}
               value="1"
-              id="1"
+              id="warehousingCount-1"
             />
 
-            <label htmlFor="1">1</label>
+            <label htmlFor="warehousingCount-1">1</label>
           </div>
 
           <div className="label-radio">
@@ -266,10 +266,10 @@ function QotesForm() {
               checked={contactFormData["warehousingCount"]["value"] === "2"}
               required={contactFormData["warehousingCount"]["required"]}
               value="2"
-              id="2"
+              id="warehousingCount-2"
             />
 
-            <label htmlFor="2">2</label>
+            <label htmlFor="warehousingCount-2">2</label>
           </div>
 
           <div className="label-radio">
@@ -280,10 +280,10 @@ function QotesForm() {
               checked={contactFormData["warehousingCount"]["value"] === "3"}
               required={contactFormData["warehousingCount"]["required"]}
               value="3"
-              id="3"
+              id="warehousingCount-3"
             />
 
-            <label htmlFor="3">3</label>
+            <label htmlFor="warehousingCount-3">3</label>
           </div>
 
           <div className="label-radio">
@@ -294,10 +294,10 @@ function QotesForm() {
               checked={contactFormData["warehousingCount"]["value"] === "4"}
               required={contactFormData["warehousingCount"]["required"]}
               value="4"
-              id="4"
+              id="warehousingCount-4"
             />
 
-            <label htmlFor="4">4</label>
+            <label htmlFor="warehousingCount-4">4</label>
           </div>
 
           <div className="label-radio">
