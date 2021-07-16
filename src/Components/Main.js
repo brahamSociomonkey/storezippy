@@ -18,6 +18,7 @@ import DifferenceBetweenPLs from "./Pages/blogs/DifferenceBetweenPLs";
 import Pricing from "./Pages/Pricing";
 import Guides from "./Pages/Guides";
 import Guide2 from "./Pages/Guide2";
+import TopProductsToSellOnline from "./Pages/blogs/TopProductsToSellOnline";
 
 const Main = () => {
   return (
@@ -36,6 +37,11 @@ const Main = () => {
           exact
           path="/blogs/how-to-start-selling-online"
           component={HowToStartSellingOnline}
+        />
+        <Route
+          exact
+          path="/blogs/top-15-products-to-sell-online-in-2021"
+          component={TopProductsToSellOnline}
         />
         <Route
           exact

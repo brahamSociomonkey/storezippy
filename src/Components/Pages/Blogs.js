@@ -6,6 +6,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const dataForBlogs = [
     {
+      img: "/assets/pages/blogs/top-15-products-to-sell-online-in-2021/featured-min.png",
+      date: "16th July 2021",
+      title: "Top 15 products to sell online in 2021",
+      des: "A definitive guide to choosing the best products to sell online in 2021.",
+      author: "Garima Mehta",
+      url: "/blogs/top-15-products-to-sell-online-in-2021",
+    },
+    {
       img: "/assets/pages/blogs/difference-between-1PL-2PL-3PL-4PL/featured.png",
       date: "9th July 2021",
       title: "Difference between 1PL, 2PL, 3PL and 4PL",

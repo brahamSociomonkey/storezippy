@@ -1688,8 +1688,8 @@ main {
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto;
-  -ms-grid-columns: (minmax(400px, 1fr))[auto-fill];
-      grid-template: auto/repeat(auto-fill, minmax(400px, 1fr));
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template: auto/repeat(auto-fill, minmax(300px, 1fr));
   gap: 3rem 2rem;
 }
 
@@ -1877,6 +1877,41 @@ main {
 .blog-page article > :last-child {
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.top-15-products-to-sell-online-in-2021 article {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item {
+  margin: clamp(2.5rem, 10vw, 3.75rem) auto;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item .heading {
+  color: #002862;
+  font-size: clamp(25px, 10vw, 28);
+  padding: 0;
+  margin-bottom: 3.125rem;
+  margin-top: 3.125rem;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item .display-img {
+  margin-top: 3.125rem;
+  margin-bottom: 3.125rem;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item .display-img img {
+  max-height: 750px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item p {
+  margin: 0;
 }
 
 #page-about-us {
