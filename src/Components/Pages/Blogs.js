@@ -9,7 +9,7 @@ const Blogs = () => {
       img: "/assets/pages/blogs/top-15-products-to-sell-online-in-2021/featured-min.png",
       date: "16th July 2021",
       title: "Top 15 products to sell online in 2021",
-      des: "A definitive guide to choosing the best products to sell online in 2021.",
+      des: "Looking for trending profitable products to sell online in 2021? Stop guessing and read our latest blog on top products to sell in your online store.",
       author: "Garima Mehta",
       url: "/blogs/top-15-products-to-sell-online-in-2021",
     },
