@@ -11,13 +11,15 @@ import { IntercomProvider } from "react-use-intercom";
 import { BrowserRouter as Router } from "react-router-dom";
 import FBPixel from "./Components/Utilities/FBPixel";
 import { hotjar } from "react-hotjar";
-import ReactGA from 'react-ga';
+import ReactGA from "react-ga";
+import linkedinInsight from "react-linkedin-insight-tag";
 
 const INTERCOM_APP_ID = "j8w2t672";
 
 function App() {
+  linkedinInsight.init(3286946);
   hotjar.initialize(2438375, 6);
-  ReactGA.initialize('G-LDDTFBHGPL');
+  ReactGA.initialize("G-LDDTFBHGPL");
   ReactGA.pageview(window.location.pathname + window.location.search);
 
   return (
