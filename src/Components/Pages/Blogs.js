@@ -1,10 +1,17 @@
 import React from "react";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import { Link } from "react-router-dom";
-// import { HashLink as Link } from "react-router-hash-link";
 
 const Blogs = () => {
   const dataForBlogs = [
+    {
+      img: "/assets/pages/blogs/ready-for-prime-sales-event/featured-min.png",
+      date: "23th July 2021",
+      title: "Is your online business ready for the Amazon Prime sales event?",
+      des: "A definitive guide to choosing the best products to sell online in 2021.",
+      author: "Garima Mehta",
+      url: "/blogs/ready-for-prime-sales-event",
+    },
     {
       img: "/assets/pages/blogs/top-15-products-to-sell-online-in-2021/featured-min.png",
       date: "16th July 2021",

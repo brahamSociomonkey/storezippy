@@ -19,6 +19,7 @@ import Pricing from "./Pages/Pricing";
 import Guides from "./Pages/Guides";
 import Guide2 from "./Pages/Guide2";
 import TopProductsToSellOnline from "./Pages/blogs/TopProductsToSellOnline";
+import ReadyForPrimeSalesEvent from "./Pages/blogs/ReadyForPrimeSalesEvent";
 
 const Main = () => {
   return (
@@ -42,6 +43,11 @@ const Main = () => {
           exact
           path="/blogs/top-15-products-to-sell-online-in-2021"
           component={TopProductsToSellOnline}
+        />
+        <Route
+          exact
+          path="/blogs/ready-for-prime-sales-event"
+          component={ReadyForPrimeSalesEvent}
         />
         <Route
           exact
