@@ -8,7 +8,7 @@ const Blogs = () => {
       img: "/assets/pages/blogs/ready-for-prime-sales-event/featured-min.png",
       date: "23th July 2021",
       title: "Is your online business ready for the Amazon Prime sales event?",
-      des: "A definitive guide to choosing the best products to sell online in 2021.",
+      des: "Want to make the most out of Amazon Prime day 2021? Read our latest blog about how Ecommerce sellers can do wonders to their sales numbers on the prime day.",
       author: "Garima Mehta",
       url: "/blogs/ready-for-prime-sales-event",
     },
