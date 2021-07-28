@@ -129,6 +129,7 @@ const Quotes = () => {
         data={{
           heading: "Your Business is in safe hands",
           img: "/assets/pages/home/stats-min.png",
+          mobImg: "/assets/pages/home/stats-mob-min.png",
         }}
       />
 

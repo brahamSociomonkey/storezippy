@@ -58,6 +58,7 @@ const Main = () => {
         <Route exact path="/guides/guide-2" component={Guide2} />
         <Route exact path="/guides/guide-1" component={Guide} />
         <Route exact path="/guides" component={Guides} />
+        <Route exact path="/guide" component={Guides} />
         <Route exact path="/pricing" component={Pricing} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/product" component={Product} />

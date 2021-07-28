@@ -3,7 +3,7 @@ import HeadingWithLine from "./HeadingWithLine";
 import ResponsiveDisplayImg from "./ResponsiveDisplayImg";
 
 const Stats = ({ data }) => {
-  const { heading, img } = data;
+  const { heading, img, mobImg } = data;
 
   return (
     <section className="stats">
@@ -13,6 +13,7 @@ const Stats = ({ data }) => {
       <ResponsiveDisplayImg
         data={{
           img,
+          mobImg,
         }}
       />
     </section>

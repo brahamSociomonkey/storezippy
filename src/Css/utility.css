@@ -824,6 +824,12 @@ a:focus::after, a:hover::after, a:active::after,
   margin-right: auto;
 }
 
+@media (max-width: 900px) {
+  .stats .display-img {
+    max-width: 350px;
+  }
+}
+
 .hr-gradient-line {
   height: 14px;
   width: 100%;

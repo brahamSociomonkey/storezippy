@@ -1,15 +1,110 @@
 import React from "react";
-import { HashLink as Link } from "react-router-hash-link";
 import DarkSection from "../Utilities/DarkSection";
 import GetQuotesSection from "../Utilities/GetQuotesSection";
 import HeroSlider from "../Utilities/HeroSlider";
-// import { Link } from "react-router-dom";
+import Slider from "react-slick";
+import { Link } from "react-router-dom";
 import animationObserver from "../Utilities/library/animationObserver";
-import HeadingWithLine from "../Utilities/mini-comps/HeadingWithLine";
+import IconsGridContainer from "../Utilities/mini-comps/IconsGridContainer";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import Stats from "../Utilities/mini-comps/Stats";
+import ReactHtmlParser from "react-html-parser";
 
 const Home = () => {
+  const integrationIconsRoot = `/assets/pages/integration/`;
+
+  const dataForIntegrationIcons = [
+    { img: `${integrationIconsRoot}icon-amazon.png` },
+    { img: `${integrationIconsRoot}icon-flipkart.png` },
+    { img: `${integrationIconsRoot}icon-shopify.png` },
+    { img: `${integrationIconsRoot}icon-paytm.png` },
+    { img: `${integrationIconsRoot}icon-myntra.png` },
+    { img: `${integrationIconsRoot}icon-ebay.png` },
+  ];
+
+  const testimonialSliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 300,
+    arrows: false,
+    cssEase: "ease",
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+      {
+        breakpoint: 650,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: true,
+        },
+      },
+    ],
+  };
+
+  const dataForTestimonials = [
+    {
+      logo: "/assets/pages/home/phase-2/logo-coconut-people.png",
+      content:
+        "Their service has been extremely exceptional. They go above and beyond the call of their duty. Looking forward to a long-term partnership.",
+      person: "Mr. XYZ",
+      personInfo: "Founder, The Coconut People",
+    },
+    {
+      logo: "/assets/pages/home/phase-2/logo-crayliving.png",
+      content:
+        "StoreZippy is the third fulfillment company I have used but the first to get it right. They always exceed my expectations and are very easy to work with. They have reduced my total operations cost by 35%. Thanks for all the support",
+      person: "Mr. Ashish Kathuria",
+      personInfo: "Founder, Cray Living",
+    },
+    {
+      logo: "/assets/pages/home/phase-2/logo-dadev.png",
+      content:
+        "StoreZippy has been the optimum solution for shipping honey to my customers. The order fulfillment has been very smooth for us since the beginning of working with them.",
+      person: "Mr. Nitesh Poonia",
+      personInfo: "Founder, Dadev honey",
+    },
+  ];
+
+  const dataForScaleUpPoints = [
+    {
+      icon: "/assets/pages/home/phase-2/icon-operating-cost.png",
+      text: "Reduce your operating costs by <strong>25%</strong>",
+    },
+    {
+      icon: "/assets/pages/home/phase-2/icon-upgrade.png",
+      text: "Improve your <strong>NPS</strong>",
+    },
+    {
+      icon: "/assets/pages/home/phase-2/icon-checklist.png",
+      text: "Reduce your inventory holding by <strong>39%</strong>",
+    },
+    {
+      icon: "/assets/pages/home/phase-2/icon-cart.png",
+      text: "Lower cart abandonment rate by <strong>18%</strong>",
+    },
+    {
+      icon: "/assets/pages/home/phase-2/icon-fulfillment.png",
+      text: "<strong>360°</strong> fulfillment solution",
+    },
+  ];
+
   React.useEffect(() => {
     animationObserver();
   }, []);
@@ -39,9 +134,51 @@ const Home = () => {
         ]}
       />
 
-      {/* quotes  */}
-      <section className="quotes">
-        <div className="basic-grid-container page-width">
+      {/* brand dna  */}
+      <div className="brand-dna">
+        <ResponsiveDisplayImg
+          data={{
+            img: "/assets/pages/home/phase-2/brand-dna.png",
+            mobImg: "/assets/pages/home/phase-2/brand-dna-mob.png",
+          }}
+        />
+      </div>
+
+      {/* dashboard  */}
+      <div className="dashboard">
+        <ResponsiveDisplayImg
+          data={{
+            img: "/assets/pages/home/phase-2/dashboard.png",
+            mobImg: "/assets/pages/home/phase-2/dashboard-mob.png",
+          }}
+        />
+      </div>
+
+      {/* integration */}
+      <div className="integration">
+        <div className="heading-with-line-grid-container">
+          <div className="heading primary-font">
+            Integration with Popular Platforms
+          </div>
+
+          <div className="gradient-line"></div>
+        </div>
+
+        <IconsGridContainer data={dataForIntegrationIcons} />
+      </div>
+
+      {/* safe hands    */}
+      <Stats
+        data={{
+          heading: "Your Business is in safe hands",
+          img: "/assets/pages/home/stats-min.png",
+          mobImg: "/assets/pages/home/stats-mob-min.png",
+        }}
+      />
+
+      {/* quotes and outsource  */}
+      <section className="quotes outsource">
+        <div className="basic-grid-container">
           <div
             data-animname="fade-in-up"
             data-onetime="true"
@@ -49,23 +186,23 @@ const Home = () => {
             className="grid-item grid-item-1"
           >
             <div className="txt-container">
-              <p className="rte">
-                When logistics becomes the most critical part of your business
-                to deal with, partnering with warehouse services is a wise idea.
-                If you’re looking for a comprehensive fulfillment solution, then
-                STOREZIPPY is the place to go.
-                <br />
-                <br />
-                {/* We pride ourselves on tailoring a warehousing solution to help
-                our clients achieve their storage, fulfilment and distribution
-                goals.
-                <br />
-                <br />
-                We don't want to think of ourselves just as a warehousing
-                service provider but as your active business partner.
-                <br />
-                <br /> */}
-              </p>
+              <div className="heading">
+                <h2 className="">
+                  Just do what’s best and outsource the rest!
+                </h2>
+              </div>
+            </div>
+          </div>
+          <div
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay=".1"
+            className="grid-item grid-item-2"
+          >
+            <div className="txt-container">
+              <div className="heading">
+                <p>It’s time to switch to a 3PL partner.</p>
+              </div>
 
               <Link className="btn" to="/quotes">
                 Get Quotes
@@ -76,7 +213,7 @@ const Home = () => {
             data-animname="fade-in-up"
             data-onetime="true"
             data-delay=".3"
-            className="grid-item grid-item-2"
+            className="grid-item grid-item-3"
           >
             <div className="img-container">
               <img
@@ -88,168 +225,158 @@ const Home = () => {
         </div>
       </section>
 
-      {/* display img  */}
-      <section className="info-img-conatiner">
-        <ResponsiveDisplayImg
-          data={{
-            img: "/assets/pages/home/info-img-min.png",
-            mobImg: "/assets/pages/home/info-img-min.png",
-          }}
-        />
-      </section>
-
-      {/* video area  */}
-      <section className="video-area">
+      {/* download guide   */}
+      <section className="guide-download">
         <div className="basic-grid-container">
           <ResponsiveDisplayImg
             data={{
-              img: "assets/pages/home/video.jpg",
+              img: "/assets/pages/home/phase-2/download.png",
             }}
           />
-          <div
-            data-animname="fade-in-up"
-            data-onetime="true"
-            data-delay=".1"
-            className="grid-item"
-          >
-            <div className="txt-container">
-              <h2 className="primary-font heading">
-                It’s time to outsource your fulfillment needs
-              </h2>
 
-              <p className="rte">
-                Download the free guide today and get a jump start on your 3PL
-                Service Provider.
-              </p>
+          <div className="txt-content">
+            <h2 className="heading primary-font">
+              Download our free guide today and get a jump-start on your 3PL
+              service provider.
+            </h2>
 
-              <Link className="btn" to="/guides">
-                Download
-              </Link>
-            </div>
+            <Link to="/guides/guide-1" className="btn">
+              Download
+            </Link>
           </div>
         </div>
       </section>
 
-      <br />
-      <br />
-      <br />
-      {/* procedure */}
-      <section className="procedure page-width">
-        <HeadingWithLine
-          data={{ heading: "From Online Store to your Customer’s door" }}
-        />
+      {/* testimonials */}
+      <section className="testimonials">
+        <div className="heading-with-line-grid-container">
+          <div className="heading primary-font">
+            Don’t just trust our words!
+          </div>
 
-        <ResponsiveDisplayImg
-          data={{
-            img: "/assets/pages/home/procedure-min.png",
-            mobImg: "/assets/pages/home/procedure-mob-min.png",
-          }}
-        />
+          <div className="gradient-line"></div>
+        </div>
+
+        <Slider
+          {...testimonialSliderSettings}
+          className="testimonials-container testimonials-slider-container"
+        >
+          {dataForTestimonials?.map(
+            ({ logo, content, person, personInfo }, index) => (
+              <div className="testimonial-item-container" key={index}>
+                <div className="testimonial-item">
+                  <img className="logo" src={logo} alt={logo} />
+                  <br />
+                  <hr />
+                  <div className="content">{content}</div>
+                  <br />
+                  <div className="person">
+                    <strong>{person}</strong>
+                  </div>
+                  <div className="personInfo">{personInfo}</div>
+                  <hr />
+                  <br />
+                  <img
+                    className="quotation"
+                    src="/assets/pages/home/phase-2/quotation.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            )
+          )}
+        </Slider>
       </section>
 
-      <br />
-      <br />
-      <br />
+      {/* scale up  */}
+      <div className="scale-up">
+        <div className="heading-with-line-grid-container">
+          <div className="heading primary-font">Scale up with us</div>
 
-      {/* dark  */}
-      <DarkSection
-        data={{
-          img: "/assets/pages/home/man-on-laptop-min.png",
-        }}
-      />
-      <br />
+          <div>
+            <div className="gradient-line"></div>
+          </div>
+        </div>
 
-      {/* display img */}
-      <div className="displayImg-container page-width">
-        <ResponsiveDisplayImg
-          data={{
-            img: "/assets/pages/home/ui-dashboard-min.png",
-          }}
-        />
-        <div className="btn-container" style={{ textAlign: "center" }}>
-          <Link className="btn" to="/">
-            How it works ?
-          </Link>
+        <div className="points-container">
+          {dataForScaleUpPoints?.map(({ icon, text }, index) => (
+            <div className="point-item" key={index}>
+              <img src={icon} alt={icon} />
+              <div className="text">{ReactHtmlParser(text)}</div>
+            </div>
+          ))}
         </div>
       </div>
-      <br />
-      <br />
-      <br />
 
-      {/* warehouse  */}
-      <section className="warehouse page-width">
-        <div className="basic-grid-container">
-          <ResponsiveDisplayImg
-            data={{
-              img: "/assets/pages/home/warehouse-min.png",
-            }}
-          />
+      {/* know us  */}
+      <div className="know-us">
+        <div className="grid-container">
+          <div className="content">
+            <h2 className="heading">Know us Better!</h2>
 
-          <div
-            data-animname="fade-in-up"
-            data-onetime="true"
-            data-delay=".1"
-            className="content-container"
-          >
-            <h2 className="heading primary-color primary-font">
-              Warehouse Solutions with a personalised service
-            </h2>
-            <p className="rte sub-text">Be rest assured!</p>
-            <p className="rte">
-              When you choose us for your warehousing services, you can be
-              assured that you are investing in a company dedicated to
-              efficiently cater to all your warehousing needs.
-            </p>
-          </div>
-        </div>
-      </section>
+            <div>
+              Your springboard to zoom into the competitive world of E commerce
+              and fulfillment. It was founded to accelerate your online growth
+              and bring your commerce dreams to reality.
+              <p>Be rest assured!</p>
+            </div>
 
-      {/* package  */}
-      <section className="package page-width">
-        <div className="basic-grid-container page-width">
-          <div
-            data-animname="fade-in-up"
-            data-onetime="true"
-            data-delay=".1"
-            className="content-container"
-          >
-            <h2 className="heading primary-color primary-font">
-              The Complete Package
-            </h2>
-            <p className="rte">
-              From start-ups to well-established companies, we store your goods,
-              pick your orders and schedule shipments for your customers.
-            </p>
-
-            <Link className="btn" to="/quotes">
-              Get Quotes
+            <Link to="/about" className="btn">
+              Our Story
             </Link>
           </div>
 
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/home/forklift-vector-min.png",
+              img: "/assets/pages/home/phase-2/know-us.png",
             }}
           />
         </div>
-      </section>
+      </div>
 
-      {/* stats    */}
-      <Stats
-        data={{
-          heading: "Your Business is in safe hands",
-          img: "/assets/pages/home/stats-min.png",
-        }}
-      />
+      {/* zippy  */}
+      <div className="zippy">
+        <ResponsiveDisplayImg
+          data={{ img: "/assets/pages/home/phase-2/zippy.png" }}
+        />
+      </div>
 
-      {/* animated tape  */}
-      <section className="animated-logos-stripe">
-        <div className="page-width">
-          <HeadingWithLine
+      {/* expert  */}
+
+      <div className="expert">
+        <div className="grid-container">
+          <ResponsiveDisplayImg
             data={{
-              heading: "We work with",
+              img: "/assets/pages/home/phase-2/expert.png",
             }}
           />
+
+          <div className="content">
+            <h2 className="heading">Expert help is at hand</h2>
+
+            <div>
+              Let us take the burden of warehousing and fulfillment off your
+              shoulders.
+            </div>
+
+            <Link to="/quotes" className="btn">
+              Get Quotes
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* animated tape  */}
+      {/* <section className="animated-logos-stripe">
+        <div className="page-width">
+          
+          <div className="heading-with-line-grid-container">
+          <div className="heading primary-font">
+            We work with
+          </div>
+
+          <div className="gradient-line"></div>
+        </div>
         </div>
 
         <ResponsiveDisplayImg
@@ -257,18 +384,7 @@ const Home = () => {
             img: "/assets/pages/home/logo-stripe-min.png",
           }}
         />
-      </section>
-
-      <div className="gradient-line-classic"></div>
-      <br />
-
-      {/* get quote  */}
-      <GetQuotesSection
-        data={{
-          img: "/assets/pages/home/quotes-min.png",
-          heading: `Looking for Fulfillment Center solutions?<br /><span style="color: #FF8F3F;">Try Us!</span>`,
-        }}
-      />
+      </section> */}
     </div>
   );
 };

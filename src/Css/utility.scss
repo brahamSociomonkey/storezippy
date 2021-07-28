@@ -713,6 +713,13 @@ a,
     margin-left: auto;
     margin-right: auto;
   }
+
+  // mob rules 
+  @media (max-width: $mob-nav-breakpoint) {
+    .display-img {
+      max-width: 350px;
+    }
+  }
 }
 
 // hr-gradient-line
