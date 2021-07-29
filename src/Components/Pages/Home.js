@@ -63,7 +63,7 @@ const Home = () => {
       logo: "/assets/pages/home/phase-2/logo-coconut-people.png",
       content:
         "Their service has been extremely exceptional. They go above and beyond the call of their duty. Looking forward to a long-term partnership.",
-      person: "Mr. XYZ",
+      person: "Mr. Arjun Marweena",
       personInfo: "Founder, The Coconut People",
     },
     {
