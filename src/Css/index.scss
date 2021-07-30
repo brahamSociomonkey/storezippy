@@ -462,6 +462,15 @@ main {
       @media (max-width: $mob-nav-breakpoint) {
         text-align: center !important;
         grid-template: auto auto auto/ 1fr;
+        gap: 2rem !important;
+        
+        .txt-container {
+          .heading {
+            h2 {
+              margin: 0 auto;
+            }
+          }
+        }
 
         .img-container {
           max-width: 250px;

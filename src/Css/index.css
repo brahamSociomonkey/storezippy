@@ -538,6 +538,10 @@ main {
     -ms-grid-rows: auto auto auto;
     -ms-grid-columns: 1fr;
         grid-template: auto auto auto/ 1fr;
+    gap: 2rem !important;
+  }
+  #home .outsource .basic-grid-container .txt-container .heading h2 {
+    margin: 0 auto;
   }
   #home .outsource .basic-grid-container .img-container {
     max-width: 250px;
