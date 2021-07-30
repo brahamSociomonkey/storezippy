@@ -355,7 +355,7 @@ const Home = () => {
       {/* zippy  */}
       <div className="zippy">
         <ResponsiveDisplayImg
-          data={{ img: "/assets/pages/home/phase-2/zippy.png" }}
+          data={{ img: "/assets/pages/home/phase-2/zippy-new.png" }}
         />
       </div>
 
@@ -372,7 +372,7 @@ const Home = () => {
             <h2 className="heading">Expert help is at hand</h2>
 
             <div>
-              Let us take the burden of warehousing and fulfillment of your
+              Let us take the burden of warehousing and fulfillment off your
               shoulders.
             </div>
 

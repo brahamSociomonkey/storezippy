@@ -20,6 +20,7 @@ import Guides from "./Pages/Guides";
 import Guide2 from "./Pages/Guide2";
 import TopProductsToSellOnline from "./Pages/blogs/TopProductsToSellOnline";
 import ReadyForPrimeSalesEvent from "./Pages/blogs/ReadyForPrimeSalesEvent";
+import TipsForSiteImprovement from "./Pages/blogs/TipsForSiteImprovement";
 
 const Main = () => {
   return (
@@ -53,6 +54,11 @@ const Main = () => {
           exact
           path="/blogs/covid-implications-on-fulfillment"
           component={CovidImplicationsOnFulfillment}
+        />
+        <Route
+          exact
+          path="/blogs/tips-for-site-improvement"
+          component={TipsForSiteImprovement}
         />
         <Route exact path="/integration" component={Integration} />
         <Route exact path="/guides/guide-2" component={Guide2} />

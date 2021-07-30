@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const dataForBlogs = [
     {
+      img: "/assets/pages/blogs/tips-for-site-improvement/featured-min.png",
+      date: "30th July 2021",
+      title: "Tips for ECommerce Website improvement",
+      des: "The first five seconds of landing on your website leave an impression of your brand in front of visitors. Without a well designed website, the business is designed for failure. But don’t you worry, we have got you covered !! Learn about 11 simple tips to drastically improve your website in our latest blog.",
+      author: "Garima Mehta",
+      url: "/blogs/tips-for-site-improvement",
+    },
+    {
       img: "/assets/pages/blogs/ready-for-prime-sales-event/featured-min.png",
       date: "23th July 2021",
       title: "Is your online business ready for the Amazon Prime sales event?",
