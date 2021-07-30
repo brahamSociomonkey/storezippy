@@ -11,15 +11,15 @@ import Stats from "../Utilities/mini-comps/Stats";
 import ReactHtmlParser from "react-html-parser";
 
 const Home = () => {
-  const integrationIconsRoot = `/assets/pages/integration/`;
+  const dirRoot = `/assets/pages/home/phase-2/`;
 
   const dataForIntegrationIcons = [
-    { img: `${integrationIconsRoot}icon-amazon.png` },
-    { img: `${integrationIconsRoot}icon-flipkart.png` },
-    { img: `${integrationIconsRoot}icon-shopify.png` },
-    { img: `${integrationIconsRoot}icon-paytm.png` },
-    { img: `${integrationIconsRoot}icon-myntra.png` },
-    { img: `${integrationIconsRoot}icon-ebay.png` },
+    { icon: `${dirRoot}icon-prime.png` },
+    { icon: `${dirRoot}icon-shopify.png` },
+    { icon: `${dirRoot}icon-two-days-delivery.png` },
+    { icon: `${dirRoot}icon-f-assured.png` },
+    { icon: `${dirRoot}icon-woocommerce.png` },
+    { icon: `${dirRoot}icon-next-day.png` },
   ];
 
   const testimonialSliderSettings = {
@@ -158,13 +158,25 @@ const Home = () => {
       <div className="integration">
         <div className="heading-with-line-grid-container">
           <div className="heading primary-font">
-            Integration with Popular Platforms
+            Everything is in place for you
           </div>
 
           <div className="gradient-line"></div>
         </div>
 
-        <IconsGridContainer data={dataForIntegrationIcons} />
+        <p>
+          Use <strong>prime-like</strong> and quick{" "}
+          <strong>delivery badges</strong> to reassure your customers with
+          StoreZippy.
+        </p>
+
+        <div className="icons-grid-container">
+          {dataForIntegrationIcons?.map(({ icon }, index) => (
+            <div className="icon-item" key={index}>
+              <img src={icon} alt={icon} />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* safe hands    */}
@@ -306,6 +318,12 @@ const Home = () => {
             </div>
           ))}
         </div>
+
+        <div className="link-container">
+          <Link to="/product" className="btn">
+            How it works?
+          </Link>
+        </div>
       </div>
 
       {/* know us  */}
@@ -315,7 +333,7 @@ const Home = () => {
             <h2 className="heading">Know us Better!</h2>
 
             <div>
-              Your springboard to zoom into the competitive world of E commerce
+              Your springboard to zoom into the competitive world of E-commerce
               and fulfillment. It was founded to accelerate your online growth
               and bring your commerce dreams to reality.
               <p>Be rest assured!</p>
@@ -342,7 +360,6 @@ const Home = () => {
       </div>
 
       {/* expert  */}
-
       <div className="expert">
         <div className="grid-container">
           <ResponsiveDisplayImg
@@ -355,7 +372,7 @@ const Home = () => {
             <h2 className="heading">Expert help is at hand</h2>
 
             <div>
-              Let us take the burden of warehousing and fulfillment off your
+              Let us take the burden of warehousing and fulfillment of your
               shoulders.
             </div>
 
