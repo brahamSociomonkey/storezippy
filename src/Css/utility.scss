@@ -581,6 +581,13 @@ a,
     margin: 0;
     padding: 0;
   }
+
+  // mobile rules
+  @media (max-width: $mob-nav-breakpoint) {
+    .gradient-line {
+      min-width: 8rem;
+    }
+  }
 }
 
 .width-40ch {
@@ -714,7 +721,7 @@ a,
     margin-right: auto;
   }
 
-  // mob rules 
+  // mob rules
   @media (max-width: $mob-nav-breakpoint) {
     .display-img {
       max-width: 350px;

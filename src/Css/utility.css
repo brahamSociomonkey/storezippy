@@ -697,6 +697,12 @@ a:focus::after, a:hover::after, a:active::after,
   padding: 0;
 }
 
+@media (max-width: 900px) {
+  .heading-with-line-grid-container .gradient-line {
+    min-width: 8rem;
+  }
+}
+
 .width-40ch {
   max-width: 40ch;
 }
