@@ -1737,8 +1737,7 @@ main {
               color: #002559;
 
               &.active,
-              &:hover,
-              &:focus {
+              &:hover {
                 background-color: #ff8f3f;
                 color: #fff;
               }

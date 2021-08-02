@@ -39,29 +39,29 @@ const Pricing = () => {
     },
     "packaging-cost": {
       "0-1Kg": {
-        "Paper Bag": "3",
-        "Parcel Box": "5",
-        "Bubble Wrap": "2",
+        "Paper Bag": 3,
+        "Parcel Box": 5,
+        "Bubble Wrap": 2,
       },
       "1-2Kg": {
-        "Paper Bag": "4",
-        "Parcel Box": "9",
-        "Bubble Wrap": "3",
+        "Paper Bag": 4,
+        "Parcel Box": 9,
+        "Bubble Wrap": 3,
       },
       "2-3Kg": {
-        "Paper Bag": "5",
-        "Parcel Box": "12",
-        "Bubble Wrap": "5",
+        "Paper Bag": 5,
+        "Parcel Box": 12,
+        "Bubble Wrap": 5,
       },
       "3-5Kg": {
         "Paper Bag": null,
-        "Parcel Box": "20",
-        "Bubble Wrap": "6",
+        "Parcel Box": 20,
+        "Bubble Wrap": 6,
       },
       "5-10Kg": {
         "Paper Bag": null,
-        "Parcel Box": "25",
-        "Bubble Wrap": "7",
+        "Parcel Box": 25,
+        "Bubble Wrap": 7,
       },
       "10Kg+": null,
     },
@@ -69,14 +69,20 @@ const Pricing = () => {
 
   const [cost, setCost] = useState(null);
   const [packagingCost, setPackagingCost] = useState(null);
+  const [bubbleWrapActive, setBubbleWrapActive] = useState(false);
 
   useEffect(() => {
     setPackagingCost(() => {
       const { weight, packaging } = priceState;
 
-      return priceData["packaging-cost"]?.[weight]?.[packaging];
+      if (bubbleWrapActive) {
+        return (
+          priceData["packaging-cost"]?.[weight]?.[packaging] +
+          priceData["packaging-cost"]?.[weight]?.["Bubble Wrap"]
+        );
+      } else return priceData["packaging-cost"]?.[weight]?.[packaging];
     });
-  }, [priceState]);
+  }, [priceState, bubbleWrapActive]);
 
   useEffect(() => {
     setCost(() => {
@@ -92,6 +98,10 @@ const Pricing = () => {
       dataset: { type },
     } = e.target.closest("button");
     setPriceState((prev) => ({ ...prev, [type]: name }));
+  };
+
+  const handleBubbleWrapClick = () => {
+    setBubbleWrapActive((prev) => !prev);
   };
 
   // scroll to top
@@ -241,11 +251,23 @@ const Pricing = () => {
                 {["Parcel Box", "Paper Bag", "Bubble Wrap"].map(
                   (item, index) => (
                     <button
-                      className={item === priceState.packaging ? "active" : ""}
+                      className={
+                        item === priceState.packaging
+                          ? "active"
+                          : item !== "Bubble Wrap"
+                          ? ""
+                          : bubbleWrapActive
+                          ? "active"
+                          : ""
+                      }
                       name={item}
                       key={index}
                       data-type="packaging"
-                      onClick={handleButtonClick}
+                      onClick={
+                        item === "Bubble Wrap"
+                          ? handleBubbleWrapClick
+                          : handleButtonClick
+                      }
                     >
                       <img src={`${dirRoot}${item}.png`} alt="" />
                       {item}
