@@ -1849,36 +1849,44 @@ main {
   margin-top: 3em;
   margin-bottom: 3em;
   padding: clamp(30px, 10vw, 66px) clamp(40px, 10vw, 81px);
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: auto auto;
+      grid-template: 1fr / auto auto;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  gap: 2em;
 }
 
-#page-pricing .calculator .calculator-container .steps-container {
+#page-pricing .calculator .calculator-container .input-container .steps-container {
   color: #fff;
-  font-size: clamp(20px, 10vw, 32px);
+  font-size: clamp(18px, 5vw, 25px);
 }
 
-#page-pricing .calculator .calculator-container .steps-container h2 {
+#page-pricing .calculator .calculator-container .input-container .steps-container .title h2 {
   margin: 0;
   padding: 0;
-  font-size: clamp(24px, 10vw, 36px);
+  font-size: clamp(20px, 10vw, 30px);
 }
 
-#page-pricing .calculator .calculator-container .steps-container hr {
-  background: #fff;
-  height: 1px;
-  border: none;
-}
-
-#page-pricing .calculator .calculator-container .steps-container p {
+#page-pricing .calculator .calculator-container .input-container .steps-container .title h2 p {
   font-weight: 500;
+  margin: 0;
+  display: inline;
+  font-size: clamp(18px, 5vw, 25px);
 }
 
-#page-pricing .calculator .calculator-container .steps-container .buttons-container {
+#page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container {
   margin: 2em auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 1fr;
-  -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template: 1fr/repeat(auto-fit, minmax(250px, 1fr));
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template: 1fr/repeat(auto-fit, minmax(150px, 1fr));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -1888,13 +1896,13 @@ main {
           align-items: center;
   -ms-flex-line-pack: center;
       align-content: center;
-  gap: 2em;
+  gap: 1em;
 }
 
-#page-pricing .calculator .calculator-container .steps-container .buttons-container button {
-  font-size: clamp(18px, 10vw, 30px);
+#page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button {
+  font-size: clamp(18px, 10vw, 18px);
   font-weight: 600;
-  padding: 0.5em 2em;
+  padding: 0.5em 1em;
   cursor: pointer;
   border: none;
   border-radius: 10px;
@@ -1904,35 +1912,48 @@ main {
   color: #002559;
 }
 
-#page-pricing .calculator .calculator-container .steps-container .buttons-container button.active, #page-pricing .calculator .calculator-container .steps-container .buttons-container button:hover, #page-pricing .calculator .calculator-container .steps-container .buttons-container button:focus {
+#page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button.active, #page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button:hover, #page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button:focus {
   background-color: #ff8f3f;
   color: #fff;
 }
 
 @media (min-width: 1350px) {
-  #page-pricing .calculator .calculator-container .steps-container .buttons-container {
+  #page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container {
     -ms-grid-rows: 1fr;
     -ms-grid-columns: (1fr)[3];
         grid-template: 1fr/repeat(3, 1fr);
   }
 }
 
-#page-pricing .calculator .calculator-container .weight .buttons-container button {
-  -ms-grid-column-align: center;
-      justify-self: center;
-  padding: 1em clamp(2em, 5vw, 3em);
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+#page-pricing .calculator .calculator-container .input-container .weight .buttons-container,
+#page-pricing .calculator .calculator-container .input-container .packaging .buttons-container {
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: (minmax(100px, 1fr))[auto-fit];
+      grid-template: 1fr/repeat(auto-fit, minmax(100px, 1fr));
 }
 
-#page-pricing .calculator .calculator-container .weight .buttons-container button img {
-  width: 124px;
-  height: 124px;
+#page-pricing .calculator .calculator-container .input-container .weight .buttons-container button,
+#page-pricing .calculator .calculator-container .input-container .packaging .buttons-container button {
+  max-width: 180px;
+}
+
+#page-pricing .calculator .calculator-container .input-container .weight .buttons-container button img,
+#page-pricing .calculator .calculator-container .input-container .packaging .buttons-container button img {
+  width: 60px;
+  height: 60px;
   margin: 0 auto;
 }
 
-#page-pricing .calculator .calculator-container .cost-container {
+@media (min-width: 1350px) {
+  #page-pricing .calculator .calculator-container .input-container .weight .buttons-container,
+  #page-pricing .calculator .calculator-container .input-container .packaging .buttons-container {
+    -ms-grid-rows: 1fr;
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template: 1fr/repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+#page-pricing .calculator .calculator-container .input-container .cost-container {
   display: -ms-grid;
   display: grid;
   -webkit-box-pack: justify;
@@ -1950,60 +1971,139 @@ main {
   margin-top: 1.5em;
 }
 
-#page-pricing .calculator .calculator-container .cost-container .heading {
-  font-size: clamp(30px, 10vw, 48px);
+@media (max-width: 900px) {
+  #page-pricing .calculator .calculator-container .input-container {
+    -ms-grid-rows: 1fr 1fr;
+    -ms-grid-columns: 1fr;
+        grid-template: 1fr 1fr / 1fr;
+    text-align: center;
+    gap: 0.5em;
+  }
 }
 
-#page-pricing .calculator .calculator-container .cost-container .cost {
+#page-pricing .calculator .calculator-container .output-container {
+  background-color: #ff8f3f;
+  border-radius: 10px;
+  padding: 2rem;
+  color: #fff;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  max-width: 40ch;
+  gap: 2rem;
+  place-content: start;
+  text-align: center;
+}
+
+#page-pricing .calculator .calculator-container .output-container hr {
+  background: #fff;
+  height: 2px;
+  border: none;
+  min-width: 12rem;
+}
+
+#page-pricing .calculator .calculator-container .output-container .img-container {
+  max-width: 300px;
+}
+
+#page-pricing .calculator .calculator-container .output-container h2 {
+  font-size: clamp(20px, 10vw, 24px);
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
+}
+
+#page-pricing .calculator .calculator-container .output-container .orders h2 {
+  margin-bottom: 0.5rem;
+}
+
+#page-pricing .calculator .calculator-container .output-container .orders p {
+  margin: 0;
+}
+
+#page-pricing .calculator .calculator-container .output-container .fulfillment-cost,
+#page-pricing .calculator .calculator-container .output-container .packaging-cost {
   text-align: center;
   background-color: #ff8f3f;
-  color: #fff;
   font-weight: 600;
-  padding: 0.5em 3em;
-  font-size: clamp(25px, 10vw, 36px);
   border-radius: 10px;
   -webkit-transition: 0.2s ease;
   transition: 0.2s ease;
 }
 
-#page-pricing .calculator .calculator-container .cost-container .cost a {
-  font-size: clamp(22px, 7vw, 36px);
+#page-pricing .calculator .calculator-container .output-container .fulfillment-cost a,
+#page-pricing .calculator .calculator-container .output-container .packaging-cost a {
   border: none;
   outline: none;
   cursor: pointer;
-  padding: 0.5em 3em;
   width: 100%;
   display: block;
   border-radius: 10px;
   overflow: hidden;
 }
 
-#page-pricing .calculator .calculator-container .cost-container .cost a::after {
+#page-pricing .calculator .calculator-container .output-container .fulfillment-cost a::after,
+#page-pricing .calculator .calculator-container .output-container .packaging-cost a::after {
   display: none;
 }
 
-#page-pricing .calculator .calculator-container .cost-container .cost a:hover, #page-pricing .calculator .calculator-container .cost-container .cost a:focus {
+#page-pricing .calculator .calculator-container .output-container .fulfillment-cost a:hover, #page-pricing .calculator .calculator-container .output-container .fulfillment-cost a:focus,
+#page-pricing .calculator .calculator-container .output-container .packaging-cost a:hover,
+#page-pricing .calculator .calculator-container .output-container .packaging-cost a:focus {
   background-color: #fff;
   color: #ff8f3f;
 }
 
 @media (max-width: 900px) {
-  #page-pricing .calculator .calculator-container .cost-container .cost a {
+  #page-pricing .calculator .calculator-container .output-container .fulfillment-cost a,
+  #page-pricing .calculator .calculator-container .output-container .packaging-cost a {
     padding: 0.5em;
   }
 }
 
-#page-pricing .calculator .calculator-container .cost-container .cost.has-link {
+#page-pricing .calculator .calculator-container .output-container .fulfillment-cost.has-link,
+#page-pricing .calculator .calculator-container .output-container .packaging-cost.has-link {
   padding: 0;
 }
 
+#page-pricing .calculator .calculator-container .output-container .cost {
+  background: #fff;
+  border-radius: 10px;
+  color: #002862;
+  padding: 0.5em 1em;
+  font-size: clamp(20px, 10vw, 24px);
+  font-weight: 600;
+  margin: 0;
+}
+
+#page-pricing .calculator .calculator-container .output-container .note {
+  text-align: left;
+}
+
 @media (max-width: 900px) {
-  #page-pricing .calculator .calculator-container .cost-container {
-    -ms-grid-rows: 1fr 1fr;
-    -ms-grid-columns: 1fr;
-        grid-template: 1fr 1fr / 1fr;
-    text-align: center;
-    gap: 0.5em;
+  #page-pricing .calculator {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #page-pricing .calculator .heading-with-line-grid-container {
+    padding-left: clamp(2rem, 10vw, 5%);
+    padding-right: clamp(2rem, 10vw, 5%);
+  }
+  #page-pricing .calculator .calculator-container {
+    display: block;
+    border-radius: 0;
+    padding: 0;
+  }
+  #page-pricing .calculator .calculator-container .input-container,
+  #page-pricing .calculator .calculator-container .output-container {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0;
+  }
+  #page-pricing .calculator .calculator-container .input-container {
+    padding: 2rem;
+    padding-left: clamp(2rem, 10vw, 5%);
+    padding-right: clamp(2rem, 10vw, 5%);
   }
 }
 

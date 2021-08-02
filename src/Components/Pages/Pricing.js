@@ -9,6 +9,7 @@ const Pricing = () => {
   const [priceState, setPriceState] = useState({
     order: "1000-2999",
     weight: "10Kg+",
+    packaging: "Parcel Box",
   });
 
   const priceData = {
@@ -36,9 +37,46 @@ const Pricing = () => {
       "5-10Kg": "21",
       "10Kg+": null,
     },
+    "packaging-cost": {
+      "0-1Kg": {
+        "Paper Bag": "3",
+        "Parcel Box": "5",
+        "Bubble Wrap": "2",
+      },
+      "1-2Kg": {
+        "Paper Bag": "4",
+        "Parcel Box": "9",
+        "Bubble Wrap": "3",
+      },
+      "2-3Kg": {
+        "Paper Bag": "5",
+        "Parcel Box": "12",
+        "Bubble Wrap": "5",
+      },
+      "3-5Kg": {
+        "Paper Bag": null,
+        "Parcel Box": "20",
+        "Bubble Wrap": "6",
+      },
+      "5-10Kg": {
+        "Paper Bag": null,
+        "Parcel Box": "25",
+        "Bubble Wrap": "7",
+      },
+      "10Kg+": null,
+    },
   };
 
   const [cost, setCost] = useState(null);
+  const [packagingCost, setPackagingCost] = useState(null);
+
+  useEffect(() => {
+    setPackagingCost(() => {
+      const { weight, packaging } = priceState;
+
+      return priceData["packaging-cost"]?.[weight]?.[packaging];
+    });
+  }, [priceState]);
 
   useEffect(() => {
     setCost(() => {
@@ -144,61 +182,121 @@ const Pricing = () => {
         </div>
 
         <div className="calculator-container">
-          <div className="orders steps-container">
-            <h2>STEP 1</h2>
-            <hr />
-            <p>My number of orders per month</p>
+          <div className="input-container">
+            <div className="orders steps-container">
+              <div className="title">
+                <h2>
+                  STEP 1 :<p> My number of orders per month</p>
+                </h2>
+              </div>
 
-            <div className="buttons-container">
-              {["1000-2999", "3000-9999", "10,000+"].map((item, index) => (
-                <button
-                  className={item === priceState.order ? "active" : ""}
-                  name={item}
-                  key={index}
-                  data-type="order"
-                  onClick={handleButtonClick}
-                >
-                  {item}
-                </button>
-              ))}
+              <div className="buttons-container">
+                {["1000-2999", "3000-9999", "10,000+"].map((item, index) => (
+                  <button
+                    className={item === priceState.order ? "active" : ""}
+                    name={item}
+                    key={index}
+                    data-type="order"
+                    onClick={handleButtonClick}
+                  >
+                    {item}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <div className="weight steps-container">
+              <div className="title">
+                <h2>
+                  STEP 2 :<p> My average product weight</p>
+                </h2>
+              </div>
+
+              <div className="buttons-container">
+                {["0-1Kg", "1-2Kg", "2-3Kg", "3-5Kg", "5-10Kg", "10Kg+"].map(
+                  (item, index) => (
+                    <button
+                      className={item === priceState.weight ? "active" : ""}
+                      name={item}
+                      key={index}
+                      data-type="weight"
+                      onClick={handleButtonClick}
+                    >
+                      <img src={`${dirRoot}Parcel Box.png`} alt="" />
+                      {item}
+                    </button>
+                  )
+                )}
+              </div>
+            </div>
+
+            <div className="packaging steps-container">
+              <div className="title">
+                <h2>
+                  STEP 3 :<p> Choose your packaging</p>
+                </h2>
+              </div>
+
+              <div className="buttons-container">
+                {["Parcel Box", "Paper Bag", "Bubble Wrap"].map(
+                  (item, index) => (
+                    <button
+                      className={item === priceState.packaging ? "active" : ""}
+                      name={item}
+                      key={index}
+                      data-type="packaging"
+                      onClick={handleButtonClick}
+                    >
+                      <img src={`${dirRoot}${item}.png`} alt="" />
+                      {item}
+                    </button>
+                  )
+                )}
+              </div>
             </div>
           </div>
 
-          <div className="weight steps-container">
-            <h2>STEP 2</h2>
-            <hr />
-            <p>My average product weight</p>
+          <div className="output-container">
+            <div className="img-container">
+              <img src={`${dirRoot}hero.png`} alt={`${dirRoot}hero.png`} />
+            </div>
 
-            <div className="buttons-container">
-              {["0-1Kg", "1-2Kg", "2-3Kg", "3-5Kg", "5-10Kg", "10Kg+"].map(
-                (item, index) => (
-                  <button
-                    className={item === priceState.weight ? "active" : ""}
-                    name={item}
-                    key={index}
-                    data-type="weight"
-                    onClick={handleButtonClick}
-                  >
-                    <img src={`${dirRoot}parcel-box.png`} alt="" />
-                    {item}
-                  </button>
-                )
+            <div className="orders">
+              <h2>{priceState.order}</h2>
+              <p>Monthly Orders</p>
+              <hr />
+            </div>
+
+            <div className={`fulfillment-cost ${cost ? "" : "has-link"}`}>
+              <h2>Fulfillment Cost</h2>
+              {cost ? (
+                <>
+                  <p className="cost">{`${cost} INR`}</p>
+                </>
+              ) : (
+                <Link className="cost" to="quotes">
+                  Request a Quote
+                </Link>
               )}
             </div>
 
-            <hr />
-            <div className="cost-container">
-              <h2 className="heading">Per Order Cost - </h2>
+            <div className="packaging-cost">
+              <h2>Packaging Cost</h2>
 
-              <div className={`cost ${cost ? "" : "has-link"}`}>
-                {cost ? (
-                  `${cost} INR`
-                ) : (
-                  <Link className="" to="quotes">
-                    Request a Quote
-                  </Link>
-                )}
-              </div>
+              {packagingCost ? (
+                <>
+                  <p className="cost">{`${packagingCost} INR`}</p>
+                </>
+              ) : (
+                <Link className="cost" to="quotes">
+                  Request a Quote
+                </Link>
+              )}
+            </div>
+
+            <div className="note">
+              Note: <br /> This is a tentative cost for your order, to know the
+              exact cost please get in touch with our team.
             </div>
           </div>
         </div>
