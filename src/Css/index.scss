@@ -1911,6 +1911,10 @@ main {
           padding-left: clamp(2rem, 10vw, 5%);
           padding-right: clamp(2rem, 10vw, 5%);
         }
+
+        .output-container {
+          max-width: revert;
+        }
       }
     }
   }

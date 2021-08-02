@@ -2105,6 +2105,9 @@ main {
     padding-left: clamp(2rem, 10vw, 5%);
     padding-right: clamp(2rem, 10vw, 5%);
   }
+  #page-pricing .calculator .calculator-container .output-container {
+    max-width: revert;
+  }
 }
 
 #page-pricing .quotes {
