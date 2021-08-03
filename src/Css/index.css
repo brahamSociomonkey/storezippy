@@ -1939,7 +1939,7 @@ main {
 
 #page-pricing .calculator .calculator-container .input-container .weight .buttons-container button img,
 #page-pricing .calculator .calculator-container .input-container .packaging .buttons-container button img {
-  width: 60px;
+  width: auto;
   height: 60px;
   margin: 0 auto;
 }
@@ -2136,6 +2136,27 @@ main {
   -ms-grid-column-align: center;
       justify-self: center;
   max-width: 45ch;
+}
+
+@media (max-width: 900px) {
+  #page-pricing .quotes .display-img {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    grid-column: 1/-1;
+  }
+  #page-pricing .quotes .content-container {
+    grid-row: 2/-1;
+    grid-column: 1/-1;
+    text-align: center;
+  }
+}
+
+#page-pricing .founder .display-img,
+#page-pricing .quotes .display-img {
+  max-width: 35rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #not-found-page {
