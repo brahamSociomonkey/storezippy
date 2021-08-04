@@ -1304,13 +1304,13 @@ main {
 }
 
 #product .hero .content-container .primary-font {
-  font-size: clamp(65px, 5vw, 45px);
+  font-size: clamp(35px, 5vw, 65px);
   color: #fff;
 }
 
 #product .hero .content-container .rte {
   font-family: "Helvetica Rounded", sans-serif;
-  font-size: clamp(48px, 5vw, 30px);
+  font-size: clamp(25px, 5vw, 48px);
   font-weight: bold;
   color: #21bed5;
 }
@@ -1318,7 +1318,7 @@ main {
 #product .mini-quotes {
   margin: 5rem auto;
   text-align: center;
-  font-size: 20px;
+  font-size: clamp(16px, 5vw, 20px);
   max-width: 100ch;
 }
 
@@ -1388,11 +1388,11 @@ main {
 }
 
 #product .steps .step .txt-container h3 {
-  font-size: clamp(30px, 5vw, 25px);
+  font-size: clamp(20px, 5vw, 30px);
 }
 
 #product .steps .step .txt-container p {
-  font-size: 18px;
+  font-size: clamp(15px, 4vw, 20px);
 }
 
 #product .steps .step .display-img {
@@ -1405,6 +1405,17 @@ main {
   -o-object-fit: contain;
      object-fit: contain;
   max-height: 30rem;
+}
+
+@media (max-width: 900px) {
+  #product .steps .step {
+    -ms-grid-rows: 80vh;
+    -ms-grid-columns: 1.5fr 1fr;
+        grid-template: 80vh/ 1.5fr 1fr;
+  }
+  #product .steps .step::before {
+    height: calc(80vh + 1rem);
+  }
 }
 
 #product .inventory,
@@ -1426,12 +1437,12 @@ main {
 }
 
 #product .warehouse .content-container .primary-font {
-  font-size: clamp(65px, 5vw, 45px);
+  font-size: clamp(35px, 5vw, 65px);
   color: #002559;
 }
 
 #product .warehouse .content-container .rte {
-  font-size: 20px;
+  font-size: clamp(16px, 4vw, 20px);
   color: #3c76ab;
 }
 

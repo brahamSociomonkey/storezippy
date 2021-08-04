@@ -22,8 +22,7 @@ const Product = () => {
     },
     {
       heading: "Ship your inventory to us.",
-      content:
-        "You ship the inventory directly to our fulfillment center.",
+      content: "You ship the inventory directly to our fulfillment center.",
       img: `${dirRoot}ship-inventory.png`,
     },
     {
