@@ -2,8 +2,50 @@ import React from "react";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import SectionImgContentGrid from "../Utilities/mini-comps/SectionImgContentGrid";
 import animationObserver from "../Utilities/library/animationObserver";
+import { Link } from "react-router-dom";
 
 const Product = () => {
+  const dirRoot = `/assets/pages/product/`;
+
+  const dataForSteps = [
+    {
+      heading: "Talk to our expert.",
+      content:
+        "Our expert will offer a solution tailored exactly to your business needs after a deeper understanding of your business and expectations.",
+      img: `${dirRoot}expert-talk.png`,
+    },
+    {
+      heading: "Onboarding.",
+      content:
+        "Our team will help you set up the account, integrate with the marketplaces and complete the onboarding process.",
+      img: `${dirRoot}onboarding.png`,
+    },
+    {
+      heading: "Ship your inventory to us.",
+      content:
+        "You ship the inventory directly to our fulfillment center.",
+      img: `${dirRoot}ship-inventory.png`,
+    },
+    {
+      heading: "We Receive and do quality check.",
+      content:
+        "We receive your inventory in our temperature controlled fulfillment center and do the quality check post receival before storing in the warehouse.",
+      img: `${dirRoot}quality-check.png`,
+    },
+    {
+      heading: "Pick, pack and ship.",
+      content:
+        "Once you start receiving online orders, our in house expert team will carefully pick and pack your orders as per the packing norms. After this, the order is dispatched via optimum shipping partner.",
+      img: `${dirRoot}pick-pack.png`,
+    },
+    {
+      heading: "Robust returns management.",
+      content:
+        "We have a seamless returns management system in place. This is an important part of what StoreZippy does.",
+      img: `${dirRoot}robust-returns.png`,
+    },
+  ];
+
   React.useEffect(() => {
     animationObserver();
   }, []);
@@ -19,77 +61,49 @@ const Product = () => {
 
       <SectionImgContentGrid
         data={{
-          sectionClassName: "hero page-width",
-          heading: "Reforming your Warehouse Management with Digitalization",
-          text: "To have an upper hand in the era of new innovative technologies, we need to undergo a digital transformation. We at STORE ZIPPY believe in warehouse automation opportunities to add value to your business. Meeting higher client’s expectations calls for the real time inventory management and hence we keep you updated with a live dashboard ensuring you know exactly about everything related to your account.",
-          urlTo: "/quotes",
-          urlText: "Get Quotes",
+          sectionClassName: "hero",
+          heading: "Struggling with Order Fulfillment?",
+          text: "<span style='color: #FF8F3F'>Don’t worry!</span> <br /> We make it simple for you.",
           img: "/assets/pages/product/hero.png",
         }}
       />
 
+      <div className="mini-quotes">
+        <p>
+          We believe that there is a dire need to undergo digital transformation
+          to have an upper hand in the era of new innovative technologies.
+          Reform your fulfillment process with digitalization at StoreZippy.
+        </p>
+
+        <Link className="btn" to="/quotes">
+          Get Quotes
+        </Link>
+      </div>
+
       {/* steps */}
       <section className="steps">
-        <h2 className="main-heading primary-font">
-          Streamlining your Fulfillment Needs!
+        <h2 className="heading main-heading primary-font">
+          Let’s visualise the Fulfillment Process together...
         </h2>
-        <div className="step step-1">
-          <div className="txt-container">
-            <h3 className="heading tertiary-font">
-              We receive and store your inventory.
-            </h3>
 
-            <p className="rte">
-              We have a temperature controlled warehouse fulfillment environment
-              to safely secure your merchandise.
-            </p>
+        {dataForSteps?.map(({ heading, content, img }, index) => (
+          <div className={`step step-${index + 1}`} key={index}>
+            <div className="txt-container">
+              <h3 className="heading tertiary-font">{heading}</h3>
+
+              <p className="rte">{content}</p>
+            </div>
+
+            <ResponsiveDisplayImg
+              data={{
+                img,
+              }}
+            />
           </div>
-
-          <ResponsiveDisplayImg
-            data={{
-              img: "/assets/pages/product/step-1.png",
-            }}
-          />
-        </div>
-        <div className="step step-2">
-          <div className="txt-container">
-            <h3 className="heading tertiary-font">
-              We pick and pack your orders.{" "}
-            </h3>
-
-            <p className="rte">
-              Our dedicated warehouse team ensures quick pick and pack services
-              following all packing requirements.
-            </p>
-          </div>
-
-          <ResponsiveDisplayImg
-            data={{
-              img: "/assets/pages/product/step-2.png",
-            }}
-          />
-        </div>
-        <div className="step step-3">
-          <div className="txt-container">
-            <h3 className="heading tertiary-font">
-              We quality check and schedule Shipment.
-            </h3>
-
-            <p className="rte">
-              As soon as you receive online orders, we do the proper quality
-              checks and schedule order dispatching.
-            </p>
-          </div>
-
-          <ResponsiveDisplayImg
-            data={{
-              img: "/assets/pages/product/step-3.png",
-            }}
-          />
-        </div>
+        ))}
       </section>
 
-      <br />
+      {/* <br />
       <br />
       <div className="basic-grid-container page-width">
         <div className="content-container width-45ch">
@@ -107,9 +121,9 @@ const Product = () => {
         </div>
       </div>
       <br />
-      <br />
+      <br /> */}
       {/* inventory management */}
-      <SectionImgContentGrid
+      {/* <SectionImgContentGrid
         data={{
           sectionClassName: "inventory page-width",
           heading: "Inbound Inventory Management",
@@ -117,10 +131,10 @@ const Product = () => {
           img: "/assets/pages/product/inventory.png",
           imgRight: false,
         }}
-      />
+      /> */}
 
       {/* inventory management dashboard */}
-      <SectionImgContentGrid
+      {/* <SectionImgContentGrid
         data={{
           sectionClassName: "inventory-dashboard page-width",
           heading: "Inventory Storage Management",
@@ -129,10 +143,10 @@ const Product = () => {
           mobImg: "/assets/pages/product/inventory-dashboard-mob.png",
           imgRight: true,
         }}
-      />
+      /> */}
 
       {/* report */}
-      <SectionImgContentGrid
+      {/* <SectionImgContentGrid
         data={{
           sectionClassName: "report page-width",
           heading: "Reporting",
@@ -141,10 +155,10 @@ const Product = () => {
           mobImg: "/assets/pages/product/report-mob.png",
           imgRight: false,
         }}
-      />
+      /> */}
 
       {/* dispatch */}
-      <SectionImgContentGrid
+      {/* <SectionImgContentGrid
         data={{
           sectionClassName: "dispatch page-width",
           heading: "One Day Dispatch",
@@ -152,10 +166,10 @@ const Product = () => {
           img: "/assets/pages/product/dispatch.png",
           imgRight: true,
         }}
-      />
+      /> */}
 
       {/* returns */}
-      <SectionImgContentGrid
+      {/* <SectionImgContentGrid
         data={{
           sectionClassName: "returns page-width",
           heading: "Returns Management",
@@ -164,15 +178,15 @@ const Product = () => {
           mobImg: "/assets/pages/product/returns-mob.png",
           imgRight: false,
         }}
-      />
+      /> */}
 
       {/* warehouse */}
       <SectionImgContentGrid
         data={{
-          sectionClassName: "warehouse page-width",
+          sectionClassName: "warehouse",
           heading: "Your On Demand Digital Warehouse Partner",
           text: "Download the free guide today and get a jump start on your 3PL Service Provider.",
-          img: "/assets/pages/product/warehouse.jpg",
+          img: "/assets/pages/product/download.png",
           urlTo: "/guide",
           urlText: "Download",
           imgRight: true,

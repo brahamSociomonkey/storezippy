@@ -52,6 +52,7 @@ const SectionImgContentGrid = ({ data }) => {
         className="rte"
         ref={textRef}
       ></div>
+      
       {urlTo && (
         <>
           <br />
