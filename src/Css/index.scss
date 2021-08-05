@@ -1151,27 +1151,30 @@ main {
   .hero {
     padding: 3rem 5%;
     background-color: #002e70;
-    align-items: center;
 
-    .content-container {
-      max-width: 50ch;
+    .basic-grid-container {
+      align-items: center;
 
-      .primary-font {
-        font-size: clamp(35px, 5vw, 65px);
-        color: #fff;
+      .content-container {
+        max-width: 50ch;
+
+        .primary-font {
+          font-size: clamp(35px, 5vw, 65px);
+          color: #fff;
+        }
+
+        .rte {
+          font-family: "Helvetica Rounded", sans-serif;
+          font-size: clamp(25px, 5vw, 48px);
+          font-weight: bold;
+          color: #21bed5;
+        }
       }
 
-      .rte {
-        font-family: "Helvetica Rounded", sans-serif;
-        font-size: clamp(25px, 5vw, 48px);
-        font-weight: bold;
-        color: #21bed5;
+      .display-img {
+        max-width: 35rem;
+        justify-self: center;
       }
-    }
-
-    .display-img {
-      max-width: 35rem;
-      justify-self: center;
     }
   }
 
