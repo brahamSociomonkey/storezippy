@@ -8,7 +8,7 @@ const Pricing = () => {
 
   const [priceState, setPriceState] = useState({
     order: "1000-2999",
-    weight: "10Kg+",
+    weight: "0-1Kg",
     packaging: "Parcel Box",
   });
 

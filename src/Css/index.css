@@ -1297,6 +1297,9 @@ main {
 #product .hero {
   padding: 3rem 5%;
   background-color: #002e70;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 #product .hero .content-container {
@@ -1313,6 +1316,12 @@ main {
   font-size: clamp(25px, 5vw, 48px);
   font-weight: bold;
   color: #21bed5;
+}
+
+#product .hero .display-img {
+  max-width: 35rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
 }
 
 #product .mini-quotes {
