@@ -1990,8 +1990,13 @@ main {
   color: #002559;
 }
 
-#page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button.active, #page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button:hover {
+#page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button.active {
   background-color: #ff8f3f;
+  color: #fff;
+}
+
+#page-pricing .calculator .calculator-container .input-container .steps-container .buttons-container button:hover {
+  background-color: #ffc42e;
   color: #fff;
 }
 

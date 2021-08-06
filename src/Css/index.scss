@@ -1805,9 +1805,13 @@ main {
               background-color: #fff;
               color: #002559;
 
-              &.active,
-              &:hover {
+              &.active {
                 background-color: #ff8f3f;
+                color: #fff;
+              }
+
+              &:hover {
+                background-color: hsl(43, 100%, 59%);
                 color: #fff;
               }
             }

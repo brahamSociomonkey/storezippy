@@ -104,6 +104,10 @@
 
 // blog-page
 .blog-page {
+  .big-heading {
+    font-size: clamp(30px, 5vw, 48px);
+  }
+
   .primary-font {
     font-size: clamp(1.8rem, 5vw, 72px);
   }
@@ -169,7 +173,8 @@
 // top-15-products-to-sell-online-in-2021
 .top-15-products-to-sell-online-in-2021,
 .ready-for-prime-sales-event,
-.tips-for-site-improvement {
+.tips-for-site-improvement,
+.amazon-seo {
   article {
     padding-left: 5%;
     padding-right: 5%;
@@ -227,5 +232,18 @@
   .another-heading {
     font-size: clamp(2rem, 10vw, 48px);
     color: #002862;
+  }
+}
+
+.amazon-seo {
+  article {
+    padding-bottom: 0;
+  }
+
+  .last-para {
+    margin: clamp(2.5rem, 10vw, 3.75rem) auto;
+    padding: clamp(2.5rem, 10vw, 3.75rem) 5%;
+    margin-bottom: 0;
+    padding-top: 0;
   }
 }

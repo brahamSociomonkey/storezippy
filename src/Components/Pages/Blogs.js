@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const dataForBlogs = [
     {
+      img: "/assets/pages/blogs/amazon-seo/featured-min.png",
+      date: "6th August 2021",
+      title: "Amazon SEO: Tips and tricks to rank highly on Amazon searches",
+      des: "Worried about how to rank on page 1 of amazon searches and increase your sales? Read our latest blog to gain insights on easy yet effective tips and achieve your dream of growing a successful business.",
+      author: "Garima Mehta",
+      url: "/blogs/tips-for-amazon-seo",
+    },
+    {
       img: "/assets/pages/blogs/tips-for-site-improvement/featured-min.png",
       date: "30th July 2021",
       title: "Tips for ECommerce Website improvement",

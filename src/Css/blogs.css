@@ -187,6 +187,10 @@
   padding-right: calc(min(5%, 4rem));
 }
 
+.blog-page .big-heading {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
 .blog-page .primary-font {
   font-size: clamp(1.8rem, 5vw, 72px);
 }
@@ -249,7 +253,8 @@
 
 .top-15-products-to-sell-online-in-2021 article,
 .ready-for-prime-sales-event article,
-.tips-for-site-improvement article {
+.tips-for-site-improvement article,
+.amazon-seo article {
   padding-left: 5%;
   padding-right: 5%;
   max-width: 1800px;
@@ -259,13 +264,15 @@
 
 .top-15-products-to-sell-online-in-2021 article .points-container .point-item,
 .ready-for-prime-sales-event article .points-container .point-item,
-.tips-for-site-improvement article .points-container .point-item {
+.tips-for-site-improvement article .points-container .point-item,
+.amazon-seo article .points-container .point-item {
   margin: clamp(2.5rem, 10vw, 3.75rem) auto;
 }
 
 .top-15-products-to-sell-online-in-2021 article .points-container .point-item .heading,
 .ready-for-prime-sales-event article .points-container .point-item .heading,
-.tips-for-site-improvement article .points-container .point-item .heading {
+.tips-for-site-improvement article .points-container .point-item .heading,
+.amazon-seo article .points-container .point-item .heading {
   color: #002862;
   font-size: clamp(25px, 10vw, 28);
   padding: 0;
@@ -275,14 +282,16 @@
 
 .top-15-products-to-sell-online-in-2021 article .points-container .point-item .display-img,
 .ready-for-prime-sales-event article .points-container .point-item .display-img,
-.tips-for-site-improvement article .points-container .point-item .display-img {
+.tips-for-site-improvement article .points-container .point-item .display-img,
+.amazon-seo article .points-container .point-item .display-img {
   margin-top: clamp(2rem, 10vw, 3.125rem);
   margin-bottom: clamp(2rem, 10vw, 3.125rem);
 }
 
 .top-15-products-to-sell-online-in-2021 article .points-container .point-item .display-img img,
 .ready-for-prime-sales-event article .points-container .point-item .display-img img,
-.tips-for-site-improvement article .points-container .point-item .display-img img {
+.tips-for-site-improvement article .points-container .point-item .display-img img,
+.amazon-seo article .points-container .point-item .display-img img {
   max-height: 750px;
   overflow: hidden;
   border-radius: 15px;
@@ -290,7 +299,8 @@
 
 .top-15-products-to-sell-online-in-2021 article .points-container .point-item p,
 .ready-for-prime-sales-event article .points-container .point-item p,
-.tips-for-site-improvement article .points-container .point-item p {
+.tips-for-site-improvement article .points-container .point-item p,
+.amazon-seo article .points-container .point-item p {
   margin: 0;
 }
 
@@ -310,4 +320,15 @@
 .tips-for-site-improvement .another-heading {
   font-size: clamp(2rem, 10vw, 48px);
   color: #002862;
+}
+
+.amazon-seo article {
+  padding-bottom: 0;
+}
+
+.amazon-seo .last-para {
+  margin: clamp(2.5rem, 10vw, 3.75rem) auto;
+  padding: clamp(2.5rem, 10vw, 3.75rem) 5%;
+  margin-bottom: 0;
+  padding-top: 0;
 }

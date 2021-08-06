@@ -21,6 +21,7 @@ import Guide2 from "./Pages/Guide2";
 import TopProductsToSellOnline from "./Pages/blogs/TopProductsToSellOnline";
 import ReadyForPrimeSalesEvent from "./Pages/blogs/ReadyForPrimeSalesEvent";
 import TipsForSiteImprovement from "./Pages/blogs/TipsForSiteImprovement";
+import AmazonSEO from "./Pages/blogs/AmazonSEO";
 
 const Main = () => {
   return (
@@ -30,6 +31,11 @@ const Main = () => {
       <Switch>
         <Route exact path="/polices/privacy" component={PrivacyPolicy} />
         <Route exact path="/blogs" component={Blogs} />
+        <Route
+          exact
+          path="/blogs/tips-for-amazon-seo"
+          component={AmazonSEO}
+        />
         <Route
           exact
           path="/blogs/difference-between-1PL-2PL-3PL-4PL"
