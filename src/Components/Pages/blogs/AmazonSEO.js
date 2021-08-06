@@ -246,7 +246,7 @@ const AmazonSEO = () => {
               Tips for Amazon SEO
             </h2>
 
-            <ResponsiveDisplayImg data={{ img: `${dirRoot}traffic-min.png` }} />
+            <ResponsiveDisplayImg data={{ img: `${dirRoot}tips-min.png` }} />
 
             <p>
               <strong>
