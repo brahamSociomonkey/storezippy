@@ -28,7 +28,7 @@ const Product = () => {
     {
       heading: "We Receive and do quality check.",
       content:
-        "We receive your inventory in our temperature controlled fulfillment center and do the quality check post receival before storing in the warehouse.",
+        "We receive your inventory in our fulfillment center and do the quality check post receival before storing in the warehouse.",
       img: `${dirRoot}quality-check.png`,
     },
     {
@@ -71,7 +71,7 @@ const Product = () => {
         <p>
           We believe that there is a dire need to undergo digital transformation
           to have an upper hand in the era of new innovative technologies.
-          Reform your fulfillment process with digitalization at StoreZippy.
+          Reform your fulfillment process with digitization at StoreZippy.
         </p>
 
         <Link className="btn" to="/quotes">
