@@ -1,9 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
+import ReactHtmlParser from "react-html-parser";
 
 const Guides = () => {
   const dataForGuides = [
+    {
+      img: "/assets/pages/guides/guide-3/feature.png",
+      date: "11 August 2021",
+      title:
+        'The Ultimate Guide to choosing your <span style= "display: inline-block">E-Commerce</span>  Platform',
+      des: "A definitive guide to choosing the right E-Commerce Platform in 2021.",
+      url: "/guides/guide-3",
+    },
     {
       img: "/assets/pages/guides/guide-2/feature.png",
       date: "13th July 2021",
@@ -39,7 +48,7 @@ const Guides = () => {
             <div className="content">
               <p className="date">{date}</p>
               <Link to={url}>
-                <p className="title primary-font">{title}</p>
+                <p className="title primary-font">{ReactHtmlParser(title)}</p>
               </Link>
               <p className="des">{des}</p>
               <div className="custom-hr"></div>

@@ -22,6 +22,7 @@ import TopProductsToSellOnline from "./Pages/blogs/TopProductsToSellOnline";
 import ReadyForPrimeSalesEvent from "./Pages/blogs/ReadyForPrimeSalesEvent";
 import TipsForSiteImprovement from "./Pages/blogs/TipsForSiteImprovement";
 import AmazonSEO from "./Pages/blogs/AmazonSEO";
+import Guide3 from "./Pages/Guide3";
 
 const Main = () => {
   return (
@@ -67,6 +68,7 @@ const Main = () => {
           component={TipsForSiteImprovement}
         />
         <Route exact path="/integration" component={Integration} />
+        <Route exact path="/guides/guide-3" component={Guide3} />
         <Route exact path="/guides/guide-2" component={Guide2} />
         <Route exact path="/guides/guide-1" component={Guide} />
         <Route exact path="/guides" component={Guides} />

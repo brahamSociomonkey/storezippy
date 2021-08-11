@@ -1406,7 +1406,8 @@ main {
   }
 }
 
-#guide-2 {
+#guide-2,
+#guide-3 {
   line-height: 1.3;
 
   .hero {
@@ -1417,6 +1418,8 @@ main {
     gap: 2rem;
 
     .content {
+      max-width: 55ch;
+
       h2 {
         font-weight: 500;
       }
@@ -1429,6 +1432,16 @@ main {
 
       .btn {
         padding: 0.5em 3.5em;
+      }
+    }
+
+    .display-img {
+      justify-self: end;
+
+      .img-container {
+        img {
+          max-height: 800px;
+        }
       }
     }
 
