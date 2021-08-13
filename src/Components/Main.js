@@ -23,6 +23,7 @@ import ReadyForPrimeSalesEvent from "./Pages/blogs/ReadyForPrimeSalesEvent";
 import TipsForSiteImprovement from "./Pages/blogs/TipsForSiteImprovement";
 import AmazonSEO from "./Pages/blogs/AmazonSEO";
 import Guide3 from "./Pages/Guide3";
+import WhatToLookInCompany from "./Pages/blogs/WhatToLookInCompany";
 
 const Main = () => {
   return (
@@ -32,6 +33,11 @@ const Main = () => {
       <Switch>
         <Route exact path="/polices/privacy" component={PrivacyPolicy} />
         <Route exact path="/blogs" component={Blogs} />
+        <Route
+          exact
+          path="/blogs/what-to-look-in-company"
+          component={WhatToLookInCompany}
+        />
         <Route
           exact
           path="/blogs/tips-for-amazon-seo"
