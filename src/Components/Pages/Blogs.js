@@ -5,6 +5,14 @@ import { Link } from "react-router-dom";
 const Blogs = () => {
   const dataForBlogs = [
     {
+      img: "/assets/pages/blogs/ecom-seo/featured-min.png",
+      date: "20th August 2021",
+      title: "ECommerce SEO- Simple process for more sales",
+      des: "Read our latest blog to gain insights on simple processes for more sales in ECommerce optimisation",
+      author: "Garima Mehta",
+      url: "/blogs/ecom-seo",
+    },
+    {
       img: "/assets/pages/blogs/what-to-look-in-company/featured-min.png",
       date: "13th August 2021",
       title: "What to look for when choosing an Ecommerce Fulfillment Company?",
