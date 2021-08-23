@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import GetQuotesSection from "../Utilities/GetQuotesSection";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
+import animationObserver from "../Utilities/library/animationObserver";
 
 const Pricing = () => {
   const dirRoot = `/assets/pages/pricing/`;
@@ -108,15 +109,27 @@ const Pricing = () => {
   React.useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  React.useEffect(() => {
+    animationObserver();
+  }, []);
+
   return (
     <div id="page-pricing">
       {/* hero  */}
       <div className="hero">
         <div className="content">
-          <h1 className="heading">Store Zippy Fulfillment Pricing</h1>
+          <h1
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="heading"
+          >
+            Store Zippy Fulfillment Pricing
+          </h1>
 
           <br />
-          <p>
+          <p data-animname="fade-in-up" data-onetime="true" data-delay="0.2">
             We understand the importance of having price transparency and that’s
             why StoreZippy offers{" "}
             <strong>
@@ -140,7 +153,12 @@ const Pricing = () => {
             }}
           />
 
-          <div className="content">
+          <div
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="content"
+          >
             <p>
               Storezippy’s pricing is clear which means they will tell you
               exactly what your costs will be and then be rest assured, they are
@@ -152,7 +170,12 @@ const Pricing = () => {
       </div>
 
       <div className="info-cards">
-        <div className="info-card">
+        <div
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0"
+          className="info-card"
+        >
           <img src={`${dirRoot}/icon-personalized.png`} alt="" />
           <h2>Personalized for you</h2>
           <p>
@@ -162,7 +185,12 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="info-card">
+        <div
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0.1"
+          className="info-card"
+        >
           <img src={`${dirRoot}/icon-traditional.png`} alt="" />
           <h2>Not just a traditional 3PL</h2>
           <p>
@@ -172,7 +200,12 @@ const Pricing = () => {
           </p>
         </div>
 
-        <div className="info-card">
+        <div
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0.2"
+          className="info-card"
+        >
           <img src={`${dirRoot}/icon-arms.png`} alt="" />
           <h2>Your extended arm</h2>
           <p>
@@ -183,7 +216,12 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="calculator">
+      <div
+        data-animname="fade-in-up"
+        data-onetime="true"
+        data-delay="0"
+        className="calculator"
+      >
         <div className="heading-with-line-grid-container">
           <h1 className="heading">
             Calculate my <br /> Fulfillment cost

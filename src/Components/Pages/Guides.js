@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import ReactHtmlParser from "react-html-parser";
+import animationObserver from "../Utilities/library/animationObserver";
 
 const Guides = () => {
   const dataForGuides = [
@@ -34,6 +35,10 @@ const Guides = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  React.useEffect(() => {
+    animationObserver();
+  }, []);
+
   return (
     <div id="page-guides">
       <div className="guides-container blog-page-width">
@@ -41,11 +46,16 @@ const Guides = () => {
           <div className="guide-item" key={index}>
             <div className="featured-image">
               <Link to={url}>
-                <ResponsiveDisplayImg data={{ img }} />
+                <ResponsiveDisplayImg data={{ img, delay: index }} />
               </Link>
             </div>
 
-            <div className="content">
+            <div
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay={index / 8}
+              className="content"
+            >
               <p className="date">{date}</p>
               <Link to={url}>
                 <p className="title primary-font">{ReactHtmlParser(title)}</p>

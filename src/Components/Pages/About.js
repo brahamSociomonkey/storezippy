@@ -1,4 +1,5 @@
 import React from "react";
+import animationObserver from "../Utilities/library/animationObserver";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 
 const About = () => {
@@ -7,13 +8,22 @@ const About = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  React.useEffect(() => {
+    animationObserver();
+  }, []);
+
   return (
     <div id="page-about-us">
       <div className="hero">
         <ResponsiveDisplayImg data={{ img: "/assets/pages/about/hero.png" }} />
       </div>
 
-      <div class="info">
+      <div
+        data-animname="fade-in-up"
+        data-onetime="true"
+        data-delay="0"
+        class="info"
+      >
         <p>
           StoreZippy is a tech-enabled, automated and India’s most
           cost-effective fulfillment service provider with tailored solutions
@@ -40,11 +50,16 @@ const About = () => {
 
       <div className="story basic-grid-container">
         <div className="content">
-          <h1 className="offset-heading primary-font heading-rounded">
+          <h1
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="offset-heading primary-font heading-rounded"
+          >
             The Store Zippy Story
           </h1>
 
-          <p>
+          <p data-animname="fade-in-up" data-onetime="true" data-delay="0.2">
             The ecommerce industry is recognized as the fastest growing industry
             in India. With this tremendous growth, the demand for warehousing
             and fulfillment is also expected to rise. We luckily spotted this
@@ -62,11 +77,16 @@ const About = () => {
       </div>
 
       <div className="inception">
-        <h1 className="offset-heading primary-font heading-rounded">
+        <h1
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0"
+          className="offset-heading primary-font heading-rounded"
+        >
           Inception
         </h1>
 
-        <p>
+        <p data-animname="fade-in-up" data-onetime="true" data-delay="0.2">
           The first real stepping stone towards the inception of{" "}
           <strong>“Store Zippy” </strong>
           was <strong>“Socio Monkey”</strong>. SocioMonkey is a team of digital
@@ -92,7 +112,12 @@ const About = () => {
       </div>
 
       <div className="founders">
-        <h1 className="offset-heading primary-font heading-rounded">
+        <h1
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0"
+          className="offset-heading primary-font heading-rounded"
+        >
           People behind the idea
         </h1>
 
@@ -115,7 +140,7 @@ const About = () => {
           </div>
         </div>
 
-        <p>
+        <p data-animname="fade-in-up" data-onetime="true" data-delay="0.2">
           <strong>Mr. Kathuria</strong> and <strong>Mr. Aggarwal</strong>{" "}
           started their career as an Area Sales Officer with Channel Play, a
           Gurugram based startup. While working there they gained some valuable

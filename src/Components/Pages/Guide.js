@@ -6,6 +6,7 @@ import HeadingWithLine from "../Utilities/mini-comps/HeadingWithLine";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import SectionImgContentGrid from "../Utilities/mini-comps/SectionImgContentGrid";
 // import MailchimpSubscribe from "react-mailchimp-subscribe";
+import animationObserver from "../Utilities/library/animationObserver";
 export const GuideFormContext = React.createContext();
 
 const Guide = () => {
@@ -107,6 +108,10 @@ const Guide = () => {
   // scroll to top
   React.useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    animationObserver();
   }, []);
 
   return (

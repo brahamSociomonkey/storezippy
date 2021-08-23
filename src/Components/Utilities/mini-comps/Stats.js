@@ -7,7 +7,12 @@ const Stats = ({ data }) => {
 
   return (
     <section className="stats">
-      <HeadingWithLine data={{ heading }} />
+      <HeadingWithLine
+        data-animname="fade-in-up"
+        data-onetime="true"
+        data-delay=".0"
+        data={{ heading }}
+      />
       <br />
       <br />
       <ResponsiveDisplayImg

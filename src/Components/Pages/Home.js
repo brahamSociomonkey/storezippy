@@ -157,20 +157,30 @@ const Home = () => {
       {/* integration */}
       <div className="integration">
         <div className="heading-with-line-grid-container">
-          <div className="heading primary-font">
+          <div
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="heading primary-font"
+          >
             Everything is in place for you
           </div>
 
           <div className="gradient-line"></div>
         </div>
 
-        <p>
+        <p data-animname="fade-in-up" data-onetime="true" data-delay=".05">
           Use <strong>prime-like</strong> and quick{" "}
           <strong>delivery badges</strong> to reassure your customers with
           StoreZippy.
         </p>
 
-        <div className="icons-grid-container">
+        <div
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay=".1"
+          className="icons-grid-container"
+        >
           {dataForIntegrationIcons?.map(({ icon }, index) => (
             <div className="icon-item" key={index}>
               <img src={icon} alt={icon} />
@@ -199,7 +209,12 @@ const Home = () => {
           >
             <div className="txt-container">
               <div className="heading">
-                <h2 className="">
+                <h2
+                  data-animname="fade-in-up"
+                  data-onetime="true"
+                  data-delay="0"
+                  className=""
+                >
                   Just do what’s best and outsource the rest!
                 </h2>
               </div>
@@ -230,7 +245,7 @@ const Home = () => {
             <div className="img-container">
               <img
                 src="/assets/pages/home/forklift-vector-min.png"
-                alt="image"
+                alt="forklift-vector-min.png"
               />
             </div>
           </div>
@@ -247,12 +262,23 @@ const Home = () => {
           />
 
           <div className="txt-content">
-            <h2 className="heading primary-font">
+            <h2
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay="0.1"
+              className="heading primary-font"
+            >
               Download our free guide today and get a jump-start on your 3PL
               service provider.
             </h2>
 
-            <Link to="/guides/guide-1" className="btn">
+            <Link
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay="0.2"
+              to="/guides/guide-1"
+              className="btn"
+            >
               Download
             </Link>
           </div>
@@ -262,7 +288,12 @@ const Home = () => {
       {/* testimonials */}
       <section className="testimonials">
         <div className="heading-with-line-grid-container">
-          <div className="heading primary-font">
+          <div
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="heading primary-font"
+          >
             Don’t just trust our words!
           </div>
 
@@ -270,6 +301,9 @@ const Home = () => {
         </div>
 
         <Slider
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0.3"
           {...testimonialSliderSettings}
           className="testimonials-container testimonials-slider-container"
         >

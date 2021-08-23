@@ -2,17 +2,13 @@ const animationObserver = () => {
   //Intersection observer for animations-----------------------------------------------------------
   let optionsForAnimations = {
     // threshold: 0.2,
+    rootMargin: "50px 0px 0px 0px",
   };
 
   const animationObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      const {
-        delay,
-        animname,
-        onetime,
-        animtiming,
-        timingfunction,
-      } = entry.target.dataset;
+      const { delay, animname, onetime, animtiming, timingfunction } =
+        entry.target.dataset;
 
       if (entry.intersectionRatio > 0) {
         entry.target.style.animation = `${animname} ${animtiming || 0.5}s ${

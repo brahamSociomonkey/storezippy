@@ -68,20 +68,26 @@ const Product = () => {
       />
 
       <div className="mini-quotes">
-        <p>
+        <p data-animname="fade-in-up"
+                  data-onetime="true"
+                  data-delay="0">
           We believe that there is a dire need to undergo digital transformation
           to have an upper hand in the era of new innovative technologies.
           Reform your fulfillment process with digitization at StoreZippy.
         </p>
 
-        <Link className="btn" to="/quotes">
+        <Link  data-animname="fade-in-up"
+                  data-onetime="true"
+                  data-delay="0.2" className="btn" to="/quotes">
           Get Quotes
         </Link>
       </div>
 
       {/* steps */}
       <section className="steps">
-        <h2 className="heading main-heading primary-font">
+        <h2 data-animname="fade-in-up"
+                  data-onetime="true"
+                  data-delay="0" className="heading main-heading primary-font">
           Let’s visualise the Fulfillment Process together...
         </h2>
 

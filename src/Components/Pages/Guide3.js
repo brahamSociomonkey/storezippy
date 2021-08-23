@@ -1,10 +1,15 @@
 import React from "react";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
+import animationObserver from "../Utilities/library/animationObserver";
 
 const Guide3 = () => {
   // scroll to top
   React.useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    animationObserver();
   }, []);
 
   return (

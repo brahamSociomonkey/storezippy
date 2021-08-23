@@ -7,7 +7,7 @@ function ResponsiveDisplayImg({ data }) {
     <section
       data-animname="fade-in-up"
       data-onetime="true"
-      data-delay=".3"
+      data-delay={data.delay / 10 || ".3"}
       className="display-img"
     >
       <div className="img-container">

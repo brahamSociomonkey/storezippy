@@ -1,8 +1,13 @@
 import React from "react";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
+import animationObserver from "../Utilities/library/animationObserver";
 import { Link } from "react-router-dom";
 
 const Blogs = () => {
+  React.useEffect(() => {
+    animationObserver();
+  }, []);
+
   const dataForBlogs = [
     {
       img: "/assets/pages/blogs/ecom-seo/featured-min.png",
@@ -90,11 +95,16 @@ const Blogs = () => {
           <div className="blog-item" key={index}>
             <div className="featured-image">
               <Link to={url}>
-                <ResponsiveDisplayImg data={{ img }} />
+                <ResponsiveDisplayImg data={{ img, delay: index }} />
               </Link>
             </div>
 
-            <div className="content">
+            <div
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay={index / 8}
+              className="content"
+            >
               <p className="date">{date}</p>
               <Link to={url}>
                 <p className="title primary-font">{title}</p>

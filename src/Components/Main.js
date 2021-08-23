@@ -25,8 +25,15 @@ import AmazonSEO from "./Pages/blogs/AmazonSEO";
 import Guide3 from "./Pages/Guide3";
 import WhatToLookInCompany from "./Pages/blogs/WhatToLookInCompany";
 import EcomSEO from "./Pages/blogs/EcomSEO";
+import animationObserver from "./Utilities/library/animationObserver";
+
 
 const Main = () => {
+
+  React.useEffect(() => {
+    animationObserver();
+  }, []);
+
   return (
     <main>
       {/* <ScrollToTop /> */}

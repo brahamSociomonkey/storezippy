@@ -5,6 +5,7 @@ import HeadingWithLine from "../Utilities/mini-comps/HeadingWithLine";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import SectionImgContentGrid from "../Utilities/mini-comps/SectionImgContentGrid";
 import { useIntercom } from "react-use-intercom";
+import animationObserver from "../Utilities/library/animationObserver";
 import MailchimpContactForm from "../forms/MailchimpGuideForm";
 export const ContactFormContext = React.createContext();
 
@@ -123,6 +124,10 @@ const Contact = () => {
   // scroll to top
   React.useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    animationObserver();
   }, []);
 
   return (

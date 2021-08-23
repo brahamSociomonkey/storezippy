@@ -5,6 +5,7 @@ import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import Stats from "../Utilities/mini-comps/Stats";
 import SliderContainer from "../Utilities/SliderContainer";
 import ReactHtmlParser from "react-html-parser";
+import animationObserver from "../Utilities/library/animationObserver";
 
 const WhyUs = () => {
   const dataFroDropDown = [
@@ -45,6 +46,10 @@ const WhyUs = () => {
     window.scrollTo(0, 0);
   }, []);
 
+  React.useEffect(() => {
+    animationObserver();
+  }, []);
+
   return (
     <div id="why-us">
       <div className="hero">
@@ -52,7 +57,12 @@ const WhyUs = () => {
       </div>
 
       <div className="fulfillment-needs">
-        <h1 className="offset-heading primary-font heading-rounded">
+        <h1
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0"
+          className="offset-heading primary-font heading-rounded"
+        >
           A One stop Window for all your Fulfillment needs
         </h1>
 
@@ -63,7 +73,13 @@ const WhyUs = () => {
             "personalised-sols.png",
             "surveillence.png",
           ]?.map((image, index) => (
-            <div className="grid-item" key={index}>
+            <div
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay={index / 10}
+              className="grid-item"
+              key={index}
+            >
               <img
                 src={`/assets/pages/why-us/${image}`}
                 alt={`/assets/pages/why-us/${image}`}
@@ -95,11 +111,16 @@ const WhyUs = () => {
       <div className="distributed">
         <div className="basic-grid-container">
           <div className="content">
-            <h1 className="offset-heading primary-font heading-rounded">
+            <h1
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay="0"
+              className="offset-heading primary-font heading-rounded"
+            >
               Distributed Inventory
             </h1>
 
-            <p>
+            <p data-animname="fade-in-up" data-onetime="true" data-delay="0.2">
               We keep your inventory distributed so that customers in the close
               proximity to one of our many fulfillment centres are eligible for
               same/next day dispatch.
@@ -125,7 +146,12 @@ const WhyUs = () => {
 
       {/* dropdowns  */}
       <div className="dropdowns-section">
-        <h1 className="offset-heading primary-font heading-rounded">
+        <h1
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0"
+          className="offset-heading primary-font heading-rounded"
+        >
           Value Added Services
         </h1>
 
@@ -135,7 +161,11 @@ const WhyUs = () => {
               <details>
                 {ReactHtmlParser(des)}
 
-                <summary>
+                <summary
+                  data-animname="fade-in-up"
+                  data-onetime="true"
+                  data-delay={index / 10}
+                >
                   <div>
                     <img className="icon" src={icon} alt={icon} />
                   </div>

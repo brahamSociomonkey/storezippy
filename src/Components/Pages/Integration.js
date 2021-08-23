@@ -2,11 +2,16 @@ import React from "react";
 import IconsGridContainer from "../Utilities/mini-comps/IconsGridContainer";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import GetQuotesSection from "../Utilities/GetQuotesSection";
+import animationObserver from "../Utilities/library/animationObserver";
 
 const Integration = () => {
   // scroll to top
   React.useEffect(() => {
     window.scrollTo(0, 0);
+  }, []);
+
+  React.useEffect(() => {
+    animationObserver();
   }, []);
 
   const dirRoot = `/assets/pages/integration/`;
@@ -87,13 +92,34 @@ const Integration = () => {
       <div className="hero">
         <div className="content">
           <h1 className="primary-font heading">
-            <span style={{ color: "#FFB800" }}>Seamless</span> <br />
-            <span style={{ color: "#FF8F3F" }}>Integrations</span> <br />
-            for your Growth
+            <div
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay="0"
+              style={{ color: "#FFB800" }}
+            >
+              Seamless
+            </div>{" "}
+            <div
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay="0.2"
+              style={{ color: "#FF8F3F" }}
+            >
+              Integrations
+            </div>{" "}
+            <div
+              data-animname="fade-in-up"
+              data-onetime="true"
+              data-delay="0.4"
+              style={{ color: "#fffff" }}
+            >
+              for your Growth
+            </div>
           </h1>
 
           <br />
-          <p>
+          <p data-animname="fade-in-up" data-onetime="true" data-delay="0.5">
             We support a diversity of popular integration platforms and prime
             technology solutions to accelerate your online growth and give you
             that extra competitive edge.
@@ -106,13 +132,25 @@ const Integration = () => {
       {/* marketplace */}
       <div className="marketplace icons-section">
         <div className="heading-with-line-grid-container">
-          <div className="heading primary-font">Marketplace</div>
+          <div
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="heading primary-font"
+          >
+            Marketplace
+          </div>
 
           <div className="gradient-line"></div>
         </div>
 
         <br />
-        <p className="tertiary-font">
+        <p
+          data-animname="fade-in-up"
+          data-onetime="true"
+          data-delay="0.2"
+          className="tertiary-font"
+        >
           At StoreZippy we expand your digital footprint by providing seamless
           integrations with the most popular and useful eCommerce marketplaces.
         </p>
