@@ -139,7 +139,7 @@ header {
     nav {
       padding: 0;
       margin: 0;
-      height: 100vh;
+      max-height: 100vh;
       width: 100vw;
       grid-template: repeat(3, max-content) / 1fr;
       text-align: center;
@@ -250,6 +250,7 @@ header {
 
     .link-item {
       color: inherit;
+      font-size: 80% !important;
     }
 
     @media (min-width: $mob-nav-breakpoint) {

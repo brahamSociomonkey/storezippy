@@ -147,12 +147,20 @@ const Header = () => {
           <div className="nav-links-group">
             <ul className="main-links-container">
               <li>
-                <Link onClick={handleLinkClick} className="main-link" to="/about">
+                <Link
+                  onClick={handleLinkClick}
+                  className="main-link"
+                  to="/about"
+                >
                   About
                 </Link>
               </li>
               <li>
-                <Link onClick={handleLinkClick} className="main-link" to="/why-us">
+                <Link
+                  onClick={handleLinkClick}
+                  className="main-link"
+                  to="/why-us"
+                >
                   Why Us?
                 </Link>
               </li>
@@ -178,7 +186,7 @@ const Header = () => {
                 <button
                   onMouseEnter={handleDropDownLinkMouseEnter}
                   onClick={handleDropDownLinkClick}
-                  // onTouchStart=""
+                  // onToStart=""
                   className="main-link has-drop-down"
                 >
                   <div className="title" data-drop-down="resources">

@@ -193,7 +193,7 @@ header nav img {
   header nav {
     padding: 0;
     margin: 0;
-    height: 100vh;
+    max-height: 100vh;
     width: 100vw;
     -ms-grid-rows: (-webkit-max-content)[3];
     -ms-grid-rows: (max-content)[3];
@@ -316,6 +316,7 @@ header.hide {
 
 .has-drop-down ul .link-item {
   color: inherit;
+  font-size: 80% !important;
 }
 
 @media (min-width: 900px) {
