@@ -188,6 +188,7 @@ header nav img {
     right: 0;
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
+    overflow-y: scroll;
   }
   header nav {
     padding: 0;
@@ -328,10 +329,16 @@ header.hide {
   pointer-events: all !important;
   height: revert !important;
   overflow: revert;
+  background-color: #fff;
+  padding: 1rem !important;
 }
 
 .has-drop-down:active ul li:first-of-type, .has-drop-down:focus-within ul li:first-of-type, .has-drop-down:hover ul li:first-of-type, .has-drop-down:focus ul li:first-of-type {
-  margin-top: 1.5rem !important;
+  margin-top: 0 !important;
+}
+
+.has-drop-down:active ul li a, .has-drop-down:focus-within ul li a, .has-drop-down:hover ul li a, .has-drop-down:focus ul li a {
+  color: #000;
 }
 
 .dropdown-nav {

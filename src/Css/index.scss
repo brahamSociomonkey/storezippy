@@ -134,6 +134,7 @@ header {
     left: 0;
     right: 0;
     transition: 0.3s ease;
+    overflow-y: scroll;
 
     nav {
       padding: 0;
@@ -265,9 +266,17 @@ header {
       pointer-events: all !important;
       height: revert !important;
       overflow: revert;
+      background-color: #fff;
+      padding: 1rem !important;
 
-      li:first-of-type {
-        margin-top: 1.5rem !important;
+      li {
+        &:first-of-type {
+          margin-top: 0 !important;
+        }
+
+        a {
+          color: #000;
+        }
       }
     }
   }
