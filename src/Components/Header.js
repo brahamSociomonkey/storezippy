@@ -6,6 +6,7 @@ import ReactHtmlParser from "react-html-parser";
 
 const Header = () => {
   const headerRef = useRef(null);
+  const detailsRef = useRef(null);
   const hamMenuRef = useRef(null);
   const dropDownNavRef = useRef(null);
   const { show } = useIntercom();
@@ -55,6 +56,10 @@ const Header = () => {
       // target.classList.remove("opened");
       // target.setAttribute("aria-expanded", target.classList.contains("opened"));
       hamMenuRef.current.classList.add("open");
+    }
+
+    if (detailsRef.current) {
+      detailsRef.current.open = false;
     }
   };
 
@@ -125,6 +130,19 @@ const Header = () => {
     }
   }, [window.innerWidth]);
 
+  useEffect(() => {
+    const onlyForPc = document.querySelectorAll(".only-show-for-pc");
+    const onlyForMob = document.querySelectorAll(".only-show-for-mob");
+
+    const deleteAll = (elements) => elements.forEach((ele) => ele.remove());
+
+    if (window.innerWidth > 750) {
+      deleteAll(onlyForMob);
+    } else {
+      deleteAll(onlyForPc);
+    }
+  }, []);
+
   return (
     <>
       <div className="mobile-header">
@@ -187,12 +205,24 @@ const Header = () => {
                   onMouseEnter={handleDropDownLinkMouseEnter}
                   onClick={handleDropDownLinkClick}
                   // onToStart=""
-                  className="main-link has-drop-down"
+                  className="main-link has-drop-down only-show-for-pc"
                 >
                   <div className="title" data-drop-down="resources">
                     Resources
                     <i className="gg-chevron-down"></i>
                   </div>
+                </button>
+
+                <details
+                  ref={detailsRef}
+                  className="only-show-for-mob main-link has-drop-down"
+                >
+                  <summary>
+                    <div className="title" data-drop-down="resources">
+                      Resources
+                      <i className="gg-chevron-down"></i>
+                    </div>
+                  </summary>
                   <ul>
                     {dataForNavDropdown["resources"]["links"]?.map(
                       ({ text, url }, index) => (
@@ -204,7 +234,7 @@ const Header = () => {
                       )
                     )}
                   </ul>
-                </button>
+                </details>
               </li>
               <li>
                 <Link

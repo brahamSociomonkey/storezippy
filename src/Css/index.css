@@ -285,6 +285,14 @@ header.hide {
   font: inherit;
 }
 
+.has-drop-down summary {
+  list-style-type: none;
+}
+
+.has-drop-down summary::-webkit-details-marker {
+  display: none;
+}
+
 .has-drop-down .title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -297,6 +305,8 @@ header.hide {
       -ms-flex-align: center;
           align-items: center;
   color: inherit;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
 }
 
 .has-drop-down .title img {
@@ -325,7 +335,12 @@ header.hide {
   }
 }
 
-.has-drop-down:active ul, .has-drop-down:focus-within ul, .has-drop-down:hover ul, .has-drop-down:focus ul {
+.has-drop-down[open] .title i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.has-drop-down[open] ul {
   opacity: 1 !important;
   pointer-events: all !important;
   height: revert !important;
@@ -334,11 +349,11 @@ header.hide {
   padding: 1rem !important;
 }
 
-.has-drop-down:active ul li:first-of-type, .has-drop-down:focus-within ul li:first-of-type, .has-drop-down:hover ul li:first-of-type, .has-drop-down:focus ul li:first-of-type {
+.has-drop-down[open] ul li:first-of-type {
   margin-top: 0 !important;
 }
 
-.has-drop-down:active ul li a, .has-drop-down:focus-within ul li a, .has-drop-down:hover ul li a, .has-drop-down:focus ul li a {
+.has-drop-down[open] ul li a {
   color: #000;
 }
 

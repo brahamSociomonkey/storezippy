@@ -227,12 +227,21 @@ header {
 .has-drop-down {
   font: inherit;
 
+  summary {
+    list-style-type: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
   .title {
     display: flex;
     gap: 0.1rem;
     justify-content: center;
     align-items: center;
     color: inherit;
+    transition: .3s ease;
 
     img {
       color: currentColor;
@@ -258,10 +267,13 @@ header {
     }
   }
 
-  &:active,
-  &:focus-within,
-  &:hover,
-  &:focus {
+  &[open] {
+    .title {
+      i {
+        transform: rotate(-180deg);
+      }
+    }
+
     ul {
       opacity: 1 !important;
       pointer-events: all !important;
@@ -281,6 +293,44 @@ header {
       }
     }
   }
+
+  // .title {
+  //   display: flex;
+  //   gap: 0.1rem;
+  //   justify-content: center;
+  //   align-items: center;
+  //   color: inherit;
+
+  //   img {
+  //     color: currentColor;
+  //   }
+  // }
+
+  // ul {
+  //   padding: 0 !important;
+  //   margin: 0 !important;
+  //   opacity: 0 !important;
+  //   pointer-events: none !important;
+  //   height: 0 !important;
+  //   transition: 0.3s ease;
+  //   overflow: hidden;
+
+  //   .link-item {
+  //     color: inherit;
+  //     font-size: 80% !important;
+  //   }
+
+  //   @media (min-width: $mob-nav-breakpoint) {
+  //     display: none;
+  //   }
+  // }
+
+  // &:active,
+  // &:focus-within,
+  // &:hover,
+  // &:focus {
+
+  // }
 }
 
 // dropdown-nav
