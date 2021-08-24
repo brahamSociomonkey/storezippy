@@ -242,7 +242,7 @@ header nav img {
     -webkit-box-pack: center !important;
         -ms-flex-pack: center !important;
             justify-content: center !important;
-    padding-top: 2rem;
+    padding-top: 1rem;
   }
   header .customers-group .btn {
     font-size: 1.5rem !important;
