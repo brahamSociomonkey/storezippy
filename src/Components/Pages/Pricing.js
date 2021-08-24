@@ -141,15 +141,15 @@ const Pricing = () => {
           </p>
         </div>
 
-        <ResponsiveDisplayImg data={{ img: `${dirRoot}hero.png` }} />
+        <ResponsiveDisplayImg data={{ img: `${dirRoot}hero-min.png` }} />
       </div>
 
       <div className="founder">
         <div className="basic-grid-container">
           <ResponsiveDisplayImg
             data={{
-              img: `${dirRoot}founder.png`,
-              mobImg: `${dirRoot}founder-mob.png`,
+              img: `${dirRoot}founder-min.png`,
+              mobImg: `${dirRoot}founder-mob-min.png`,
             }}
           />
 
@@ -176,7 +176,7 @@ const Pricing = () => {
           data-delay="0"
           className="info-card"
         >
-          <img src={`${dirRoot}/icon-personalized.png`} alt="" />
+          <img src={`${dirRoot}/icon-personalized-min.png`} alt="" />
           <h2>Personalized for you</h2>
           <p>
             We can provide customized solutions for your unique needs (like
@@ -191,7 +191,7 @@ const Pricing = () => {
           data-delay="0.1"
           className="info-card"
         >
-          <img src={`${dirRoot}/icon-traditional.png`} alt="" />
+          <img src={`${dirRoot}/icon-traditional-min.png`} alt="" />
           <h2>Not just a traditional 3PL</h2>
           <p>
             StoreZippy is not just a pick, pack and ship warehouse. We offer
@@ -206,7 +206,7 @@ const Pricing = () => {
           data-delay="0.2"
           className="info-card"
         >
-          <img src={`${dirRoot}/icon-arms.png`} alt="" />
+          <img src={`${dirRoot}/icon-arms-min.png`} alt="" />
           <h2>Your extended arm</h2>
           <p>
             We ensure that our clients not only achieve their business goals
@@ -270,7 +270,7 @@ const Pricing = () => {
                       data-type="weight"
                       onClick={handleButtonClick}
                     >
-                      <img src={`${dirRoot}Parcel Box.png`} alt="" />
+                      <img src={`${dirRoot}Parcel Box-min.png`} alt="" />
                       {item}
                     </button>
                   )
@@ -307,7 +307,7 @@ const Pricing = () => {
                           : handleButtonClick
                       }
                     >
-                      <img src={`${dirRoot}${item}.png`} alt="" />
+                      <img src={`${dirRoot}${item}-min.png`} alt="" />
                       {item}
                     </button>
                   )
@@ -318,7 +318,7 @@ const Pricing = () => {
 
           <div className="output-container">
             <div className="img-container">
-              <img src={`${dirRoot}hero.png`} alt={`${dirRoot}hero.png`} />
+              <img src={`${dirRoot}hero-min.png`} alt={`${dirRoot}hero-min.png`} />
             </div>
 
             <div className="orders">
@@ -365,7 +365,7 @@ const Pricing = () => {
       {/* get quote  */}
       <GetQuotesSection
         data={{
-          img: `${dirRoot}quotes.png`,
+          img: `${dirRoot}quotes-min.png`,
           heading: `No storage fee for the first 60 days!!<br /><span style="color: #FF8F3F;">So what’s your next move?</span>`,
         }}
       />

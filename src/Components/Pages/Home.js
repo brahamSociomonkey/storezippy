@@ -14,12 +14,12 @@ const Home = () => {
   const dirRoot = `/assets/pages/home/phase-2/`;
 
   const dataForIntegrationIcons = [
-    { icon: `${dirRoot}icon-prime.png` },
-    { icon: `${dirRoot}icon-shopify.png` },
-    { icon: `${dirRoot}icon-two-days-delivery.png` },
-    { icon: `${dirRoot}icon-f-assured.png` },
-    { icon: `${dirRoot}icon-woocommerce.png` },
-    { icon: `${dirRoot}icon-next-day.png` },
+    { icon: `${dirRoot}icon-prime-min.png` },
+    { icon: `${dirRoot}icon-shopify-min.png` },
+    { icon: `${dirRoot}icon-two-days-delivery-min.png` },
+    { icon: `${dirRoot}icon-f-assured-min.png` },
+    { icon: `${dirRoot}icon-woocommerce-min.png` },
+    { icon: `${dirRoot}icon-next-day-min.png` },
   ];
 
   const testimonialSliderSettings = {
@@ -60,21 +60,21 @@ const Home = () => {
 
   const dataForTestimonials = [
     {
-      logo: "/assets/pages/home/phase-2/logo-coconut-people.png",
+      logo: "/assets/pages/home/phase-2/logo-coconut-people-min.png",
       content:
         "Their service has been extremely exceptional. They go above and beyond the call of their duty. Looking forward to a long-term partnership.",
       person: "Mr. Arjun Marweena",
       personInfo: "Founder, The Coconut People",
     },
     {
-      logo: "/assets/pages/home/phase-2/logo-crayliving.png",
+      logo: "/assets/pages/home/phase-2/logo-crayliving-min.png",
       content:
         "StoreZippy is the third fulfillment company I have used but the first to get it right. They always exceed my expectations and are very easy to work with. They have reduced my total operations cost by 35%. Thanks for all the support",
       person: "Mr. Ashish Kathuria",
       personInfo: "Founder, Cray Living",
     },
     {
-      logo: "/assets/pages/home/phase-2/logo-dadev.png",
+      logo: "/assets/pages/home/phase-2/logo-dadev-min.png",
       content:
         "StoreZippy has been the optimum solution for shipping honey to my customers. The order fulfillment has been very smooth for us since the beginning of working with them.",
       person: "Mr. Nitesh Poonia",
@@ -84,23 +84,23 @@ const Home = () => {
 
   const dataForScaleUpPoints = [
     {
-      icon: "/assets/pages/home/phase-2/icon-operating-cost.png",
+      icon: "/assets/pages/home/phase-2/icon-operating-cost-min.png",
       text: "Reduce your operating costs by <strong>25%</strong>",
     },
     {
-      icon: "/assets/pages/home/phase-2/icon-upgrade.png",
+      icon: "/assets/pages/home/phase-2/icon-upgrade-min.png",
       text: "Improve your <strong>NPS</strong>",
     },
     {
-      icon: "/assets/pages/home/phase-2/icon-checklist.png",
+      icon: "/assets/pages/home/phase-2/icon-checklist-min.png",
       text: "Reduce your inventory holding by <strong>39%</strong>",
     },
     {
-      icon: "/assets/pages/home/phase-2/icon-cart.png",
+      icon: "/assets/pages/home/phase-2/icon-cart-min.png",
       text: "Lower cart abandonment rate by <strong>18%</strong>",
     },
     {
-      icon: "/assets/pages/home/phase-2/icon-fulfillment.png",
+      icon: "/assets/pages/home/phase-2/icon-fulfillment-min.png",
       text: "<strong>360°</strong> fulfillment solution",
     },
   ];
@@ -138,8 +138,8 @@ const Home = () => {
       <div className="brand-dna">
         <ResponsiveDisplayImg
           data={{
-            img: "/assets/pages/home/phase-2/brand-dna.png",
-            mobImg: "/assets/pages/home/phase-2/brand-dna-mob.png",
+            img: "/assets/pages/home/phase-2/brand-dna-min.png",
+            mobImg: "/assets/pages/home/phase-2/brand-dna-mob-min.png",
           }}
         />
       </div>
@@ -148,8 +148,8 @@ const Home = () => {
       <div className="dashboard">
         <ResponsiveDisplayImg
           data={{
-            img: "/assets/pages/home/phase-2/dashboard.png",
-            mobImg: "/assets/pages/home/phase-2/dashboard-mob.png",
+            img: "/assets/pages/home/phase-2/dashboard-min.png",
+            mobImg: "/assets/pages/home/phase-2/dashboard-mob-min.png",
           }}
         />
       </div>
@@ -245,7 +245,7 @@ const Home = () => {
             <div className="img-container">
               <img
                 src="/assets/pages/home/forklift-vector-min.png"
-                alt="forklift-vector-min.png"
+                alt="image"
               />
             </div>
           </div>
@@ -257,7 +257,7 @@ const Home = () => {
         <div className="basic-grid-container">
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/home/phase-2/download.png",
+              img: "/assets/pages/home/phase-2/download-min.png",
             }}
           />
 
@@ -324,7 +324,7 @@ const Home = () => {
                   <br />
                   <img
                     className="quotation"
-                    src="/assets/pages/home/phase-2/quotation.png"
+                    src="/assets/pages/home/phase-2/quotation-min.png"
                     alt=""
                   />
                 </div>
@@ -380,7 +380,7 @@ const Home = () => {
 
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/home/phase-2/know-us.png",
+              img: "/assets/pages/home/phase-2/know-us-min.png",
             }}
           />
         </div>
@@ -389,7 +389,7 @@ const Home = () => {
       {/* zippy  */}
       <div className="zippy">
         <ResponsiveDisplayImg
-          data={{ img: "/assets/pages/home/phase-2/zippy-new.png" }}
+          data={{ img: "/assets/pages/home/phase-2/zippy-new-min.png" }}
         />
       </div>
 
@@ -398,7 +398,7 @@ const Home = () => {
         <div className="grid-container">
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/home/phase-2/expert.png",
+              img: "/assets/pages/home/phase-2/expert-min.png",
             }}
           />
 

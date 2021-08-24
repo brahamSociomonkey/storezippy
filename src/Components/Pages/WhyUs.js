@@ -10,32 +10,32 @@ import animationObserver from "../Utilities/library/animationObserver";
 const WhyUs = () => {
   const dataFroDropDown = [
     {
-      icon: "/assets/pages/why-us/icon-marketing-inserts.png",
+      icon: "/assets/pages/why-us/icon-marketing-inserts-min.png",
       title: "Marketing Inserts",
       des: "A convenient way to delight your customers with addition of custom inserts viz*. <br />1. Stickers <br />2. Brochures <br />3. Coupons <br />4. Product samples",
     },
     {
-      icon: "/assets/pages/why-us/icon-claim-report.png",
+      icon: "/assets/pages/why-us/icon-claim-report-min.png",
       title: "Claim Filing Report",
       des: "Receive timely reports to file claims regarding any damage caused to your account from marketplaces or shipping providers.",
     },
     {
-      icon: "/assets/pages/why-us/icon-bundling.png",
+      icon: "/assets/pages/why-us/icon-bundling-min.png",
       title: "Bundling",
       des: "We create one unique SKU by putting many items together as one shippable package. <br />It keeps inventory moving at a steady rate.",
     },
     {
-      icon: "/assets/pages/why-us/icon-packaging.png",
+      icon: "/assets/pages/why-us/icon-packaging-min.png",
       title: "Custom Packaging",
       des: "We also provide custom packaging solutions tailored to your needs.",
     },
     {
-      icon: "/assets/pages/why-us/icon-returns.png",
+      icon: "/assets/pages/why-us/icon-returns-min.png",
       title: "Returns Management",
       des: "Management of returns is an important part of what StoreZippy does. We efficiently and effectively handle your customer’s returns simplifying the reverse logistics process.",
     },
     {
-      icon: "/assets/pages/why-us/icon-payment.png",
+      icon: "/assets/pages/why-us/icon-payment-min.png",
       title: "Payment Reconciliation",
       des: "Our robust payment reconciliation system gives you better insights into your financial data at the ease of a single click and lets you track your payments easily across scenarios like overcharged shipping, marketplace refunds, overcharged commission etc.",
     },
@@ -53,7 +53,7 @@ const WhyUs = () => {
   return (
     <div id="why-us">
       <div className="hero">
-        <ResponsiveDisplayImg data={{ img: "/assets/pages/why-us/hero.png" }} />
+        <ResponsiveDisplayImg data={{ img: "/assets/pages/why-us/hero-min.png" }} />
       </div>
 
       <div className="fulfillment-needs">
@@ -68,10 +68,10 @@ const WhyUs = () => {
 
         <div className="basic-grid-container">
           {[
-            "customer-centric-focus.png",
-            "f-assured.png",
-            "personalised-sols.png",
-            "surveillence.png",
+            "customer-centric-focus-min.png",
+            "f-assured-min.png",
+            "personalised-sols-min.png",
+            "surveillence-min.png",
           ]?.map((image, index) => (
             <div
               data-animname="fade-in-up"
@@ -101,7 +101,7 @@ const WhyUs = () => {
       <Stats
         data={{
           heading: "Proven Track Record",
-          img: "/assets/pages/why-us/status.png",
+          img: "/assets/pages/why-us/status-min.png",
         }}
       />
 
@@ -129,7 +129,7 @@ const WhyUs = () => {
 
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/why-us/map-india.png",
+              img: "/assets/pages/why-us/map-india-min.png",
             }}
           />
         </div>
@@ -138,9 +138,9 @@ const WhyUs = () => {
       {/* slider area  */}
       <SliderContainer
         dataForSlider={[
-          { img: "/assets/pages/why-us/slider-1.png" },
-          { img: "/assets/pages/why-us/slider-2.png" },
-          { img: "/assets/pages/why-us/slider-3.png" },
+          { img: "/assets/pages/why-us/slider-1-min.png" },
+          { img: "/assets/pages/why-us/slider-2-min.png" },
+          { img: "/assets/pages/why-us/slider-3-min.png" },
         ]}
       />
 
@@ -173,8 +173,8 @@ const WhyUs = () => {
 
                   <div>
                     <img
-                      src="/assets/pages/why-us/icon-arrow-down.png"
-                      alt="/assets/pages/why-us/icon-arrow-down.png"
+                      src="/assets/pages/why-us/icon-arrow-down-min.png"
+                      alt="/assets/pages/why-us/icon-arrow-down-min.png"
                       className="arrow"
                     />
                   </div>
@@ -188,7 +188,7 @@ const WhyUs = () => {
       {/* get quote  */}
       <GetQuotesSection
         data={{
-          img: "/assets/pages/why-us/try-us.png",
+          img: "/assets/pages/why-us/try-us-min.png",
           heading: `Looking for Fulfillment Centre solutions?<br /><span style="color: #FF8F3F;">Try Us!</span>`,
         }}
       />

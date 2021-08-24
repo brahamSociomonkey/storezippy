@@ -15,7 +15,7 @@ const About = () => {
   return (
     <div id="page-about-us">
       <div className="hero">
-        <ResponsiveDisplayImg data={{ img: "/assets/pages/about/hero.png" }} />
+        <ResponsiveDisplayImg data={{ img: "/assets/pages/about/hero-min.png" }} />
       </div>
 
       <div
@@ -71,7 +71,7 @@ const About = () => {
 
         <ResponsiveDisplayImg
           data={{
-            img: "/assets/pages/about/mobile.png",
+            img: "/assets/pages/about/mobile-min.png",
           }}
         />
       </div>
@@ -124,7 +124,7 @@ const About = () => {
         <div className="basic-grid-container">
           <div class="person">
             <ResponsiveDisplayImg
-              data={{ img: "/assets/pages/about/founder-1.png" }}
+              data={{ img: "/assets/pages/about/founder-1-min.png" }}
             />
             <p className="txt-center">
               <strong>Mr. Neeraj Kathuria</strong>
@@ -132,7 +132,7 @@ const About = () => {
           </div>
           <div class="person">
             <ResponsiveDisplayImg
-              data={{ img: "/assets/pages/about/founder-2.png" }}
+              data={{ img: "/assets/pages/about/founder-2-min.png" }}
             />
             <p className="txt-center">
               <strong>Mr. Vinay Aggarwal</strong>

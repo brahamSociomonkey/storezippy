@@ -157,17 +157,17 @@ const Contact = () => {
         <div className="images-area">
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/contact/display-img-1.png",
+              img: "/assets/pages/contact/display-img-1-min.png",
             }}
           />
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/contact/display-img-2.png",
+              img: "/assets/pages/contact/display-img-2-min.png",
             }}
           />
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/contact/display-img-3.png",
+              img: "/assets/pages/contact/display-img-3-min.png",
             }}
           />
         </div>
@@ -191,7 +191,7 @@ const Contact = () => {
           text: "Download the free guide today and get a jump start on your 3PL Service Provider.",
           urlTo: "/guide",
           urlText: "Download",
-          img: "/assets/pages/contact/download.png",
+          img: "/assets/pages/contact/download-min.png",
         }}
       />
     </div>

@@ -123,7 +123,7 @@ const Quotes = () => {
 
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/quotes/hero-gird.png",
+              img: "/assets/pages/quotes/hero-gird-min.png",
             }}
           />
         </div>
@@ -143,8 +143,8 @@ const Quotes = () => {
         <div className="basic-grid-container">
           <ResponsiveDisplayImg
             data={{
-              img: "/assets/pages/quotes/testimonial.png",
-              mobImg: "/assets/pages/quotes/testimonial-mob.png",
+              img: "/assets/pages/quotes/testimonial-min.png",
+              mobImg: "/assets/pages/quotes/testimonial-mob-min.png",
             }}
           />
 
@@ -167,7 +167,7 @@ const Quotes = () => {
           text: " Download the free guide today and get a jump start on your 3PL Service Provider.",
           urlTo: "/guide",
           urlText: "Download",
-          img: "/assets/pages/quotes/partner.png",
+          img: "/assets/pages/quotes/partner-min.png",
         }}
       />
     </div>
