@@ -283,10 +283,14 @@ header.hide {
 
 .has-drop-down {
   font: inherit;
+  outline: none;
+  border: none;
 }
 
 .has-drop-down summary {
   list-style-type: none;
+  outline: none;
+  border: none;
 }
 
 .has-drop-down summary::-webkit-details-marker {
@@ -305,8 +309,8 @@ header.hide {
       -ms-flex-align: center;
           align-items: center;
   color: inherit;
-  -webkit-transition: .3s ease;
-  transition: .3s ease;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
 }
 
 .has-drop-down .title img {
@@ -355,6 +359,13 @@ header.hide {
 
 .has-drop-down[open] ul li a {
   color: #000;
+}
+
+.has-drop-down:focus, .has-drop-down:active,
+.has-drop-down summary:active,
+.has-drop-down summary:focus {
+  outline: none;
+  border: none;
 }
 
 .dropdown-nav {

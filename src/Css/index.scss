@@ -226,9 +226,13 @@ header {
 
 .has-drop-down {
   font: inherit;
+  outline: none;
+  border: none;
 
   summary {
     list-style-type: none;
+    outline: none;
+    border: none;
 
     &::-webkit-details-marker {
       display: none;
@@ -241,7 +245,7 @@ header {
     justify-content: center;
     align-items: center;
     color: inherit;
-    transition: .3s ease;
+    transition: 0.3s ease;
 
     img {
       color: currentColor;
@@ -292,6 +296,14 @@ header {
         }
       }
     }
+  }
+
+  &:focus,
+  &:active,
+  summary:active,
+  summary:focus {
+    outline: none;
+    border: none;
   }
 
   // .title {
