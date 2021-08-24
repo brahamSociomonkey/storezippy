@@ -24,8 +24,8 @@ function HamIcon({ data }) {
           />
         </svg> */}
 
-        <img src="/assets/menu.png" />
-        <img src="/assets/menu-cross.png" />
+        <img className="normal-icon" alt="" src="/assets/menu.png" />
+        <img className="cross-icon" alt="" src="/assets/menu-cross.png" />
       </button>
     </div>
   );
