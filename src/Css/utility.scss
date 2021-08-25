@@ -1,4 +1,4 @@
-@import url('https://css.gg/chevron-down.css');
+@import url("https://css.gg/chevron-down.css");
 @import "./variables";
 
 *,
@@ -751,5 +751,25 @@ a,
   .basic-grid-container {
     justify-content: revert;
     max-width: revert;
+  }
+}
+
+details {
+  summary {
+    list-style-type: none;
+    outline: none;
+    border: none;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+  }
+
+  &:focus,
+  &:active,
+  summary:active,
+  summary:focus {
+    outline: none;
+    border: none;
   }
 }

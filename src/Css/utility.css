@@ -857,3 +857,20 @@ a:focus::after, a:hover::after, a:active::after,
           justify-content: revert;
   max-width: revert;
 }
+
+details summary {
+  list-style-type: none;
+  outline: none;
+  border: none;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+details:focus, details:active,
+details summary:active,
+details summary:focus {
+  outline: none;
+  border: none;
+}

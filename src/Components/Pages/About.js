@@ -149,7 +149,7 @@ const About = () => {
           that they got an idea to build a company which helps bridge the gap
           between the brands, customers and the powerful digital media &
           ecommerce platforms. With this mesmerising idea in mind, these young,
-          talented souls left their job at just the age of 25 and went beyond
+          talented souls left their job at just the age of 23 and went beyond
           the barriers to start their own marvelous journey. <br />
           <br />
           Till now, they have helped over 200 brands establish a stronghold in
