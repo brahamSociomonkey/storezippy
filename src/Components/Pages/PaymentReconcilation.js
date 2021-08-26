@@ -111,8 +111,6 @@ const PaymentReconcilation = () => {
 
       {/* dropdowns  */}
       <div className="dropdowns-section">
-        <br />
-        <br />
         <div className="des">
           <p>
             Our robust reconciliation system allows you to have better insights
@@ -121,7 +119,6 @@ const PaymentReconcilation = () => {
             you to check individual payment heads in the following scenarios -
           </p>
         </div>
-        <br />
 
         <div className="dropdowns">
           {dataFroDropDown?.map(({ title, des, icon }, index) => (

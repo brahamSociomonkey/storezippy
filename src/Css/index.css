@@ -2418,8 +2418,8 @@ main {
 #payment-reconcilation .hero .content {
   color: #fff;
   max-width: 40ch;
-  -ms-grid-column-align: start;
-      justify-self: start;
+  -ms-grid-column-align: center;
+      justify-self: center;
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
@@ -2448,12 +2448,16 @@ main {
   }
 }
 
-#payment-reconcilation .des p {
+#payment-reconcilation .dropdowns-section {
+  margin: clamp(1rem, 5vw, 5rem) 0;
+}
+
+#payment-reconcilation .dropdowns-section .des p {
   max-width: 1000px;
   text-align: center;
   color: #002862;
   font-size: clamp(16px, 3vw, 20px);
-  margin: auto;
+  margin: clamp(1rem, 5vw, 5rem) auto;
 }
 
 #payment-reconcilation .leakages {
@@ -2478,6 +2482,7 @@ main {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+  max-width: revert;
 }
 
 #payment-reconcilation .form-section .basic-grid-container .form-container form {
@@ -2520,12 +2525,13 @@ main {
       align-self: center;
   -ms-grid-column-align: center;
       justify-self: center;
-  max-width: 450px;
+  max-width: 550px;
 }
 
 #payment-reconcilation .form-section .heading,
 #payment-reconcilation .leakages .heading {
   position: relative;
+  max-width: 30ch;
 }
 
 #payment-reconcilation .form-section .heading .gradient-line,

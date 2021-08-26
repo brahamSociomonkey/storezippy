@@ -2217,7 +2217,7 @@ main {
     .content {
       color: #fff;
       max-width: 40ch;
-      justify-self: start;
+      justify-self: center;
       align-self: center;
 
       h1 {
@@ -2241,13 +2241,17 @@ main {
     }
   }
 
-  .des {
-    p {
-      max-width: 1000px;
-      text-align: center;
-      color: #002862;
-      font-size: clamp(16px, 3vw, 20px);
-      margin: auto;
+  .dropdowns-section {
+    margin: clamp(1rem, 5vw, 5rem) 0;
+
+    .des {
+      p {
+        max-width: 1000px;
+        text-align: center;
+        color: #002862;
+        font-size: clamp(16px, 3vw, 20px);
+        margin: clamp(1rem, 5vw, 5rem) auto;
+      }
     }
   }
 
@@ -2272,6 +2276,7 @@ main {
 
     .basic-grid-container {
       align-items: stretch;
+      max-width: revert;
 
       .form-container {
         form {
@@ -2308,7 +2313,7 @@ main {
       .display-img {
         align-self: center;
         justify-self: center;
-        max-width: 450px;
+        max-width: 550px;
       }
     }
   }
@@ -2317,6 +2322,7 @@ main {
   .leakages {
     .heading {
       position: relative;
+      max-width: 30ch;
 
       .gradient-line {
         display: inline-block;
