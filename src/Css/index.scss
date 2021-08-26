@@ -760,6 +760,67 @@ main {
     }
   }
 
+  .more-from-us {
+    .blocks-container {
+      display: grid;
+      grid-template: auto/repeat(auto-fill, minmax(300px, 1fr));
+      gap: 3rem 2rem;
+
+      .blog-item,
+      .guide-item {
+        .featured-image,
+        .content {
+          a {
+            &::after {
+              display: none;
+            }
+          }
+        }
+
+        .content {
+          font-weight: normal;
+          // max-width: 35ch;
+
+          p {
+            margin-top: 0.5rem;
+            margin-bottom: 1rem;
+          }
+
+          .date {
+          }
+
+          .title {
+            font-family: "Helvetica Rounded";
+            color: #002862;
+          }
+
+          .des {
+          }
+
+          .author {
+            span {
+              font-weight: 600;
+            }
+          }
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        // mobile rules
+        @media (max-width: $mob-nav-breakpoint) {
+          gap: 0rem;
+
+          .content {
+            padding-left: 5%;
+            padding-right: 5%;
+          }
+        }
+      }
+    }
+  }
+
   .testimonials {
     .heading-with-line-grid-container {
       .heading {
@@ -1530,7 +1591,8 @@ main {
 }
 
 // why-us-page
-#why-us {
+#why-us,
+#payment-reconcilation {
   .fulfillment-needs,
   .distributed,
   .dropdowns-section {
@@ -2141,6 +2203,140 @@ main {
   }
 }
 
+// #payment-reconcilation
+#payment-reconcilation {
+  .hero {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    grid-template: 1fr / 1fr 1fr;
+    gap: 2rem;
+    padding: clamp(1rem, 5vw, 5rem) 5%;
+    background-color: #002862;
+
+    .content {
+      color: #fff;
+      max-width: 40ch;
+      justify-self: start;
+      align-self: center;
+
+      h1 {
+        font-size: clamp(55px, 10vw, 65px);
+      }
+
+      p {
+        font-size: clamp(1rem, 10vw, 18px);
+        max-width: 43ch;
+      }
+    }
+
+    .display-img {
+      max-width: 400px;
+      justify-self: center;
+    }
+
+    // mobile rules
+    @media (max-width: $mob-nav-breakpoint) {
+      grid-template: auto auto/ auto;
+    }
+  }
+
+  .des {
+    p {
+      max-width: 1000px;
+      text-align: center;
+      color: #002862;
+      font-size: clamp(16px, 3vw, 20px);
+      margin: auto;
+    }
+  }
+
+  .leakages {
+    background: #002862;
+    padding: 3rem 5%;
+    color: #fff;
+
+    .icons-grid-container {
+      .icon-item {
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  .form-section {
+    padding: 0 5%;
+
+    .heading {
+      color: #002862;
+    }
+
+    .basic-grid-container {
+      align-items: stretch;
+
+      .form-container {
+        form {
+          padding-left: 5%;
+          padding-right: 5%;
+
+          .form-item {
+            [data-required="true"] > span {
+              display: inline-block;
+
+              &::after {
+                content: "*";
+                color: red;
+                padding-left: 0.1rem;
+              }
+            }
+
+            input,
+            textarea,
+            select {
+              margin-top: 0.5rem;
+            }
+          }
+
+          .split-half {
+            display: flex;
+            gap: 1rem;
+            align-items: stretch;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .display-img {
+        align-self: center;
+        justify-self: center;
+        max-width: 450px;
+      }
+    }
+  }
+
+  .form-section,
+  .leakages {
+    .heading {
+      position: relative;
+
+      .gradient-line {
+        display: inline-block;
+        position: relative;
+        top: 2rem;
+        left: -2rem;
+        height: 10px;
+        width: 300px;
+
+        // mobile rules
+
+        @media (max-width: $mob-nav-breakpoint) {
+          top: 0;
+          left: 2rem;
+        }
+      }
+    }
+  }
+}
+
 // policy-pages
 .policy-pages {
   max-width: 1000px;
@@ -2306,74 +2502,6 @@ main {
     }
   }
 
-  .icons-section {
-    margin-top: clamp(2rem, 10vw, 5rem);
-    margin-bottom: clamp(2rem, 10vw, 5rem);
-    padding: 0 5%;
-    max-width: 1600px;
-    margin-left: auto;
-    margin-right: auto;
-
-    .tertiary-font {
-      font-weight: normal;
-    }
-
-    .icons-grid-container {
-      margin-top: clamp(3rem, 10vw, 5rem);
-      margin-bottom: clamp(3rem, 10vw, 5rem);
-      display: grid;
-      justify-content: space-between;
-      justify-items: center;
-      gap: clamp(3rem, 10vw, 4rem) clamp(2rem, 10vw, 3rem);
-      grid-template: auto/ repeat(5, 1fr);
-
-      .icon-item {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-        justify-content: stretch;
-        align-items: center;
-        text-align: center;
-        max-width: 134px;
-
-        img {
-          border-radius: 10px;
-          // height: 200px;
-          // width: 200px;
-          object-fit: contain;
-        }
-
-        strong {
-          p {
-            margin: 0;
-          }
-        }
-      }
-
-      // mobile rules
-      @media (max-width: 850px) {
-        justify-content: stretch;
-        grid-template: auto/ repeat(4, 1fr);
-      }
-
-      @media (max-width: 550px) {
-        grid-template: auto/ repeat(3, 1fr);
-
-        .icon-item {
-          img {
-            // height: 150px;
-            // width: 150px;
-            object-fit: contain;
-          }
-        }
-      }
-
-      @media (max-width: 450px) {
-        grid-template: auto/ repeat(2, 1fr);
-      }
-    }
-  }
-
   .quotes {
     padding-top: clamp(2rem, 10vw, 5rem);
     padding-bottom: clamp(2rem, 10vw, 5rem);
@@ -2479,6 +2607,33 @@ footer {
       img {
         height: 2.2rem;
         width: 2.2rem;
+      }
+    }
+  }
+
+  .form-container {
+    .form-item {
+      margin: 0 !important;
+      display: inline-flex;
+      justify-content: start;
+      gap: 0.25rem;
+
+      input {
+        max-width: 15rem !important;
+      }
+
+      button {
+        padding: 0;
+        color: #fff;
+        width: 2.5rem;
+        height: 2.5rem;
+        cursor: pointer;
+        flex-shrink: 0;
+
+        svg {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

@@ -26,6 +26,7 @@ import Guide3 from "./Pages/Guide3";
 import WhatToLookInCompany from "./Pages/blogs/WhatToLookInCompany";
 import EcomSEO from "./Pages/blogs/EcomSEO";
 import animationObserver from "./Utilities/library/animationObserver";
+import PaymentReconcilation from "./Pages/PaymentReconcilation";
 
 
 const Main = () => {
@@ -92,6 +93,7 @@ const Main = () => {
         <Route exact path="/guides/guide-1" component={Guide} />
         <Route exact path="/guides" component={Guides} />
         <Route exact path="/guide" component={Guides} />
+        <Route exact path="/payment-reconcilation" component={PaymentReconcilation} />
         <Route exact path="/pricing" component={Pricing} />
         <Route exact path="/contact" component={Contact} />
         <Route exact path="/product" component={Product} />

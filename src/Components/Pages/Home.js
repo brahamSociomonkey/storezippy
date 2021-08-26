@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import DarkSection from "../Utilities/DarkSection";
 import GetQuotesSection from "../Utilities/GetQuotesSection";
 import HeroSlider from "../Utilities/HeroSlider";
@@ -9,9 +9,24 @@ import IconsGridContainer from "../Utilities/mini-comps/IconsGridContainer";
 import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import Stats from "../Utilities/mini-comps/Stats";
 import ReactHtmlParser from "react-html-parser";
+import dataForBlogs from "../allData/data/dataForBlogs";
+import dataForGuides from '../allData/data/dataForGuides';
+
 
 const Home = () => {
   const dirRoot = `/assets/pages/home/phase-2/`;
+
+  const getRandomNum = (limit) => {
+    let currentNum = Math.floor(Math.random() * limit);
+
+    while (currentNum >= limit) {
+      currentNum = Math.floor(Math.random() * limit);
+    }
+
+    return currentNum;
+  };
+
+  const [moreFromUsBlock, setMoreFromUsBlock] = useState([]);
 
   const dataForIntegrationIcons = [
     { icon: `${dirRoot}icon-prime-min.png` },
@@ -107,6 +122,12 @@ const Home = () => {
 
   React.useEffect(() => {
     animationObserver();
+
+    setMoreFromUsBlock(() => [
+      dataForBlogs[getRandomNum(dataForBlogs.length)],
+      dataForGuides[getRandomNum(dataForGuides.length)],
+      dataForBlogs[getRandomNum(dataForBlogs.length)],
+    ]);
   }, []);
 
   // scroll to top
@@ -253,7 +274,7 @@ const Home = () => {
       </section>
 
       {/* download guide   */}
-      <section className="guide-download">
+      {/* <section className="guide-download">
         <div className="basic-grid-container">
           <ResponsiveDisplayImg
             data={{
@@ -282,6 +303,36 @@ const Home = () => {
               Download
             </Link>
           </div>
+        </div>
+      </section> */}
+
+      <section className="more-from-us blog-page-width">
+        <h1 className="heading primary-font">More from Storezippy</h1>
+        <br />
+        <br />
+        <div className="blocks-container">
+          {moreFromUsBlock?.map(({ img, date, title, url }, index) => (
+            <div className="blog-item" key={index}>
+              <div className="featured-image">
+                <Link to={url}>
+                  <ResponsiveDisplayImg data={{ img, delay: index }} />
+                </Link>
+              </div>
+
+              <div
+                data-animname="fade-in-up"
+                data-onetime="true"
+                data-delay={index / 8}
+                className="content"
+              >
+                <p className="date">{date}</p>
+                <Link to={url}>
+                  <p className="title secondary-font">{title}</p>
+                </Link>
+
+              </div>
+            </div>
+          ))}
         </div>
       </section>
 

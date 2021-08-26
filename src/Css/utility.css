@@ -1,4 +1,5 @@
 @import url("https://css.gg/chevron-down.css");
+@import url("https://css.gg/arrow-right-r.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @font-face {
   font-family: "Helvetica";
@@ -873,4 +874,96 @@ details summary:active,
 details summary:focus {
   outline: none;
   border: none;
+}
+
+.icons-section {
+  margin-top: clamp(2rem, 10vw, 5rem);
+  margin-bottom: clamp(2rem, 10vw, 5rem);
+  padding: 0 5%;
+  max-width: 1600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icons-section .tertiary-font {
+  font-weight: normal;
+}
+
+.icons-section .icons-grid-container {
+  margin-top: clamp(3rem, 10vw, 5rem);
+  margin-bottom: clamp(3rem, 10vw, 5rem);
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-items: center;
+  gap: clamp(3rem, 10vw, 4rem) clamp(2rem, 10vw, 3rem);
+  -ms-grid-rows: auto;
+  -ms-grid-columns: (1fr)[5];
+      grid-template: auto/repeat(5, 1fr);
+}
+
+.icons-section .icons-grid-container .icon-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.5rem;
+  -webkit-box-pack: stretch;
+      -ms-flex-pack: stretch;
+          justify-content: stretch;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  max-width: 134px;
+}
+
+.icons-section .icons-grid-container .icon-item img {
+  border-radius: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.icons-section .icons-grid-container .icon-item strong p {
+  margin: 0;
+}
+
+@media (max-width: 850px) {
+  .icons-section .icons-grid-container {
+    -webkit-box-pack: stretch;
+        -ms-flex-pack: stretch;
+            justify-content: stretch;
+    -ms-grid-rows: auto;
+    -ms-grid-columns: (1fr)[4];
+        grid-template: auto/repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 550px) {
+  .icons-section .icons-grid-container {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: (1fr)[3];
+        grid-template: auto/repeat(3, 1fr);
+  }
+  .icons-section .icons-grid-container .icon-item img {
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+}
+
+@media (max-width: 450px) {
+  .icons-section .icons-grid-container {
+    -ms-grid-rows: auto;
+    -ms-grid-columns: (1fr)[2];
+        grid-template: auto/repeat(2, 1fr);
+  }
+}
+
+.primary-font-60px {
+  font-size: clamp(1.8rem, 5vw, 60px);
 }
