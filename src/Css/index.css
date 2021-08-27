@@ -2390,6 +2390,35 @@ main {
   margin-right: auto;
 }
 
+#careers .hero {
+  width: auto;
+}
+
+#careers .hero img {
+  -o-object-fit: contain;
+     object-fit: contain;
+  pointer-events: none !important;
+}
+
+#careers .content {
+  padding: clamp(2rem, 5vw, 3rem) 5%;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 1600px;
+  color: #002559;
+  font-size: 20px;
+}
+
+#careers .content p {
+  margin: 0;
+}
+
+#careers .content a {
+  margin-top: clamp(1rem, 5vw, 2rem);
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
 #not-found-page {
   padding-bottom: clamp(3rem, 5vh, 8rem);
   display: -ms-grid;
