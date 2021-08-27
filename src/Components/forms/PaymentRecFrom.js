@@ -160,7 +160,7 @@ function PaymentRecFrom() {
 
         <div className="form-item form-submit">
           <button type="submit" className="btn">
-            Request Pricing
+            Submit
           </button>
         </div>
 

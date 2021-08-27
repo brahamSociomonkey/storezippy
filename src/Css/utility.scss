@@ -414,6 +414,10 @@ a,
 
     .form-item:not(.form-submit) {
       margin-bottom: 2rem;
+
+      &:last-of-type {
+        margin-bottom: 0;
+      }
     }
   }
 }

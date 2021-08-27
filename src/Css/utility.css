@@ -528,6 +528,10 @@ a:focus::after, a:hover::after, a:active::after,
   margin-bottom: 2rem;
 }
 
+.form-container form .form-item:not(.form-submit):last-of-type {
+  margin-bottom: 0;
+}
+
 .form-has-error {
   pointer-events: none;
   display: block;

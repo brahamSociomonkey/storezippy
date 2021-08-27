@@ -1700,15 +1700,20 @@ main {
           summary {
             position: relative;
             display: flex;
+            width: 99%;
+            gap: 1rem;
             align-items: center;
             transition: 0.3s ease;
             border: none;
             outline: none;
 
-            .icon {
-              width: 2rem;
-              height: 2rem;
-              margin-right: 2rem;
+            div {
+              flex-shrink: 0;
+              .icon {
+                width: 2rem;
+                height: 2rem;
+                margin-right: 0;
+              }
             }
 
             .arrow {
@@ -2221,7 +2226,7 @@ main {
       align-self: center;
 
       h1 {
-        font-size: clamp(55px, 10vw, 65px);
+        font-size: clamp(40px, 10vw, 65px);
       }
 
       p {
@@ -2314,6 +2319,10 @@ main {
         align-self: center;
         justify-self: center;
         max-width: 550px;
+
+        @media (max-width: $mob-nav-breakpoint) {
+          margin-bottom: 4rem;
+        }
       }
     }
   }

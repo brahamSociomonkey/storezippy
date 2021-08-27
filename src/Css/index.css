@@ -1842,6 +1842,8 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  width: 99%;
+  gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1851,11 +1853,17 @@ main {
   outline: none;
 }
 
-#why-us .dropdowns-section .dropdowns .dropdown-item details summary .icon,
-#payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary .icon {
+#why-us .dropdowns-section .dropdowns .dropdown-item details summary div,
+#payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary div {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+}
+
+#why-us .dropdowns-section .dropdowns .dropdown-item details summary div .icon,
+#payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary div .icon {
   width: 2rem;
   height: 2rem;
-  margin-right: 2rem;
+  margin-right: 0;
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details summary .arrow,
@@ -2426,7 +2434,7 @@ main {
 }
 
 #payment-reconcilation .hero .content h1 {
-  font-size: clamp(55px, 10vw, 65px);
+  font-size: clamp(40px, 10vw, 65px);
 }
 
 #payment-reconcilation .hero .content p {
@@ -2526,6 +2534,12 @@ main {
   -ms-grid-column-align: center;
       justify-self: center;
   max-width: 550px;
+}
+
+@media (max-width: 900px) {
+  #payment-reconcilation .form-section .basic-grid-container .display-img {
+    margin-bottom: 4rem;
+  }
 }
 
 #payment-reconcilation .form-section .heading,
