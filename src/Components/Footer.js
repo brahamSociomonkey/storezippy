@@ -30,7 +30,7 @@ const Footer = () => {
     linksData: [
       { text: "Guides", to: "/guide" },
       { text: "Case Studies", to: "/" },
-      { text: "Frequently Asked Questions", to: "/" },
+      { text: "Frequently Asked Questions", to: "/faqs" },
       { text: "Blogs", to: "/blogs" },
     ],
   };

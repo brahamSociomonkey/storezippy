@@ -1713,6 +1713,9 @@ main {
 #why-us .fulfillment-needs,
 #why-us .distributed,
 #why-us .dropdowns-section,
+#faqs .fulfillment-needs,
+#faqs .distributed,
+#faqs .dropdowns-section,
 #payment-reconcilation .fulfillment-needs,
 #payment-reconcilation .distributed,
 #payment-reconcilation .dropdowns-section {
@@ -1721,18 +1724,21 @@ main {
 }
 
 #why-us .fulfillment-needs,
+#faqs .fulfillment-needs,
 #payment-reconcilation .fulfillment-needs {
   margin-top: 4rem;
   margin-bottom: 4rem;
 }
 
 #why-us .fulfillment-needs h1,
+#faqs .fulfillment-needs h1,
 #payment-reconcilation .fulfillment-needs h1 {
   max-width: 25ch;
   width: auto;
 }
 
 #why-us .fulfillment-needs .basic-grid-container,
+#faqs .fulfillment-needs .basic-grid-container,
 #payment-reconcilation .fulfillment-needs .basic-grid-container {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1744,12 +1750,14 @@ main {
 }
 
 #why-us .fulfillment-needs .basic-grid-container .grid-item,
+#faqs .fulfillment-needs .basic-grid-container .grid-item,
 #payment-reconcilation .fulfillment-needs .basic-grid-container .grid-item {
   max-width: 40rem;
 }
 
 @media (max-width: 900px) {
   #why-us .fulfillment-needs .basic-grid-container,
+  #faqs .fulfillment-needs .basic-grid-container,
   #payment-reconcilation .fulfillment-needs .basic-grid-container {
     -ms-grid-rows: auto;
     -ms-grid-columns: auto;
@@ -1757,33 +1765,39 @@ main {
     gap: 1rem;
   }
   #why-us .fulfillment-needs .basic-grid-container .grid-item,
+  #faqs .fulfillment-needs .basic-grid-container .grid-item,
   #payment-reconcilation .fulfillment-needs .basic-grid-container .grid-item {
     max-width: 100%;
   }
 }
 
 #why-us .dark .heading-with-line-grid-container,
+#faqs .dark .heading-with-line-grid-container,
 #payment-reconcilation .dark .heading-with-line-grid-container {
   display: none;
 }
 
 #why-us .distributed,
+#faqs .distributed,
 #payment-reconcilation .distributed {
   background-color: #002862;
   color: #fff;
 }
 
 #why-us .distributed .basic-grid-container .content,
+#faqs .distributed .basic-grid-container .content,
 #payment-reconcilation .distributed .basic-grid-container .content {
   max-width: 27ch;
 }
 
 #why-us .distributed .basic-grid-container .content h1,
+#faqs .distributed .basic-grid-container .content h1,
 #payment-reconcilation .distributed .basic-grid-container .content h1 {
   width: auto;
 }
 
 #why-us .distributed .basic-grid-container .content h1::after,
+#faqs .distributed .basic-grid-container .content h1::after,
 #payment-reconcilation .distributed .basic-grid-container .content h1::after {
   background: -webkit-gradient(linear, right top, left top, color-stop(50%, #21bed5), color-stop(74.12%, rgba(255, 255, 255, 0))), -webkit-gradient(linear, left top, left bottom, from(#4069a3), to(#3c76ab));
   background: linear-gradient(270deg, #21bed5 50%, rgba(255, 255, 255, 0) 74.12%), linear-gradient(180deg, #4069a3 0%, #3c76ab 100%);
@@ -1791,6 +1805,7 @@ main {
 
 @media (max-width: 900px) {
   #why-us .distributed .basic-grid-container,
+  #faqs .distributed .basic-grid-container,
   #payment-reconcilation .distributed .basic-grid-container {
     -ms-grid-rows: auto;
     -ms-grid-columns: auto;
@@ -1798,31 +1813,36 @@ main {
     gap: 1rem;
   }
   #why-us .distributed .basic-grid-container .content,
+  #faqs .distributed .basic-grid-container .content,
   #payment-reconcilation .distributed .basic-grid-container .content {
     max-width: 100%;
   }
 }
 
 #why-us .dropdowns-section h1::after,
+#faqs .dropdowns-section h1::after,
 #payment-reconcilation .dropdowns-section h1::after {
   background-color: currentColor;
 }
 
 #why-us .dropdowns-section .dropdowns,
+#faqs .dropdowns-section .dropdowns,
 #payment-reconcilation .dropdowns-section .dropdowns {
-  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item,
+#faqs .dropdowns-section .dropdowns .dropdown-item,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item {
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: #fff;
+  font-size: clamp(16px, 4vw, 26px);
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details,
+#faqs .dropdowns-section .dropdowns .dropdown-item details,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
@@ -1837,12 +1857,13 @@ main {
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details summary,
+#faqs .dropdowns-section .dropdowns .dropdown-item details summary,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 99%;
+  width: 98%;
   gap: 1rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -1854,12 +1875,14 @@ main {
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details summary div,
+#faqs .dropdowns-section .dropdowns .dropdown-item details summary div,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary div {
   -ms-flex-negative: 0;
       flex-shrink: 0;
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details summary div .icon,
+#faqs .dropdowns-section .dropdowns .dropdown-item details summary div .icon,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary div .icon {
   width: 2rem;
   height: 2rem;
@@ -1867,6 +1890,7 @@ main {
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details summary .arrow,
+#faqs .dropdowns-section .dropdowns .dropdown-item details summary .arrow,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary .arrow {
   width: 1.5rem;
   height: 1.5rem;
@@ -1880,11 +1904,13 @@ main {
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details summary::marker,
+#faqs .dropdowns-section .dropdowns .dropdown-item details summary::marker,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details summary::marker {
   content: "";
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details[open] summary,
+#faqs .dropdowns-section .dropdowns .dropdown-item details[open] summary,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details[open] summary {
   border-bottom: 2px solid;
   padding-bottom: 0.5rem;
@@ -1892,6 +1918,7 @@ main {
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details[open] summary .arrow,
+#faqs .dropdowns-section .dropdowns .dropdown-item details[open] summary .arrow,
 #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item details[open] summary .arrow {
   -webkit-transform: translateY(-50%) rotate(-180deg);
           transform: translateY(-50%) rotate(-180deg);
@@ -1899,11 +1926,13 @@ main {
 
 @media (max-width: 900px) {
   #why-us .dropdowns-section .dropdowns .dropdown-item,
+  #faqs .dropdowns-section .dropdowns .dropdown-item,
   #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item {
     margin-top: 1rem;
     margin-bottom: 1rem;
   }
   #why-us .dropdowns-section .dropdowns .dropdown-item summary .icon,
+  #faqs .dropdowns-section .dropdowns .dropdown-item summary .icon,
   #payment-reconcilation .dropdowns-section .dropdowns .dropdown-item summary .icon {
     margin-right: 1rem;
   }
@@ -2593,6 +2622,62 @@ main {
     top: 0;
     left: 2rem;
   }
+}
+
+#faqs {
+  padding-bottom: 1rem;
+}
+
+#faqs .hero {
+  padding: 2rem 5%;
+  background-color: #002862;
+  color: #fff;
+}
+
+#faqs .hero .grid-container {
+  -ms-grid-rows: 1fr;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template: 1fr/ 1fr 1fr;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#faqs .hero .grid-container .content {
+  max-width: 55ch;
+}
+
+#faqs .hero .grid-container .content h1 {
+  font-size: clamp(40px, 10vw, 65px);
+}
+
+#faqs .hero .grid-container .content p {
+  font-size: 18px;
+}
+
+#faqs .hero .grid-container .display-img {
+  max-width: 400px;
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+@media (max-width: 900px) {
+  #faqs .hero .grid-container {
+    -ms-grid-rows: auto auto;
+    -ms-grid-columns: 1fr;
+        grid-template: auto auto/ 1fr;
+  }
+}
+
+#faqs .dropdowns-section .dropdown-item ul {
+  margin: .5rem 0;
+}
+
+#faqs .dropdowns-section .dropdown-item ul li {
+  list-style: disc;
 }
 
 .policy-pages {

@@ -28,6 +28,7 @@ import EcomSEO from "./Pages/blogs/EcomSEO";
 import animationObserver from "./Utilities/library/animationObserver";
 import PaymentReconcilation from "./Pages/PaymentReconcilation";
 import Careers from "./Pages/Careers";
+import FAQS from "./Pages/FAQS";
 
 
 const Main = () => {
@@ -89,6 +90,7 @@ const Main = () => {
           component={TipsForSiteImprovement}
         />
         <Route exact path="/careers" component={Careers} />
+        <Route exact path="/faqs" component={FAQS} />
         <Route exact path="/integration" component={Integration} />
         <Route exact path="/guides/guide-3" component={Guide3} />
         <Route exact path="/guides/guide-2" component={Guide2} />
