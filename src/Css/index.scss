@@ -1686,7 +1686,7 @@ main {
         margin-top: 2rem;
         margin-bottom: 2rem;
         color: #fff;
-        font-size:clamp(16px, 4vw, 26px);
+        font-size: clamp(16px, 4vw, 26px);
 
         details {
           transition: 0.3s ease;
@@ -2415,7 +2415,7 @@ main {
         justify-self: center;
       }
 
-      // mobile rules 
+      // mobile rules
       @media (max-width: $mob-nav-breakpoint) {
         grid-template: auto auto/ 1fr;
       }
@@ -2423,11 +2423,9 @@ main {
   }
 
   .dropdowns-section {
-
     .dropdown-item {
-
       ul {
-        margin: .5rem 0;
+        margin: 0.5rem 0;
 
         li {
           list-style: disc;
