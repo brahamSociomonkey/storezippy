@@ -1223,6 +1223,10 @@ main {
   }
 }
 
+#quotes .basic-grid-container .display-img {
+  padding: 4rem;
+}
+
 #contact .hero {
   padding: 3rem 2rem;
 }
