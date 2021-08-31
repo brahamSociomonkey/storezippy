@@ -761,9 +761,12 @@ main {
   }
 
   .more-from-us {
+    padding-left: 5%;
+    padding-right: 5%;
+
     .blocks-container {
       display: grid;
-      grid-template: auto/repeat(auto-fill, minmax(300px, 1fr));
+      grid-template: auto/auto auto auto;
       gap: 3rem 2rem;
 
       .blog-item,
@@ -795,6 +798,14 @@ main {
           }
 
           .des {
+            // max-width: 45ch;
+            // overflow: hidden;
+            // white-space:nowrap;
+            // text-overflow: ellipsis;
+          }
+
+          .type {
+            text-transform: uppercase;
           }
 
           .author {
@@ -807,9 +818,15 @@ main {
         &:last-of-type {
           margin-bottom: 0;
         }
+      }
 
-        // mobile rules
-        @media (max-width: $mob-nav-breakpoint) {
+      // mobile rules
+      @media (max-width: $mob-nav-breakpoint) {
+        grid-template: auto/ auto;
+        grid-auto-rows: auto;
+
+        .blog-item,
+        .guide-item {
           gap: 0rem;
 
           .content {
@@ -821,7 +838,8 @@ main {
     }
   }
 
-  .testimonials {
+  .testimonials,
+  .more-from-us {
     .heading-with-line-grid-container {
       .heading {
         color: #002559;
@@ -1604,7 +1622,6 @@ main {
   }
 }
 
-// why-us-page
 #why-us,
 #faqs,
 #payment-reconcilation {
@@ -1774,6 +1791,88 @@ main {
             }
           }
         }
+      }
+    }
+  }
+}
+
+// why-us-page
+#why-us {
+  .fulfillment-needs {
+    .offset-heading {
+      &::after {
+        background-color: #035daf;
+      }
+    }
+  }
+
+  .dark {
+    // mobile rules
+    @media (max-width: $mob-nav-breakpoint) {
+      text-align: center;
+
+      .content-container {
+        ul {
+          text-align: left;
+          margin: 0 auto;
+          width: max-content;
+        }
+      }
+    }
+  }
+
+  .stats {
+    .gradient-line {
+      height: 1rem;
+    }
+  }
+
+  .distributed {
+    .video-container {
+      max-width: 500px;
+      padding: 2rem;
+      justify-self: center;
+
+      video {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+
+    // mobile rules
+    @media (max-width: $mob-nav-breakpoint) {
+      text-align: center;
+
+      .basic-grid-container {
+        .content {
+          .offset-heading {
+            max-width: 14ch;
+            margin-left: auto;
+            margin-right: auto;
+
+            &::after {
+              bottom: -2rem;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+        }
+
+        .video-container {
+          padding: 0;
+          padding-bottom: 2rem;
+        }
+      }
+    }
+  }
+
+  .dropdowns-section {
+    .offset-heading {
+      &::after {
+        height: 0.5rem;
       }
     }
   }

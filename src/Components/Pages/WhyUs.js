@@ -53,7 +53,9 @@ const WhyUs = () => {
   return (
     <div id="why-us">
       <div className="hero">
-        <ResponsiveDisplayImg data={{ img: "/assets/pages/why-us/hero-min.png" }} />
+        <ResponsiveDisplayImg
+          data={{ img: "/assets/pages/why-us/hero-min.png" }}
+        />
       </div>
 
       <div className="fulfillment-needs">
@@ -72,6 +74,8 @@ const WhyUs = () => {
             "f-assured-min.png",
             "personalised-sols-min.png",
             "surveillence-min.png",
+            "eco-friendly.png",
+            "negotiated-shipping.png",
           ]?.map((image, index) => (
             <div
               data-animname="fade-in-up"
@@ -102,6 +106,7 @@ const WhyUs = () => {
         data={{
           heading: "Proven Track Record",
           img: "/assets/pages/why-us/status-min.png",
+          mobImg: "/assets/pages/why-us/status-mob-min.png",
         }}
       />
 
@@ -127,20 +132,39 @@ const WhyUs = () => {
             </p>
           </div>
 
-          <ResponsiveDisplayImg
+          {/* <ResponsiveDisplayImg
             data={{
               img: "/assets/pages/why-us/map-india-min.png",
             }}
-          />
+          /> */}
+
+          <div className="video-container">
+            <video
+              muted
+              autoPlay
+              loop
+              controls
+              src="/assets/pages/why-us/video.m4v"
+            ></video>
+          </div>
         </div>
       </div>
 
       {/* slider area  */}
       <SliderContainer
         dataForSlider={[
-          { img: "/assets/pages/why-us/slider-1-min.png" },
-          { img: "/assets/pages/why-us/slider-2-min.png" },
-          { img: "/assets/pages/why-us/slider-3-min.png" },
+          {
+            img: "/assets/pages/why-us/slider-1-min.png",
+            mobImg: "/assets/pages/why-us/slider-1-mob.png",
+          },
+          {
+            img: "/assets/pages/why-us/slider-2-min.png",
+            mobImg: "/assets/pages/why-us/slider-2-mob.png",
+          },
+          {
+            img: "/assets/pages/why-us/slider-3-min.png",
+            mobImg: "/assets/pages/why-us/slider-3-mob.png",
+          },
         ]}
       />
 

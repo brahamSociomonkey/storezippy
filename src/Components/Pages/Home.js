@@ -10,8 +10,7 @@ import ResponsiveDisplayImg from "../Utilities/mini-comps/ResponsiveDisplayImg";
 import Stats from "../Utilities/mini-comps/Stats";
 import ReactHtmlParser from "react-html-parser";
 import dataForBlogs from "../allData/data/dataForBlogs";
-import dataForGuides from '../allData/data/dataForGuides';
-
+import dataForGuides from "../allData/data/dataForGuides";
 
 const Home = () => {
   const dirRoot = `/assets/pages/home/phase-2/`;
@@ -306,33 +305,51 @@ const Home = () => {
         </div>
       </section> */}
 
-      <section className="more-from-us blog-page-width">
-        <h1 className="heading primary-font">More from Storezippy</h1>
+      <section className="more-from-us">
+        <div className="heading-with-line-grid-container">
+          <div
+            data-animname="fade-in-up"
+            data-onetime="true"
+            data-delay="0"
+            className="heading primary-font"
+          >
+            More from Storezippy
+          </div>
+
+          <div className="gradient-line"></div>
+        </div>
         <br />
         <br />
         <div className="blocks-container">
-          {moreFromUsBlock?.map(({ img, date, title, url }, index) => (
-            <div className="blog-item" key={index}>
-              <div className="featured-image">
-                <Link to={url}>
-                  <ResponsiveDisplayImg data={{ img, delay: index }} />
-                </Link>
-              </div>
+          {moreFromUsBlock?.map(
+            ({ img, date, title, url, des, type }, index) => (
+              <div className="blog-item" key={index}>
+                <div className="featured-image">
+                  <Link to={url}>
+                    <ResponsiveDisplayImg data={{ img, delay: index }} />
+                  </Link>
+                </div>
 
-              <div
-                data-animname="fade-in-up"
-                data-onetime="true"
-                data-delay={index / 8}
-                className="content"
-              >
-                <p className="date">{date}</p>
-                <Link to={url}>
-                  <p className="title secondary-font">{title}</p>
-                </Link>
+                <div
+                  data-animname="fade-in-up"
+                  data-onetime="true"
+                  data-delay={index / 8}
+                  className="content"
+                >
+                  <p className="date">{date}</p>
+                  <Link to={url}>
+                    <p className="title secondary-font">{title}</p>
+                  </Link>
+                  <br />
+                  <p className="des">{des}</p>
 
+                  <div className="custom-hr"></div>
+
+                  <h4 className="type">{type}</h4>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          )}
         </div>
       </section>
 
