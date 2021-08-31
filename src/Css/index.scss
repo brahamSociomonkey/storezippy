@@ -888,6 +888,14 @@ main {
       color: inherit;
     }
 
+    .btn {
+      &:active,
+      &:hover,
+      &:focus {
+        color: #ff8f3f;
+      }
+    }
+
     .points-container {
       margin: clamp(1.5rem, 10vw, 3rem) 5%;
       // margin-bottom: clamp(1.5rem, 10vw, 3rem);
@@ -1146,7 +1154,7 @@ main {
 
   .basic-grid-container {
     .display-img {
-      padding: 4rem;
+      padding: clamp(1rem, 3vw, 4rem);
     }
   }
 }
@@ -1692,7 +1700,7 @@ main {
         margin-top: 2rem;
         margin-bottom: 2rem;
         color: #fff;
-        font-size: clamp(16px, 4vw, 26px);
+        font-size: clamp(16px, 4vw, 20px);
 
         details {
           transition: 0.3s ease;

@@ -30,11 +30,11 @@ const Home = () => {
 
   const dataForIntegrationIcons = [
     { icon: `${dirRoot}icon-prime-min.png` },
+    { icon: `${dirRoot}icon-f-assured-min.png` },
+    { icon: `${dirRoot}icon-woocommerce-min.png` },
     { icon: `${dirRoot}icon-shopify-min.png` },
     { icon: `${dirRoot}icon-two-days-delivery-min.png` },
-    { icon: `${dirRoot}icon-f-assured-min.png` },
     { icon: `${dirRoot}icon-next-day-min.png` },
-    { icon: `${dirRoot}icon-woocommerce-min.png` },
   ];
 
   const testimonialSliderSettings = {

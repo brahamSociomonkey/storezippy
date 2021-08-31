@@ -52,8 +52,8 @@ const FAQS = () => {
       des: "Yes, we do process returns. Please get in touch to discuss, if this is essential to your business.",
     },
     {
-      title: "Do you have minimum order quantities?",
-      des: "Yes, the minimum order quantity is 1000.",
+      title: "Do you have minimum monthly order quantities?",
+      des: "No we manage any no. of orders.",
     },
     {
       title: "How does the storage fee work?",

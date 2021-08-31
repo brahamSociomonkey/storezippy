@@ -938,6 +938,10 @@ main {
   color: inherit;
 }
 
+#home .scale-up .btn:active, #home .scale-up .btn:hover, #home .scale-up .btn:focus {
+  color: #ff8f3f;
+}
+
 #home .scale-up .points-container {
   margin: clamp(1.5rem, 10vw, 3rem) 5%;
 }
@@ -1224,7 +1228,7 @@ main {
 }
 
 #quotes .basic-grid-container .display-img {
-  padding: 4rem;
+  padding: clamp(1rem, 3vw, 4rem);
 }
 
 #contact .hero {
@@ -1842,7 +1846,7 @@ main {
   margin-top: 2rem;
   margin-bottom: 2rem;
   color: #fff;
-  font-size: clamp(16px, 4vw, 26px);
+  font-size: clamp(16px, 4vw, 20px);
 }
 
 #why-us .dropdowns-section .dropdowns .dropdown-item details,
