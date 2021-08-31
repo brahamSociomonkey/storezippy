@@ -338,10 +338,10 @@ const Home = () => {
                 >
                   <p className="date">{date}</p>
                   <Link to={url}>
-                    <p className="title secondary-font">{title}</p>
+                    <p className="title secondary-font">{ReactHtmlParser(title)}</p>
                   </Link>
                   <br />
-                  <p className="des">{des}</p>
+                  <p className="des">{ReactHtmlParser(des)}</p>
 
                   <div className="custom-hr"></div>
 
