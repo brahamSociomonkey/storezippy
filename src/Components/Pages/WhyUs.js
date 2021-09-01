@@ -54,7 +54,10 @@ const WhyUs = () => {
     <div id="why-us">
       <div className="hero">
         <ResponsiveDisplayImg
-          data={{ img: "/assets/pages/why-us/hero-min.png" }}
+          data={{
+            img: "/assets/pages/why-us/hero-new.png",
+            mobImg: "/assets/pages/why-us/hero-mob.png",
+          }}
         />
       </div>
 

@@ -283,7 +283,7 @@ header {
       pointer-events: all !important;
       height: revert !important;
       overflow: revert;
-      background-color: #fff;
+      // background-color: #fff;
       padding: 1rem !important;
 
       li {
@@ -292,7 +292,7 @@ header {
         }
 
         a {
-          color: #000;
+          // color: #000;
         }
       }
     }
@@ -1487,6 +1487,11 @@ main {
 
     .basic-grid-container {
       gap: 5rem;
+
+      .display-img {
+        justify-self: center;
+        max-width: 33rem;
+      }
     }
 
     .rte {
@@ -1804,6 +1809,12 @@ main {
         background-color: #035daf;
       }
     }
+
+    .basic-grid-container {
+      .grid-item {
+        max-width: 500px;
+      }
+    }
   }
 
   .dark {
@@ -1828,17 +1839,29 @@ main {
   }
 
   .distributed {
-    .video-container {
-      max-width: 500px;
-      padding: 2rem;
-      justify-self: center;
+    .basic-grid-container {
+      padding: 3rem 0;
 
-      video {
-        width: 100%;
-        height: 100%;
-        max-width: 100%;
-        object-fit: cover;
-        object-position: center;
+      .content {
+        .offset-heading {
+          &::after {
+            bottom: -1.5rem;
+          }
+        }
+      }
+
+      .video-container {
+        max-width: 500px;
+        padding: 2rem;
+        justify-self: center;
+
+        video {
+          width: 100%;
+          height: 100%;
+          max-width: 100%;
+          object-fit: cover;
+          object-position: center;
+        }
       }
     }
 
@@ -1874,6 +1897,13 @@ main {
       &::after {
         height: 0.5rem;
       }
+    }
+  }
+
+  .quotes {
+    .display-img {
+      justify-self: center;
+      max-width: 30rem;
     }
   }
 }

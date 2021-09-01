@@ -349,16 +349,11 @@ header.hide {
   pointer-events: all !important;
   height: revert !important;
   overflow: revert;
-  background-color: #fff;
   padding: 1rem !important;
 }
 
 .has-drop-down[open] ul li:first-of-type {
   margin-top: 0 !important;
-}
-
-.has-drop-down[open] ul li a {
-  color: #000;
 }
 
 .has-drop-down:focus, .has-drop-down:active,
@@ -1595,6 +1590,12 @@ main {
   gap: 5rem;
 }
 
+#guide-1 .hero .basic-grid-container .display-img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 33rem;
+}
+
 #guide-1 .hero .rte ul {
   font-weight: bold;
   padding: 0;
@@ -1975,6 +1976,10 @@ main {
   background-color: #035daf;
 }
 
+#why-us .fulfillment-needs .basic-grid-container .grid-item {
+  max-width: 500px;
+}
+
 @media (max-width: 900px) {
   #why-us .dark {
     text-align: center;
@@ -1992,14 +1997,22 @@ main {
   height: 1rem;
 }
 
-#why-us .distributed .video-container {
+#why-us .distributed .basic-grid-container {
+  padding: 3rem 0;
+}
+
+#why-us .distributed .basic-grid-container .content .offset-heading::after {
+  bottom: -1.5rem;
+}
+
+#why-us .distributed .basic-grid-container .video-container {
   max-width: 500px;
   padding: 2rem;
   -ms-grid-column-align: center;
       justify-self: center;
 }
 
-#why-us .distributed .video-container video {
+#why-us .distributed .basic-grid-container .video-container video {
   width: 100%;
   height: 100%;
   max-width: 100%;
@@ -2032,6 +2045,12 @@ main {
 
 #why-us .dropdowns-section .offset-heading::after {
   height: 0.5rem;
+}
+
+#why-us .quotes .display-img {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  max-width: 30rem;
 }
 
 #page-pricing .hero {
