@@ -1,0 +1,346 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@font-face {
+  font-family: "Helvetica";
+  src: url("../src-assets/Helvetica.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Lite";
+  src: url("../src-assets/helvetica-light.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Bold";
+  src: url("../src-assets/Helvetica-Bold.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica BoldOblique";
+  src: url("../src-assets/Helvetica-BoldOblique.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Oblique";
+  src: url("../src-assets/Helvetica-Oblique.ttf");
+}
+
+@font-face {
+  font-family: "Helvetica Rounded";
+  src: url("../src-assets/helvetica-rounded-bold.otf");
+}
+
+#blogs-page,
+#page-guides {
+  padding: 3rem 0;
+}
+
+#blogs-page .blogs-container,
+#blogs-page .guides-container,
+#page-guides .blogs-container,
+#page-guides .guides-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto;
+  -ms-grid-columns: (minmax(300px, 1fr))[auto-fill];
+      grid-template: auto/repeat(auto-fill, minmax(300px, 1fr));
+  gap: 3rem 2rem;
+}
+
+#blogs-page .blogs-container .blog-item:first-of-type,
+#blogs-page .blogs-container .guide-item:first-of-type,
+#blogs-page .guides-container .blog-item:first-of-type,
+#blogs-page .guides-container .guide-item:first-of-type,
+#page-guides .blogs-container .blog-item:first-of-type,
+#page-guides .blogs-container .guide-item:first-of-type,
+#page-guides .guides-container .blog-item:first-of-type,
+#page-guides .guides-container .guide-item:first-of-type {
+  grid-column: 1/-1;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -ms-grid;
+  display: grid;
+  gap: 2rem;
+  -ms-grid-columns: (minmax(25rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-auto-rows: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+#blogs-page .blogs-container .blog-item .featured-image a::after,
+#blogs-page .blogs-container .blog-item .content a::after,
+#blogs-page .blogs-container .guide-item .featured-image a::after,
+#blogs-page .blogs-container .guide-item .content a::after,
+#blogs-page .guides-container .blog-item .featured-image a::after,
+#blogs-page .guides-container .blog-item .content a::after,
+#blogs-page .guides-container .guide-item .featured-image a::after,
+#blogs-page .guides-container .guide-item .content a::after,
+#page-guides .blogs-container .blog-item .featured-image a::after,
+#page-guides .blogs-container .blog-item .content a::after,
+#page-guides .blogs-container .guide-item .featured-image a::after,
+#page-guides .blogs-container .guide-item .content a::after,
+#page-guides .guides-container .blog-item .featured-image a::after,
+#page-guides .guides-container .blog-item .content a::after,
+#page-guides .guides-container .guide-item .featured-image a::after,
+#page-guides .guides-container .guide-item .content a::after {
+  display: none;
+}
+
+#blogs-page .blogs-container .blog-item .content,
+#blogs-page .blogs-container .guide-item .content,
+#blogs-page .guides-container .blog-item .content,
+#blogs-page .guides-container .guide-item .content,
+#page-guides .blogs-container .blog-item .content,
+#page-guides .blogs-container .guide-item .content,
+#page-guides .guides-container .blog-item .content,
+#page-guides .guides-container .guide-item .content {
+  font-weight: normal;
+}
+
+#blogs-page .blogs-container .blog-item .content p,
+#blogs-page .blogs-container .guide-item .content p,
+#blogs-page .guides-container .blog-item .content p,
+#blogs-page .guides-container .guide-item .content p,
+#page-guides .blogs-container .blog-item .content p,
+#page-guides .blogs-container .guide-item .content p,
+#page-guides .guides-container .blog-item .content p,
+#page-guides .guides-container .guide-item .content p {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#blogs-page .blogs-container .blog-item .content .title,
+#blogs-page .blogs-container .guide-item .content .title,
+#blogs-page .guides-container .blog-item .content .title,
+#blogs-page .guides-container .guide-item .content .title,
+#page-guides .blogs-container .blog-item .content .title,
+#page-guides .blogs-container .guide-item .content .title,
+#page-guides .guides-container .blog-item .content .title,
+#page-guides .guides-container .guide-item .content .title {
+  font-family: "Helvetica Rounded";
+  color: #002862;
+}
+
+#blogs-page .blogs-container .blog-item .content .author span,
+#blogs-page .blogs-container .guide-item .content .author span,
+#blogs-page .guides-container .blog-item .content .author span,
+#blogs-page .guides-container .guide-item .content .author span,
+#page-guides .blogs-container .blog-item .content .author span,
+#page-guides .blogs-container .guide-item .content .author span,
+#page-guides .guides-container .blog-item .content .author span,
+#page-guides .guides-container .guide-item .content .author span {
+  font-weight: 600;
+}
+
+#blogs-page .blogs-container .blog-item:last-of-type,
+#blogs-page .blogs-container .guide-item:last-of-type,
+#blogs-page .guides-container .blog-item:last-of-type,
+#blogs-page .guides-container .guide-item:last-of-type,
+#page-guides .blogs-container .blog-item:last-of-type,
+#page-guides .blogs-container .guide-item:last-of-type,
+#page-guides .guides-container .blog-item:last-of-type,
+#page-guides .guides-container .guide-item:last-of-type {
+  margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+  #blogs-page .blogs-container .blog-item,
+  #blogs-page .blogs-container .guide-item,
+  #blogs-page .guides-container .blog-item,
+  #blogs-page .guides-container .guide-item,
+  #page-guides .blogs-container .blog-item,
+  #page-guides .blogs-container .guide-item,
+  #page-guides .guides-container .blog-item,
+  #page-guides .guides-container .guide-item {
+    gap: 0rem;
+  }
+  #blogs-page .blogs-container .blog-item .content,
+  #blogs-page .blogs-container .guide-item .content,
+  #blogs-page .guides-container .blog-item .content,
+  #blogs-page .guides-container .guide-item .content,
+  #page-guides .blogs-container .blog-item .content,
+  #page-guides .blogs-container .guide-item .content,
+  #page-guides .guides-container .blog-item .content,
+  #page-guides .guides-container .guide-item .content {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
+.blogs-container .blog-item .content .primary-font {
+  font-size: clamp(24px, 5vw, 36px);
+}
+
+.blogs-container .blog-item:first-of-type .content .primary-font {
+  font-size: clamp(24px, 5vw, 55px);
+}
+
+.blog-page-width {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-left: calc(min(5%, 4rem));
+  padding-right: calc(min(5%, 4rem));
+}
+
+.blog-page .big-heading {
+  font-size: clamp(30px, 5vw, 48px);
+}
+
+.blog-page .primary-font {
+  font-size: clamp(1.8rem, 5vw, 72px);
+}
+
+.blog-page .primary-color {
+  color: #002862;
+}
+
+.blog-page .title.heading.primary-font {
+  color: #002862;
+  font-family: "Helvetica Rounded";
+  max-width: 30ch;
+}
+
+.blog-page .author {
+  font-weight: 500;
+}
+
+.blog-page p {
+  margin: revert;
+  line-height: 1.4;
+}
+
+.blog-page ul {
+  padding-left: revert;
+}
+
+.blog-page ul li {
+  list-style: disc;
+}
+
+.blog-page .has-float-img img {
+  float: right;
+  width: 50vw;
+  max-width: 500px;
+  margin-left: 2rem;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: 100%;
+}
+
+.blog-page .point {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  overflow: hidden;
+}
+
+.blog-page .point:first-of-type {
+  margin-top: 0;
+}
+
+.blog-page article {
+  padding-bottom: 2rem;
+}
+
+.blog-page article > :last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.top-15-products-to-sell-online-in-2021 article,
+.ready-for-prime-sales-event article,
+.tips-for-site-improvement article,
+.ecom-seo article,
+.amazon-seo article,
+.what-to-look-in-company article {
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 1800px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item,
+.ready-for-prime-sales-event article .points-container .point-item,
+.tips-for-site-improvement article .points-container .point-item,
+.ecom-seo article .points-container .point-item,
+.amazon-seo article .points-container .point-item,
+.what-to-look-in-company article .points-container .point-item {
+  margin: clamp(2.5rem, 10vw, 3.75rem) auto;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item .heading,
+.ready-for-prime-sales-event article .points-container .point-item .heading,
+.tips-for-site-improvement article .points-container .point-item .heading,
+.ecom-seo article .points-container .point-item .heading,
+.amazon-seo article .points-container .point-item .heading,
+.what-to-look-in-company article .points-container .point-item .heading {
+  color: #002862;
+  font-size: clamp(25px, 10vw, 28);
+  padding: 0;
+  margin-bottom: clamp(2rem, 10vw, 3.125rem);
+  margin-top: clamp(2rem, 10vw, 3.125rem);
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item .display-img,
+.ready-for-prime-sales-event article .points-container .point-item .display-img,
+.tips-for-site-improvement article .points-container .point-item .display-img,
+.ecom-seo article .points-container .point-item .display-img,
+.amazon-seo article .points-container .point-item .display-img,
+.what-to-look-in-company article .points-container .point-item .display-img {
+  margin-top: clamp(2rem, 10vw, 3.125rem);
+  margin-bottom: clamp(2rem, 10vw, 3.125rem);
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item .display-img img,
+.ready-for-prime-sales-event article .points-container .point-item .display-img img,
+.tips-for-site-improvement article .points-container .point-item .display-img img,
+.ecom-seo article .points-container .point-item .display-img img,
+.amazon-seo article .points-container .point-item .display-img img,
+.what-to-look-in-company article .points-container .point-item .display-img img {
+  max-height: 750px;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.top-15-products-to-sell-online-in-2021 article .points-container .point-item p,
+.ready-for-prime-sales-event article .points-container .point-item p,
+.tips-for-site-improvement article .points-container .point-item p,
+.ecom-seo article .points-container .point-item p,
+.amazon-seo article .points-container .point-item p,
+.what-to-look-in-company article .points-container .point-item p {
+  margin: 0;
+}
+
+.ready-for-prime-sales-event .secondary-font-size {
+  padding-bottom: 0;
+  font-size: clamp(2rem, 10vw, 2.25rem);
+}
+
+.ready-for-prime-sales-event .heading {
+  color: #002862;
+}
+
+.ready-for-prime-sales-event p {
+  font-size: 1.125rem;
+}
+
+.tips-for-site-improvement .another-heading {
+  font-size: clamp(2rem, 10vw, 48px);
+  color: #002862;
+}
+
+.amazon-seo article {
+  padding-bottom: 0;
+}
+
+.amazon-seo .last-para {
+  margin: clamp(2.5rem, 10vw, 3.75rem) auto;
+  padding: clamp(2.5rem, 10vw, 3.75rem) 5%;
+  margin-bottom: 0;
+  padding-top: 0;
+}
