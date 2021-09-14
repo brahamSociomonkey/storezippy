@@ -13,7 +13,7 @@ const WhatareWarehouseServices = () => {
     <div className="blog-page amazon-seo">
       <ResponsiveDisplayImg
         data={{
-          img: `${dirRoot}hero-min.jpeg`,
+          img: `${dirRoot}hero-min.png`,
         }}
       />
 
@@ -38,7 +38,7 @@ const WhatareWarehouseServices = () => {
         </p>
         <h2 class="secondary-font heading big-heading">What is a Warehouse?</h2>
         <ResponsiveDisplayImg
-              data={{ img: `${dirRoot}What-is-a-Warehouse.jpeg` }}
+              data={{ img: `${dirRoot}What-is-a-Warehouse.png` }}
             />
 
         </div>
@@ -136,7 +136,7 @@ const WhatareWarehouseServices = () => {
             How Fulfillment Services can improve your Business?
             </h2>
 
-            <ResponsiveDisplayImg data={{ img: `${dirRoot}improve-your-business.jpeg` }} />
+            <ResponsiveDisplayImg data={{ img: `${dirRoot}improve-your-business.png` }} />
 
             <p>
             Using 3PL services can help you take your eCommerce business to the next level. You get experience in the warehouse without hiring a single person. Fulfillment centres can help to shorten delivery times. And you might be surprised at how inexpensive fulfilment services are, especially when you consider the savings from fewer errors and returns.
