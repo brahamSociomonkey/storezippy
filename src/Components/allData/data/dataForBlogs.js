@@ -1,6 +1,6 @@
 const dataForBlogs = [
   {
-    img: "/assets/pages/blogs/what-are-warehouse-services/featured-min.png",
+    img: "/assets/pages/blogs/what-are-warehouse-services/featured-min.jpeg",
     date: "13th September 2021",
     title: "What are Warehouse Services?",
     des: "Read our latest blog to gain insights on what are Warehouses, and the type of Warehouse Services.",

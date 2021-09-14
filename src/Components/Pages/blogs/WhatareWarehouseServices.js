@@ -13,15 +13,19 @@ const WhatareWarehouseServices = () => {
     <div className="blog-page amazon-seo">
       <ResponsiveDisplayImg
         data={{
-          img: `${dirRoot}hero-min.png`,
+          img: `${dirRoot}hero-min.jpeg`,
         }}
       />
 
       <article>
-        <br />
+     
+        <div className="points-container">
+          
+      <div class="point-item">
         <h1 className="title heading primary-font">
         What are Warehouse Services?
         </h1>
+        
         <p>
           Written by <span className="author">Garima Mehta</span> | 4 mins Read
         </p>
@@ -34,11 +38,10 @@ const WhatareWarehouseServices = () => {
         </p>
         <h2 class="secondary-font heading big-heading">What is a Warehouse?</h2>
         <ResponsiveDisplayImg
-              data={{ img: `${dirRoot}What-is-a-Warehouse.png` }}
+              data={{ img: `${dirRoot}What-is-a-Warehouse.jpeg` }}
             />
 
-
-        <div className="points-container">
+        </div>
           <div className="point-item">
            
 
@@ -104,11 +107,7 @@ const WhatareWarehouseServices = () => {
           <div className="point-item">
             <h2 class="secondary-font heading">5. Returns Management</h2>
             <p>Reverse logistics is another term for returns processing. One of the choices you'll have to make is whether you want your 3PL to manage reverse logistics or if you want returns to come back to you directly. When StoreZippy handles returns for our clients, we evaluate each item to determine if it may be restocked.</p>
-          </div>
-          <div className="point-item">
-            <h2 class="secondary-font heading">5. Returns Management</h2>
-            <p>Reverse logistics is another term for returns processing. One of the choices you'll have to make is whether you want your 3PL to manage reverse logistics or if you want returns to come back to you directly. When StoreZippy handles returns for our clients, we evaluate each item to determine if it may be restocked.</p>
-          </div>
+          </div>          
           <div className="point-item">
             <h2 class="secondary-font heading">6. Kitting & Assembly</h2>
             <p>Reverse logistics is another term for returns processing. One of the choices you'll have to make is whether you want your 3PL to manage reverse logistics or if you want returns to come back to you directly. When StoreZippy handles returns for our clients, we evaluate each item to determine if it may be restocked.</p>
@@ -132,16 +131,12 @@ const WhatareWarehouseServices = () => {
             <h2 class="secondary-font heading">10. Expert Fulfillment Service</h2>
             <p>We go out of our way to assist our clients at StoreZippy. Because our team members are fulfilment experts, we can ensure accurate warehousing services. Furthermore, we leverage the expertise to answer your queries and assist you in resolving your fulfilment problem points.</p>
           </div>
-          
-
-
-
           <div className="point-item">
             <h2 className="secondary-font heading big-heading">
             How Fulfillment Services can improve your Business?
             </h2>
 
-            <ResponsiveDisplayImg data={{ img: `${dirRoot}improve-your-business.png` }} />
+            <ResponsiveDisplayImg data={{ img: `${dirRoot}improve-your-business.jpeg` }} />
 
             <p>
             Using 3PL services can help you take your eCommerce business to the next level. You get experience in the warehouse without hiring a single person. Fulfillment centres can help to shorten delivery times. And you might be surprised at how inexpensive fulfilment services are, especially when you consider the savings from fewer errors and returns.
@@ -153,7 +148,7 @@ const WhatareWarehouseServices = () => {
         </div>
       </article>
 
-     
+     <div>&nbsp;<br/><br/></div>
     </div>
   );
 };
